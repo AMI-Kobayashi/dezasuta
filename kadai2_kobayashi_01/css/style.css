@@ -84,11 +84,18 @@ img {
     display: flex;
     max-width: 960px;
     justify-content: space-between;
-    margin: 30%;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.wrap3 ul {
-    display: flex;
-    justify-content: space-around;
-    margin: 10px;
+.wrap3 li {
+    display: inline;
+    border-right: 1px solid;
+    padding: 0px 20px;
+    width: 30%;
+    align-items: center;
+}
+
+li:last-child {
+    border-right: none;
 }

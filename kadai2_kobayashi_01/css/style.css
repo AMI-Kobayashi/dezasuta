@@ -72,7 +72,7 @@ img {
 .wrap2 div {
     display: flex;
     background: red;
-    height: 300px; これは必要
+    height: 300px;
     width: 30%;
     justify-content: space-around;
     align-items: center;
@@ -118,5 +118,5 @@ li:last-child {
         padding: 10px 0px;
     }
 }
-//必然と横幅いっぱいまで広がるもの
-//※なくて問題なければなくてもOK！
+/* 必然と横幅いっぱいまで広がるもの */
+/* ※なくて問題なければなくてもOK！ */

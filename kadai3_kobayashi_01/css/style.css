@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #000;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+/* work2 */
+section {
+    background: #eeeeee;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #068272;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    /* マージンでは上下のスペースにができない😭 */
+}
+.wrap2 {
+    background: #eeeeee;
+    max-width: 960px;
+    margin: 30px auto;
+    padding-bottom: 50px;
+}
+
+.wrap2 ul {
+    display: flex;
+    background: white;
+    justify-content: space-around;
+    margin: 10px auto;
+}
+.wrap2 h2 {
+    font-size: 1.6rem;
+    color: #068272;
+    border-left: 10px solid #068272;
+    padding: 2px 5px;
+    margin: 10px 5px;
+}
+.street {
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.disco {
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.cocktail {
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.wrap2 p {
+    width: fit-content;
+}
+/* テキストがはみ出てしまうのですが、どうやったら画像の下に収まるでしょうか・・・ */

@@ -12,23 +12,54 @@
 <body>
 
     <!-- work1 -->
+    <!-- let num=0なのはなぜ？？？？１になる時もある？ -->
     <script>
         let num = 0;
         let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-        for (i = 1; array.length; i++) {
+        for (i = 0; i < array.length; i++) {
             num = num + array[i];
+            console.log(num);
         }
-        if (num > 20); {
+        if (num >= 20) {
             console.log("20以上");
         }
-        if (num < 19); {
+        if (num < 20) {
             console.log("20未満");
-
         }
+            // iの初期値は0
+            //⇩forにもどこまで計算するのか条件をつけないといけないので、１＜を入れる！⇩
+            // for (i = 0; 1 < array.length; i++)
+            // 最終的に数字が幾つになったのか知るために、for文の最後にはconsole.log(num)
+            // ifはfor文の外側に出す
+            // 以上の時は＞＝、未満は＜(´ω`)
+
+
+
     </script>
 
     <!-- work2 -->
-
+    <section id="service" class="wrap1">
+        <h1>サービス</h1>
+        <div class="wrap2">
+            <ul>
+                <li class="street" alt="street">
+                    <img src="images/main_1.jpg" alt="ストリート">
+                    <h2 class="street">サービス１</h2>
+                    <p>サービス１サービス１サービス１サービス１サービス１サービス１サービス１</p>
+                </li>
+                <li class="disco">
+                    <img src="images/main_2.png" alt="ディスコ">
+                    <h2 class="disco">サービス２</h2>
+                    <p>サービス２サービス２サービス２サービス２サービス２サービス２サービス２</p>
+                </li>
+                <li class="cocktail">
+                    <img src="images/main_3.png" alt="カクテル">
+                    <h2 class="cocktail">サービス３</h2>
+                    <p>サービス３サービス３サービス３サービス３サービス３サービス３サービス３</p>
+                </li>
+            </ul>
+        </div>
+    </section>
 
 </body>
 

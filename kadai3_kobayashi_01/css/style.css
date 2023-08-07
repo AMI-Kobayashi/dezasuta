@@ -45,19 +45,15 @@ h1 {
     text-align: center;
     padding-top: 50px;
     padding-bottom: 20px;
-    /* マージンでは上下のスペースにができない😭 */
 }
 .wrap2 {
-    background: #eeeeee;
     max-width: 960px;
     margin: 30px auto;
     padding-bottom: 50px;
 }
-
 .wrap2 ul {
     display: flex;
-    background: white;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 10px auto;
 }
 .wrap2 h2 {
@@ -67,19 +63,35 @@ h1 {
     padding: 2px 5px;
     margin: 10px 5px;
 }
-.street {
-    justify-content: space-between;
-    padding: 0 10px;
+
+.wrap2 li {
+    background: white;
+    width: 30%;
 }
-.disco {
-    justify-content: space-between;
-    padding: 0 10px;
+
+/* work4 */
+@media screen and (max-width: 400px) {
+    /*　画面サイズ 400px以下になったらここに書いてあるcssが適用される　*/
+    .wrap2 ul {
+        display: block;
+        margin: 10px;
+    }
+    /* display:flex;を解除&横幅にマージン */
+    .wrap2 li {
+        width: 100%;
+        margin: 30px auto;
+    }
+    /* 横幅100%まで広げるようにwidth設定&縦幅にマージンとる */
+    .wrap2 img {
+        width: 100%;
+    }
+    /* 写真を100%まで引き伸ばす。 */
+    .wrap2 p {
+        margin: 10px;
+        padding-bottom: 10px;
+    }
+    /* テキストの周りにも余白をとってあげる */
 }
-.cocktail {
-    justify-content: space-between;
-    padding: 0 10px;
-}
-.wrap2 p {
-    width: fit-content;
-}
-/* テキストがはみ出てしまうのですが、どうやったら画像の下に収まるでしょうか・・・ */
+
+/* QUESTION：縦横均等に並べる時はmarginとpadding
+で調整してしまっていいのか？！ */

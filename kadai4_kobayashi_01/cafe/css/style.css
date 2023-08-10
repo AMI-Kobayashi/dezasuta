@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #4f260b;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+    /*  */
+}
+
+/* テキストや画像にマウスが触れた時に何かが起こるもの。
+　opacity→透明にする。０.５％透明するよって出す
+　リンクで飛ぶよっていうのを表すときにこれをよく使う */
+a:hover {
+    opacity: 0.5;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+/* ここから課題 */
+
+/* header */
+
+body {
+    background: gray;
+}
+.header_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 7% 0 3%;
+    /* ％にしておくことでよりレスポンシブに対応するようにする */
+}
+.header_logo {
+    width: 226px;
+}
+.pc_nav ul {
+    display: flex;
+}
+.pc_nav ul li {
+    width: 105px;
+    margin-left: 55px;
+    /*  */
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    text-align: center;
+}
+
+/* リード文のエリア */
+
+.lead_sentense {
+    text-align: center;
+    background: #e8d9bf;
+    width: 460px;
+    margin: 0 auto;
+    padding: 50px 460px;
+}
+.english {
+    text-align: center;
+    font-weight: 100;
+    font-family: "游明朝体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    padding-bottom: 30px;
+}
+.text-center span {
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 40;
+    font-weight: 400;
+    font-family: "游明朝体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+.main_sentense1 {
+    text-align: center;
+    font-size: small;
+    font-family: "游明朝体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    padding-top: 20px;
+    line-height: 180%;
+}
+
+.main_sentense1 span {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* ABOUS US */
+
+.ABOUT_US {
+    display: flex;
+    width: 460px;
+}
+.about_us_picture {
+    width: 300%;
+}
+.aboutus_picture img {
+    border-bottom-right-radius: 45px;
+    width: 500px;
+    justify-content: center;
+}
+
+.main {
+    display: block;
+}
+.aboutus_logo {
+    display: block;
+}

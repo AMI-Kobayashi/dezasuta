@@ -16,7 +16,7 @@ li {
     line-height: 1;
     /*デフォルトの文字色、font-familyを予め当てておく*/
     color: #4f260b;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+    font-family: "游明朝体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
         "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 }
 
@@ -106,17 +106,14 @@ body {
     white-space: nowrap;
     font-size: 40;
     font-weight: 400;
-    font-family: "游明朝体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
-        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    padding-bottom: 10px;
 }
 
 .main_sentense1 {
     text-align: center;
     font-size: small;
-    font-family: "游明朝体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
-        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-    padding-top: 20px;
     line-height: 180%;
+    padding-top: 10px;
 }
 
 .main_sentense1 span {
@@ -127,21 +124,35 @@ body {
 /* ABOUS US */
 
 .ABOUT_US {
+    background: #e8d9bf;
     display: flex;
     width: 460px;
+    margin: 0 auto;
+    padding: 50px 460px;
+    
 }
 .about_us_picture {
-    width: 300%;
+    width: 500px;
+    object-fit: cover;
 }
 .aboutus_picture img {
     border-bottom-right-radius: 45px;
-    width: 500px;
-    justify-content: center;
 }
-
 .main {
-    display: block;
+    width: 50%;
 }
 .aboutus_logo {
     display: block;
+    padding-bottom: 40px;
+}
+.main h2{
+   font-size: 2rem;
+   font-weight: 400;
+    padding-bottom: 40px;
+    font-feature-settings: "palt";
+}
+}
+.main_sentense2 {
+    padding-bottom: 40px;
+    font-feature-settings: "palt";
 }

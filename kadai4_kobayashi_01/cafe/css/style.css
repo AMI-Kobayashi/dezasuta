@@ -198,6 +198,8 @@ section h2 {
 first-childは効かなかった*/
 #MENU h2 img {
     width: 150px;
+    /* 画像のサイズ、AIデータのWとHの数値をwidthに入れているけど
+    　これでいいのか・・・？font-size使ってもサイズ変わらない */
     border-top-right-radius: 0px;
     text-align: center;
     padding: 40px;
@@ -256,6 +258,7 @@ first-childは効かなかった*/
 }
 
 /* ここからEVENTのニュース */
+/* お手上げ！！！ */
 .EVENT_detail {
     background: #fff;
     box-sizing: border-box;
@@ -270,10 +273,15 @@ first-childは効かなかった*/
     font-weight: 100;
     max-width: 100%;
     height: 200px;
+    /* 縦幅heightで指定していいのか？
+    　これ以上増えた時に対応しないから別の書き方がいいのか？ */
 }
 
 #EVENT li {
     display: inline;
+    /* display:inline;はもう迷走。
+    　こんなもの入れても横並びにならなかった。
+    time datetimeはどうやって横並びにするの！？！？！？ */
     padding: 20px;
     margin-left: 50px;
     font-feature-settings: "palt";
@@ -307,6 +315,8 @@ first-childは効かなかった*/
 }
 
 /* hooter */
+/* 横幅の調節激ムズ！なんでここだけ中央揃えじゃないの！？
+正しい横幅とは！？！？！？！？ */
 #footer {
     background-color: white;
     max-width: 1900px;
@@ -343,28 +353,34 @@ first-childは効かなかった*/
 }
 
 /* ページトップボタン */
-/* 全然うまくいかんこれ：https://recooord.org/scroll-to-top/ */
+/* 全然うまくいかないです：https://recooord.org/scroll-to-top/ */
 
 .pagetop {
     width: 125px;
+    /* .pagetop imgにwidth:125px;入れるべき？
+    　　pxで入れちゃうとレスポンシブに対応しないのでは？
+    　もう分からんです*/
     right: 240px;
     position: fixed;
 }
 
 .pagetop a {
     transition: 0.3s;
+    /* 全然へっだーに固定されたまま・・・。
+    　なんの効果も発揮しない・・・ */
 }
 
 .pagetop img {
     width: 100%;
     transition: 0.3s;
 
-    /*デフォルトで非表示にする*/
+    /*デフォルトで非表示にする？？ずっと消えたままですが*/
     opacity: 0;
     visibility: hidden;
 }
 
-/*このクラスが付与されると表示する*/
+/*このクラスが付与されると表示する
+　.activeって何？？これ入れても消えたままなんですけどーーーー*/
 .active {
     opacity: 1;
     visibility: visible;

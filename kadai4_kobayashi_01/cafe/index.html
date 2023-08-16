@@ -11,44 +11,177 @@
 
 <body>
     <header>
-        <div class="header_slider">
+        <section id="header">
             <div><img src="images/pc_first-100.jpg" alt="店内の様子"></div>
-        </div>
-        <div class="header_wrap">
-            <h1 class="header_logo"><img src="images/design_cafe_logo_header@2x.png" alt="DESIGN CAFE"></h1>
-            <nav class="pc_nav">
-                <ul>
-                    <li><a href="">ABOUT US</a></li>
-                    <li><a href="">MENU</a></li>
-                    <li><a href="">GALLERY</a></li>
-                    <li><a href="">EVENT</a></li>
-                    <li><a href="">ACCESS</a></li>
-                </ul>
-            </nav>
-        </div>
-        <!-- 導入部分 -->
-        <div class="lead_sentense">
-            <p class="english">Have a happy day From a cup of coffee.</p>
-            <h1 class="text-center"><span>ハッピーに溢れる1日を</span><span>1杯のコーヒーから。</span></h1>
-            <p class="main_sentense1">
-                <span>　毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ</span><span>足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</span>
-            </p>
-        </div>
-        <!-- About us -->
-        <section class="ABOUT_US">
-            <div class="about_us_picture">
-                <p class="aboutus_picture"><img src="images/about_us@2x-100.jpg" alt="picture of about US"></p>
-            </div>
-            <div class="main">
-                <div class="aboutus_logo"><img src="images/about_us@2x.png" alt="about_us_logo"></div>
-                <h2>私たちが提供する
-                    こだわりのコーヒー</h2>
-                <p class="main_sentense2">
-                    サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
-                </p>
+            <div class="header_wrap">
+                <h1 class="header_logo"><img src="images/design_cafe_logo_header@2x.png" alt="DESIGN CAFE"></h1>
+                <nav class="pc_nav">
+                    <ul>
+                        <li><a href="">ABOUT US</a></li>
+                        <li><a href="">MENU</a></li>
+                        <li><a href="">GALLERY</a></li>
+                        <li><a href="">EVENT</a></li>
+                        <li><a href="">ACCESS</a></li>
+                    </ul>
+                </nav>
             </div>
         </section>
     </header>
+    <!-- 導入部分 -->
+    <div class="lead_sentense">
+        <p class="english">Have a happy day From a cup of coffee.</p>
+        <p class="text-center">ハッピーに溢れる1日を<br>1杯のコーヒーから。</p>
+        <p class="main_sentense1">
+            　毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。
+        </p>
+    </div>
+    <div class="pagetop">
+        <a href="#header">
+            <img src="images/to_top@2x.png">
+        </a>
+    </div>
+    <!-- About us -->
+    <!-- sectionタグはidでやる！ -->
+    <section id="ABOUT_US" class="section">
+        <!-- sectionタグ内のcssは他のメニューにも適応できる -->
+        <div class="about_us_picture">
+            <img src="images/pc_about-100.jpg" alt="picture of about US">
+        </div>
+        <!-- imgタグはpタグで囲わない -->
+        <div class="main">
+            <img src="images/about_us@2x.png" alt="about_us_logo">
+
+            <h2>私たちが提供する<br>こだわりのコーヒー</h2>
+            <p class="main_sentense2">
+                サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
+            </p>
+        </div>
+        <div class="pagetop">
+            <a href="#header">
+                <img src="images/to_top@2x.png">
+            </a>
+        </div>
+    </section>
+    <!-- ここからMENU -->
+
+    <section id="MENU" class="section">
+        <h2>
+            <img src="images/menu@2x.png" alt="Menuの見出しロゴ">
+        </h2>
+        <ul>
+            <li class="drink_block">
+                <img src="images/pc_menu_drink-100.jpg" alt="drink_sp photo">
+                <h3>Drink</h3>
+                <p class="description_drink">ドリンクメニューの概要を100文字程度で<br>紹介します。素材やこだわりなどをアピー<br>ルしていきます。</p>
+            </li>
+            <li class="food_block">
+                <img src="images/pc_menu_food-100.jpg" alt=" food_photo">
+                <h3>Food</h3>
+                <p class="description_food">フードメニューの概要を100文字程度で紹<br>介します。素材やこだわりなどをアピールし<br>ていきます。
+                </p>
+            </li>
+            <li class="sweets_block">
+                <img src="images/pc_menu_sweets-100.jpg" alt="sweets_photo">
+                <h3>Sweets</h3>
+                <p class="description_sweets">スイーツメニューの概要を100文字程度で<br>紹介します。素材やこだわりなどをアピー<br>ルしていきます。
+                </p>
+            </li>
+        </ul>
+        <div class="pagetop">
+            <a href="#header">
+                <img src="images/to_top@2x.png">
+            </a>
+        </div>
+    </section>
+    <!-- ここからGallery -->
+    <!-- max-widthをここだけ変更しないと！ -->
+    <section id="Gallery" class="section">
+        <h2>
+            <img src="images/gallery@2x.png">
+        </h2>
+        <ul>
+            <li><img src="images/pc_gallary_05-100.jpg" alt="カフェアート"></li>
+            <li><img src="images/pc_gallary_04-100.jpg" alt="看板"></li>
+            <li><img src="images/pc_gallary_03-100.jpg" alt="注文カウンター"></li>
+            <li><img src="images/pc_gallary_02-100.jpg" alt="コーヒー豆"></li>
+            <li><img src="images/pc_gallary_01-100.jpg" alt="店内"></li>
+        </ul>
+        <div class="pagetop">
+            <a href="#header">
+                <img src="images/to_top@2x.png">
+            </a>
+        </div>
+    </section>
+
+    <!-- ここからEVENT -->
+    <section id="EVENT" class="section">
+        <h2>
+            <img src="images/event@2x.png">
+        </h2>
+        <div class="EVENT_detail">
+            <ul class="date">
+                <li><time datetime="2020-06-23">2020.06.23</time>
+                    <a href="">
+                        <p>7月はイベント出店のため0/0お休みします</p>
+                    </a>
+                </li>
+                <li>
+                    <time datetime="2020-03-15"> 2020.03.15</time>
+                    <a href>
+                        <p>春の新商品新発売。話題のあのブランドとコラボ</p>
+                    </a>
+                </li>
+                <li>
+                    <time datetime="2020-02-06">2020.02.06</time>
+                    <a href="">
+                        <p>コーヒーの日で30％OFFイベントを開催［3日間限定］</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="pagetop">
+            <a href="#header">
+                <img src="images/to_top@2x.png">
+            </a>
+        </div>
+    </section>
+
+    <section id="ACCESS" class="section">
+        <h2>
+            <img src="images/access@2x.png">
+        </h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51862.54740673229!2d139.65141623021188!3d35.666924715537334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cb2eb3108d1%3A0xf11cd9b2395b6677!2z5p2x5Lqs6YO95riL6LC35Yy6!5e0!3m2!1sja!2sjp!4v1692189049443!5m2!1sja!2sjp"
+            width="1900" height="471" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section id="footer" class="section">
+        <div class="footer">
+            <img src="images/design_cafe_logo_footer@2x.png">
+            <ul>
+                <li>OPEN 18:00 / CLOSE 24:00</li>
+                <li>〒150-0022</li>
+                <li>東京都渋谷区東京南123デザインビルB1
+                </li>
+                <li>MAIL：info@designcafe.tokyo</li>
+            </ul>
+        </div>
+        <p>© 2021 DESIGN CAFE</p>
+        <div class="pagetop">
+            <a href="#header">
+                <img src="images/to_top@2x.png">
+            </a>
+        </div>
+    </section>
+
+    <div class="pagetop">
+        <a href="#header">
+            <img src="images/to_top@2x.png">
+        </a>
+
+
+    </div>
 </body>
 
 </html>

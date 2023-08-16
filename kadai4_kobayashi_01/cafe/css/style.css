@@ -52,8 +52,10 @@ img {
 /* header */
 
 body {
-    background: gray;
+    background: #e8d9bf;
+    /* 全体の背景色指定 */
 }
+
 .header_wrap {
     position: absolute;
     top: 0;
@@ -84,75 +86,286 @@ body {
     text-align: center;
 }
 
+.img {
+    max-width: 100%;
+}
 /* リード文のエリア */
 
 .lead_sentense {
     text-align: center;
-    background: #e8d9bf;
-    width: 460px;
     margin: 0 auto;
-    padding: 50px 460px;
+    padding: 50px 0;
 }
 .english {
     text-align: center;
+    font-size: 30px;
     font-weight: 100;
     font-family: "游明朝体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
         "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
     padding-bottom: 30px;
 }
-.text-center span {
+.text-center {
     text-align: center;
-    display: inline-block;
-    white-space: nowrap;
-    font-size: 40;
+    font-size: 82px;
     font-weight: 400;
     padding-bottom: 10px;
+    line-height: 1.17;
+    font-feature-settings: "palt";
 }
 
 .main_sentense1 {
     text-align: center;
-    font-size: small;
-    line-height: 180%;
+    font-size: 23px;
+    line-height: 1.62;
     padding-top: 10px;
 }
 
 .main_sentense1 span {
     display: inline-block;
-    white-space: nowrap;
 }
 
 /* ABOUS US */
 
-.ABOUT_US {
-    background: #e8d9bf;
-    display: flex;
-    width: 460px;
+.section {
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 50px 460px;
-    
+}
+#ABOUT_US {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 .about_us_picture {
-    width: 500px;
-    object-fit: cover;
+    padding-right: 50px;
+    width: 50%;
 }
-.aboutus_picture img {
+.about_us_picture img {
     border-bottom-right-radius: 45px;
 }
 .main {
-    width: 50%;
+    width: 41%;
 }
-.aboutus_logo {
-    display: block;
+.main img {
+    padding-top: 60px;
+    width: 270px;
     padding-bottom: 40px;
+    font-size: 80px;
 }
-.main h2{
-   font-size: 2rem;
-   font-weight: 400;
-    padding-bottom: 40px;
+.main h2 {
+    font-size: 44px;
+    font-weight: 200;
+    line-height: 1.39;
+    padding-bottom: 20px;
     font-feature-settings: "palt";
+    text-align: start;
 }
-}
+
 .main_sentense2 {
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     font-feature-settings: "palt";
+    /* 上のやつは字幅メトリクスで指定 */
+    line-height: 1.65;
+    /* /* line-heightは行間を調整 */
+}
+
+/* ここからMENU */
+
+#MENU {
+    /* idは＃で示す*/
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+/* sectionでh2は今後全部中央揃えなので、一気にcssかける */
+section h2 {
+    text-align: center;
+}
+
+/* id「MENU」の中にある、ulタグだから＃ */
+#MENU ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#MENU img {
+    border-top-right-radius: 45px;
+    margin-bottom: -10px;
+}
+
+/* 最初の画像だけは角丸つけないので、
+＃MENU imgの後にピンポイントでcss上書きする。 
+first-childは効かなかった*/
+#MENU h2 img {
+    width: 150px;
+    border-top-right-radius: 0px;
+    text-align: center;
+    padding: 40px;
+}
+
+#MENU h3 {
+    color: #d30202;
+    font-size: 31px;
+    padding-left: 10px;
+    font-weight: 400;
+}
+
+#MENU p {
+    font-size: 17px;
+    font-weight: 200;
+    font-feature-settings: "palt";
+    line-height: 150%;
+    padding-top: 15px;
+}
+
+/* ここからGallery */
+
+#Gallery {
+    max-width: 100%;
+}
+
+#Gallery h2 img {
+    width: 245px;
+    border-top-right-radius: 0px;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+#Gallery ul {
+    display: flex;
+    margin: -10px calc(50% - 50vw);
+    /* 上のcssで親要素のコンテンツ幅からはみ出す */
+}
+
+#Gallery img {
+    border-top-right-radius: 0px;
+}
+
+/* ここからevent */
+
+#EVENT {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#EVENT h2 img {
+    width: 173px;
+    border-top-right-radius: 0px;
+    text-align: center;
+    padding: 40px;
+}
+
+/* ここからEVENTのニュース */
+.EVENT_detail {
+    background: #fff;
+    box-sizing: border-box;
+    border: 3px solid #4f260b;
+    max-width: 100%;
+    justify-content: center;
+    overflow: hidden;
+    /* はみ出た文の処理 */
+}
+.date {
+    font-size: 23px;
+    font-weight: 100;
+    max-width: 100%;
+    height: 200px;
+}
+
+#EVENT li {
+    display: inline;
+    padding: 20px;
+    margin-left: 50px;
+    font-feature-settings: "palt";
+    align-items: center;
+}
+
+.date a {
+    text-decoration: 2px solid underline;
+}
+
+/* ここからアクセス */
+
+#ACCESS {
+    max-width: 100%;
+}
+
+#ACCESS h2 img {
+    width: 213px;
+    border-top-right-radius: 0px;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+#ACCESS iframe {
+    display: block;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    max-width: 100%;
+}
+
+/* hooter */
+#footer {
+    background-color: white;
+    max-width: 1900px;
+    margin: 0 auto;
+    padding-top: 90px;
+}
+
+.footer {
+    display: flex;
+    max-width: 1000px;
+    background-color: #fff;
+    padding-left: 55px;
+    margin: 0 auto;
+}
+
+.footer img {
+    width: 213px;
+    height: 50px;
+    border-top-right-radius: 0px;
+}
+.footer ul {
+    padding-left: 40px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    font-feature-settings: "palt";
+}
+.footer li {
+    line-height: 1.95;
+}
+
+#footer p {
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+/* ページトップボタン */
+/* 全然うまくいかんこれ：https://recooord.org/scroll-to-top/ */
+
+.pagetop {
+    width: 125px;
+    right: 240px;
+    position: fixed;
+}
+
+.pagetop a {
+    transition: 0.3s;
+}
+
+.pagetop img {
+    width: 100%;
+    transition: 0.3s;
+
+    /*デフォルトで非表示にする*/
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*このクラスが付与されると表示する*/
+.active {
+    opacity: 1;
+    visibility: visible;
 }

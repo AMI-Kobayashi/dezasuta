@@ -18,6 +18,12 @@ li {
     color: #4f260b;
     font-family: "游明朝体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
         "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    font-feature-settings: "palt";
+    /* 上のやつは字幅メトリクスで指定 */
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 a {
@@ -93,31 +99,28 @@ body {
 
 .lead_sentense {
     text-align: center;
+    /* 親要素にtextalineかければ小要素にも引き継がれる。
+    テキストに関するcssは、親→子で継承される。 */
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 80px;
 }
 .english {
-    text-align: center;
     font-size: 30px;
-    font-weight: 100;
-    font-family: "游明朝体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
-        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    /* font-weightはnormalで入れる（游明朝の場合） */
     padding-bottom: 30px;
 }
 .text-center {
-    text-align: center;
     font-size: 82px;
-    font-weight: 400;
-    padding-bottom: 10px;
+    padding: 20px;
     line-height: 1.17;
-    font-feature-settings: "palt";
+    letter-spacing: 0.1em;
 }
 
 .main_sentense1 {
-    text-align: center;
     font-size: 23px;
-    line-height: 1.62;
     padding-top: 10px;
+    line-height: 1.62;
+    letter-spacing: 0.1em;
 }
 
 .main_sentense1 span {
@@ -130,51 +133,47 @@ body {
     max-width: 1000px;
     margin: 0 auto;
 }
-#ABOUT_US {
+#about {
     display: flex;
     max-width: 1000px;
     margin: 0 auto;
 }
 .about_us_picture {
-    padding-right: 50px;
+    padding-right: 80px;
     width: 50%;
 }
 .about_us_picture img {
-    border-bottom-right-radius: 45px;
+    border-bottom-right-radius: 80px;
 }
 .main {
     width: 41%;
 }
-.main img {
+.main h2 {
     padding-top: 60px;
     width: 270px;
     padding-bottom: 40px;
-    font-size: 80px;
 }
-.main h2 {
+.main_copy {
     font-size: 44px;
     font-weight: 200;
     line-height: 1.39;
     padding-bottom: 20px;
-    font-feature-settings: "palt";
     text-align: start;
 }
 
 .main_sentense2 {
-    padding-bottom: 20px;
-    font-feature-settings: "palt";
-    /* 上のやつは字幅メトリクスで指定 */
+    font-size: 16px;
     line-height: 1.65;
     /* /* line-heightは行間を調整 */
 }
 
 /* ここからMENU */
 
-#MENU {
+#menu {
     /* idは＃で示す*/
     max-width: 1000px;
     margin: 0 auto;
-    padding-bottom: 30px;
+    padding: 60px;
 }
 
 /* sectionでh2は今後全部中央揃えなので、一気にcssかける */
@@ -183,12 +182,20 @@ section h2 {
 }
 
 /* id「MENU」の中にある、ulタグだから＃ */
-#MENU ul {
+#menu ul {
     display: flex;
     justify-content: space-between;
 }
 
-#MENU img {
+#menu ul li {
+    /*⭐️重要⭐️display:flexを使う時、その子要素がならぶ
+レイアウトの割合（比率）を決めてあげないといけない！ */
+    width: 30%;
+}
+
+#menu ul li img {
+    /* ul li入れないと、h2内の見出しMENUも角丸になちゃうので
+    　より細かく指定してあげる（ul li) */
     border-top-right-radius: 45px;
     margin-bottom: -10px;
 }
@@ -196,70 +203,66 @@ section h2 {
 /* 最初の画像だけは角丸つけないので、
 ＃MENU imgの後にピンポイントでcss上書きする。 
 first-childは効かなかった*/
-#MENU h2 img {
+#menu h2 {
     width: 150px;
+    margin: 0 auto;
     /* 画像のサイズ、AIデータのWとHの数値をwidthに入れているけど
     　これでいいのか・・・？font-size使ってもサイズ変わらない */
-    border-top-right-radius: 0px;
-    text-align: center;
     padding: 40px;
 }
 
-#MENU h3 {
+#menu h3 {
     color: #d30202;
-    font-size: 31px;
+    font-size: 35px;
     padding-left: 10px;
     font-weight: 400;
 }
 
-#MENU p {
+#menu p {
     font-size: 17px;
     font-weight: 200;
-    font-feature-settings: "palt";
     line-height: 150%;
     padding-top: 15px;
 }
 
 /* ここからGallery */
 
-#Gallery {
+#gallery {
     max-width: 100%;
 }
 
-#Gallery h2 img {
+#gallery h2 {
     width: 245px;
-    border-top-right-radius: 0px;
-    text-align: center;
-    padding-top: 80px;
-    padding-bottom: 40px;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 30px;
 }
-#Gallery ul {
+#gallery ul {
     display: flex;
-    margin: -10px calc(50% - 50vw);
-    /* 上のcssで親要素のコンテンツ幅からはみ出す */
 }
 
-#Gallery img {
+#gallery img {
     border-top-right-radius: 0px;
 }
 
 /* ここからevent */
 
-#EVENT {
+#event {
     max-width: 1000px;
-    margin: 0 auto;
+    padding: 0 10px;
 }
 
-#EVENT h2 img {
+#event h2 {
     width: 173px;
-    border-top-right-radius: 0px;
-    text-align: center;
-    padding: 40px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
 
 /* ここからEVENTのニュース */
-/* お手上げ！！！ */
-.EVENT_detail {
+.event_detail {
+    display: flex;
+    margin: 0 auto;
     background: #fff;
     box-sizing: border-box;
     border: 3px solid #4f260b;
@@ -267,25 +270,30 @@ first-childは効かなかった*/
     justify-content: center;
     overflow: hidden;
     /* はみ出た文の処理 */
+    /* heightで箱の幅は指定しない！News追加された時にはみ出る */
 }
 .date {
+    padding-bottom: 35px;
+    padding-top: 35px;
     font-size: 23px;
     font-weight: 100;
     max-width: 100%;
-    height: 200px;
-    /* 縦幅heightで指定していいのか？
-    　これ以上増えた時に対応しないから別の書き方がいいのか？ */
+    /* 縦幅heightで指定していいのか？→NGNGNGダメです
+    　これ以上増えた時に対応しないから別の書き方がいいのか？→そうです！
+    　　paddingで調整しよう */
 }
 
-#EVENT li {
-    display: inline;
-    /* display:inline;はもう迷走。
-    　こんなもの入れても横並びにならなかった。
-    time datetimeはどうやって横並びにするの！？！？！？ */
-    padding: 20px;
-    margin-left: 50px;
-    font-feature-settings: "palt";
+#event ul li {
+    display: flex;
+    /* ここflex! */
     align-items: center;
+}
+#event li + li {
+    padding-top: 20px;
+}
+
+#event time {
+    padding-right: 55px;
 }
 
 .date a {
@@ -294,11 +302,11 @@ first-childは効かなかった*/
 
 /* ここからアクセス */
 
-#ACCESS {
+#access {
     max-width: 100%;
 }
 
-#ACCESS h2 img {
+#access h2 img {
     width: 213px;
     border-top-right-radius: 0px;
     text-align: center;
@@ -306,22 +314,22 @@ first-childは効かなかった*/
     padding-bottom: 40px;
 }
 
-#ACCESS iframe {
+#access iframe {
     display: block;
-    top: 0;
-    left: 0;
-    justify-content: center;
+    /* top: 0;　→position:absoluteやposition fixed?
+    left: 0;  　 と一緒に使うよ！注意。だから適用されてない。  
+    justify-content: center; →display:flex;と一緒に使う
+    aline: items;もflexと一緒*/
     max-width: 100%;
 }
 
 /* hooter */
-/* 横幅の調節激ムズ！なんでここだけ中央揃えじゃないの！？
-正しい横幅とは！？！？！？！？ */
+
 #footer {
     background-color: white;
     max-width: 1900px;
     margin: 0 auto;
-    padding-top: 90px;
+    padding-top: 70px;
 }
 
 .footer {
@@ -341,9 +349,9 @@ first-childは効かなかった*/
     padding-left: 40px;
     padding-bottom: 30px;
     font-size: 20px;
-    font-feature-settings: "palt";
 }
 .footer li {
+    color: black;
     line-height: 1.95;
 }
 
@@ -352,36 +360,26 @@ first-childは効かなかった*/
     padding-bottom: 80px;
 }
 
-/* ページトップボタン */
-/* 全然うまくいかないです：https://recooord.org/scroll-to-top/ */
-
 .pagetop {
     width: 125px;
-    /* .pagetop imgにwidth:125px;入れるべき？
-    　　pxで入れちゃうとレスポンシブに対応しないのでは？
-    　もう分からんです*/
-    right: 240px;
+    right: 40px;
+    bottom: 40px;
     position: fixed;
 }
 
 .pagetop a {
     transition: 0.3s;
-    /* 全然へっだーに固定されたまま・・・。
-    　なんの効果も発揮しない・・・ */
 }
 
 .pagetop img {
     width: 100%;
     transition: 0.3s;
-
-    /*デフォルトで非表示にする？？ずっと消えたままですが*/
-    opacity: 0;
-    visibility: hidden;
 }
 
-/*このクラスが付与されると表示する
-　.activeって何？？これ入れても消えたままなんですけどーーーー*/
 .active {
     opacity: 1;
+    /* opacityは不透明どのこと */
     visibility: visible;
 }
+
+/*  */

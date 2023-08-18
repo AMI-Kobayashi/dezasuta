@@ -17,11 +17,11 @@
                 <h1 class="header_logo"><img src="images/design_cafe_logo_header@2x.png" alt="DESIGN CAFE"></h1>
                 <nav class="pc_nav">
                     <ul>
-                        <li><a href="">ABOUT US</a></li>
-                        <li><a href="">MENU</a></li>
-                        <li><a href="">GALLERY</a></li>
-                        <li><a href="">EVENT</a></li>
-                        <li><a href="">ACCESS</a></li>
+                        <li><a href="#about">ABOUT US</a></li>
+                        <li><a href="#menu">MENU</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
+                        <li><a href="#event">EVENT</a></li>
+                        <li><a href="#access">ACCESS</a></li>
                     </ul>
                 </nav>
             </div>
@@ -35,67 +35,58 @@
             　毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。
         </p>
     </div>
-    <div class="pagetop">
-        <a href="#header">
-            <img src="images/to_top@2x.png">
-        </a>
-    </div>
+
+    <!-- h2をつけるときは、本の目次になる項目にかける。
+キャッチコピーは目次にならない場合もあるので要注意 -->
+
     <!-- About us -->
     <!-- sectionタグはidでやる！ -->
-    <section id="ABOUT_US" class="section">
+    <section id="about" class="section">
         <!-- sectionタグ内のcssは他のメニューにも適応できる -->
         <div class="about_us_picture">
             <img src="images/pc_about-100.jpg" alt="picture of about US">
         </div>
         <!-- imgタグはpタグで囲わない -->
         <div class="main">
-            <img src="images/about_us@2x.png" alt="about_us_logo">
-
-            <h2>私たちが提供する<br>こだわりのコーヒー</h2>
+            <h2>
+                <img src="images/about_us@2x.png" alt="about_us_logo">
+            </h2>
+            <p class="main_copy">私たちが提供する<br>こだわりのコーヒー</p>
             <p class="main_sentense2">
                 サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
             </p>
         </div>
-        <div class="pagetop">
-            <a href="#header">
-                <img src="images/to_top@2x.png">
-            </a>
-        </div>
     </section>
     <!-- ここからMENU -->
 
-    <section id="MENU" class="section">
+    <section id="menu" class="section">
         <h2>
             <img src="images/menu@2x.png" alt="Menuの見出しロゴ">
         </h2>
+        <!-- 使わないclass名は削除 -->
         <ul>
-            <li class="drink_block">
+            <li>
                 <img src="images/pc_menu_drink-100.jpg" alt="drink_sp photo">
                 <h3>Drink</h3>
-                <p class="description_drink">ドリンクメニューの概要を100文字程度で<br>紹介します。素材やこだわりなどをアピー<br>ルしていきます。</p>
+                <p>ドリンクメニューの概要を100文字程度で<br>紹介します。素材やこだわりなどをアピー<br>ルしていきます。</p>
             </li>
-            <li class="food_block">
+            <li>
                 <img src="images/pc_menu_food-100.jpg" alt=" food_photo">
                 <h3>Food</h3>
-                <p class="description_food">フードメニューの概要を100文字程度で紹<br>介します。素材やこだわりなどをアピールし<br>ていきます。
+                <p>フードメニューの概要を100文字程度で紹<br>介します。素材やこだわりなどをアピールし<br>ていきます。
                 </p>
             </li>
-            <li class="sweets_block">
+            <li>
                 <img src="images/pc_menu_sweets-100.jpg" alt="sweets_photo">
                 <h3>Sweets</h3>
-                <p class="description_sweets">スイーツメニューの概要を100文字程度で<br>紹介します。素材やこだわりなどをアピー<br>ルしていきます。
+                <p>スイーツメニューの概要を100文字程度で<br>紹介します。素材やこだわりなどをアピー<br>ルしていきます。
                 </p>
             </li>
         </ul>
-        <div class="pagetop">
-            <a href="#header">
-                <img src="images/to_top@2x.png">
-            </a>
-        </div>
     </section>
     <!-- ここからGallery -->
     <!-- max-widthをここだけ変更しないと！ -->
-    <section id="Gallery" class="section">
+    <section id="gallery" class="section">
         <h2>
             <img src="images/gallery@2x.png">
         </h2>
@@ -106,19 +97,14 @@
             <li><img src="images/pc_gallary_02-100.jpg" alt="コーヒー豆"></li>
             <li><img src="images/pc_gallary_01-100.jpg" alt="店内"></li>
         </ul>
-        <div class="pagetop">
-            <a href="#header">
-                <img src="images/to_top@2x.png">
-            </a>
-        </div>
     </section>
 
     <!-- ここからEVENT -->
-    <section id="EVENT" class="section">
+    <section id="event" class="section">
         <h2>
             <img src="images/event@2x.png">
         </h2>
-        <div class="EVENT_detail">
+        <div class="event_detail">
             <ul class="date">
                 <li><time datetime="2020-06-23">2020.06.23</time>
                     <a href="">
@@ -139,14 +125,9 @@
                 </li>
             </ul>
         </div>
-        <div class="pagetop">
-            <a href="#header">
-                <img src="images/to_top@2x.png">
-            </a>
-        </div>
     </section>
 
-    <section id="ACCESS" class="section">
+    <section id="access" class="section">
         <h2>
             <img src="images/access@2x.png">
         </h2>
@@ -168,11 +149,6 @@
             </ul>
         </div>
         <p>© 2021 DESIGN CAFE</p>
-        <div class="pagetop">
-            <a href="#header">
-                <img src="images/to_top@2x.png">
-            </a>
-        </div>
     </section>
 
     <div class="pagetop">

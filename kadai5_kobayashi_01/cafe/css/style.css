@@ -38,6 +38,7 @@ a {
 /* テキストや画像にマウスが触れた時に何かが起こるもの。
 　opacity→透明にする。０.５％透明するよって出す
 　リンクで飛ぶよっていうのを表すときにこれをよく使う */
+/* hoverは、ボタンの上にカーソルを乗せた時の演出を示すタグ */
 a:hover {
     opacity: 0.5;
 }
@@ -91,10 +92,122 @@ body {
         "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
     text-align: center;
 }
-
+#header source {
+    display: none;
+}
 .img {
     max-width: 100%;
 }
+
+/* スマホ版のcssスタート ：pcとspを出し分ける*/
+/* スマホ版メニューは消す */
+.sp_nav,
+.sp_btn {
+    display: none;
+    /* まずはpc版で非表示にしておく */
+}
+
+@media screen and (max-width: 1100px) {
+    .pc_nav {
+        display: none;
+    }
+    /* ハンバーガー */
+    .sp_btn {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        display: block;
+        height: 23px;
+        cursor: pointer;
+        z-index: 2;
+        /* z-indexはレイヤーみたいなもの１２３４の順で１が前面に来るよ */
+    }
+    /* 1本線作る */
+    .sp_btn span {
+        position: relative;
+        /* relative入ったタグが基準になる！（親要素にかける） */
+        /* relativeとtopなど組み合わせると
+        　棒線を好きなところに移動できる */
+        top: 10px;
+        display: block;
+        width: 33px;
+        height: 3px;
+        border-radius: 2px;
+        background: #fff;
+        /* 四角形の高さ低くして棒のように見せている */
+        transition: 0.3s;
+        /* これを入れると❌になるまでの過程をモーションで見ることができる
+        おしゃれ！全バッテンに追加*/
+    }
+    /* 擬似要素before・afterと「content: "";」追加
+    　　*/
+    .sp_btn span::before,
+    .sp_btn span::after {
+        position: absolute;
+        /* absolute使う時には、親要素にrelativeを入れないといけない。
+        　　relativeが入った要素を基準に移動することになる */
+        content: "";
+        display: block;
+        width: 33px;
+        height: 3px;
+        border-radius: 2px;
+        background: #fff;
+        transition: 0.3s;
+    }
+    .sp_btn span::before {
+        bottom: 10px;
+        /* 真ん中の線から下に10px */
+    }
+    .sp_btn span::after {
+        top: 10px;
+        /* 真ん中の線から上に10px */
+    }
+
+    /* ここの説明２h；３０経過くらいのところ */
+    .sp_btn.open span {
+        background: transparent;
+    }
+    .sp_btn.open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    .sp_btn.open span::after {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    /* ハンバーガーメニュー */
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        /* vhにすると全画面にできる。100%は違う、実際sp.navのスペースはちょびっとしかない */
+        background: rgba(0, 0, 0, 0.8);
+        /*  rgba(0, 0, 0, 0.8);これで透過した色になる。
+        　１が１００％なので、0.8で不透明度８０％ */
+        z-index: 1;
+    }
+    .sp_nav ul {
+        display: flex;
+        flex-direction: column;
+        /* 横並びなのか縦並びなのか指定するcss ,
+        方向を変えられる！「row」だと横並びになるよ*/
+        justify-content: center;
+        /* flexと必ずセットな！ */
+        align-items: center;
+        height: 100%;
+    }
+    .sp_nav ul li {
+        padding: 20px;
+        color: #fff;
+        font-size: 18px;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
+            "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    }
+}
+
 /* リード文のエリア */
 
 .lead_sentense {
@@ -123,10 +236,9 @@ body {
     letter-spacing: 0.1em;
 }
 
-.main_sentense1 span {
-    display: inline-block;
+.sp_main_sentense1 {
+    display: none;
 }
-
 /* ABOUS US */
 
 .section {
@@ -138,17 +250,21 @@ body {
     max-width: 1000px;
     margin: 0 auto;
 }
-.about_us_picture {
+.pc_about_us_picture {
     padding-right: 80px;
     width: 50%;
 }
-.about_us_picture img {
+.pc_about_us_picture img {
     border-bottom-right-radius: 80px;
 }
 .main {
     width: 41%;
 }
-.main h2 {
+.sp_about {
+    display: none;
+}
+
+.pc_about {
     padding-top: 60px;
     width: 270px;
     padding-bottom: 40px;
@@ -359,7 +475,7 @@ first-childは効かなかった*/
     text-align: center;
     padding-bottom: 80px;
 }
-
+/* PAGE TOP */
 .pagetop {
     width: 125px;
     right: 40px;
@@ -382,4 +498,184 @@ first-childは効かなかった*/
     visibility: visible;
 }
 
-/*  */
+/* 以下スマホ版*/
+@media screen and (max-width: 1100px) {
+    .english {
+        font-size: 17px;
+        padding: 0px 0px 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* ヘッダー */
+    .lead_sentense {
+        padding: 40px 0px 0px 0px;
+    }
+    .text-center {
+        font-size: 38px;
+        padding: 0px;
+        width: 100%;
+        letter-spacing: 0;
+    }
+    .main_sentense1 {
+        display: none;
+    }
+
+    .sp_main_sentense1 {
+        display: block;
+        font-size: 16px;
+        padding-bottom: 40px;
+        text-align: center;
+        padding-top: 20px;
+        line-height: 1.7;
+        letter-spacing: 0.1em;
+    }
+
+    /* 導入 */
+
+    /* About us */
+
+    #about {
+        display: block;
+        width: 100%;
+    }
+
+    .sp_about {
+        display: block;
+        margin: 0 auto;
+        width: 160px;
+        padding-bottom: 10px;
+    }
+    .pc_about {
+        display: none;
+    }
+    .main {
+        width: 100%;
+    }
+    .pc_about_us_picture img {
+        display: none;
+    }
+    .sp_about_us_picture img {
+        display: block;
+        width: 100%;
+    }
+    .main_copy {
+        font-size: 36px;
+        padding-top: 30px;
+        padding-left: 20px;
+    }
+    .main_sentense2 {
+        font-size: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
+        line-height: 1.75;
+    }
+
+    /* MENU */
+    #menu {
+        padding-top: 40px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
+    #menu h2 {
+        padding: 30px;
+        width: 88px;
+    }
+    #menu ul {
+        display: block;
+        width: 100%;
+    }
+    #menu ul li {
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    #menu p {
+        text-align: justify;
+    }
+    /* Gallary */
+    #gallery h2 img {
+        width: 143px;
+    }
+
+    #gallery ul {
+        display: block;
+    }
+
+    /* EVENT */
+
+    #event h2 {
+        width: 100px;
+        padding-bottom: 20px;
+    }
+    .event_detail {
+        display: block;
+    }
+    .date {
+        padding-left: 30px;
+        font-size: 16px;
+        font-weight: 100;
+        max-width: 100%;
+    }
+
+    #event ul li {
+        display: block;
+        align-items: center;
+    }
+    #event li + li {
+        padding-top: 10px;
+    }
+
+    #event .date ul li p {
+        /* https://web-camp.io/magazine/archives/90660 うまく機能しない🧐*/
+        /* https://csshtml.work/overflow-bad/#overflowhidden
+           positio: absolute、position relativeとセットでtext-overflow
+           使わないといけない・・・が、absoluteってどこに置けばいいの🤨 */
+        text-overflow: hidden;
+        position: absolute;
+    }
+    .date a {
+        text-decoration: 2px solid underline;
+    }
+    /* ACCESS */
+
+    #access h2 img {
+        width: 124px;
+        text-align: center;
+        padding: 40px 0px 20px;
+    }
+    #access iframe {
+        display: block;
+        height: 191px;
+        max-width: 100%;
+    }
+    /* footer */
+    #footer {
+        padding-top: 50px;
+    }
+    .footer {
+        display: block;
+        padding: none;
+    }
+    .footer img {
+        padding: 0px 0px 20px 20px;
+    }
+    .footer ul {
+        padding: 0px 0px 30px 20px;
+    }
+    .footer ul li {
+        line-height: 35px;
+    }
+    #footer p {
+        padding-bottom: 30px;
+        margin: 0 auto;
+    }
+
+    /* pagetop */
+    .pagetop {
+        width: 100px;
+        right: 20px;
+        bottom: 20px;
+        position: fixed;
+    }
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デザインカフェ</title>
+    <meta name="description" content="デザインカフェのサイトです！">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- jQueryをここに入れる！ -->
+</head>
+
+<body>
+    <header>
+        <script>
+            $(function () {
+                $('.sp_btn, .sp_nav li').on('click', function () {
+                    $('.sp_btn').toggleClass('open');
+                    $('.sp_nav').fadeToggle();
+                })
+            });
+        </script>
+        <section id="header">
+            <div>
+                <picture>
+                    <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width: 767px)">
+                    <img src="images/pc_first-100.jpg" alt="店内の様子">
+                </picture>
+            </div>
+            <div class="header_wrap">
+                <h1 class="header_logo"><img src="images/design_cafe_logo_header@2x.png" alt="DESIGN CAFE"></h1>
+                <nav class="pc_nav">
+                    <ul>
+                        <li><a href="#about">ABOUT US</a></li>
+                        <li><a href="#menu">MENU</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
+                        <li><a href="#event">EVENT</a></li>
+                        <li><a href="#access">ACCESS</a></li>
+                    </ul>
+                </nav>
+                <!-- 下記のコードでハンバーガーメニュー作成 -->
+
+                <!-- sp_btn=親要素、空のスパンタグ＝１本線 -->
+                <!-- タグを１本線として使うときにspanタグ有能、
+                　　　１文字変えたい時とかにこれ使う -->
+                <div class="sp_btn"><span></span></div>
+                <nav class="sp_nav">
+                    <ul>
+                        <li><a href="#about">ABOUT US</a></li>
+                        <li><a href="#menu">MENU</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
+                        <li><a href="#event">EVENT</a></li>
+                        <li><a href="#access">ACCESS</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <!-- 導入部分 -->
+    <div class="lead_sentense">
+        <p class="english">Have a happy day From a cup of coffee.</p>
+        <p class="text-center">ハッピーに溢れる1日を<br>1杯のコーヒーから。</p>
+        <p class="main_sentense1">
+            　毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。
+        </p>
+        <p class="sp_main_sentense1">
+            　毎日を丁寧に大切に過ごしたい。<br>だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間と
+            <br>こだわりのコーヒーを提供したい。
+        </p>
+    </div>
+
+    <!-- h2をつけるときは、本の目次になる項目にかける。
+キャッチコピーは目次にならない場合もあるので要注意 -->
+
+    <!-- About us -->
+    <!-- sectionタグはidでやる！ -->
+    <section id="about" class="section">
+        <h2 class="sp_about">
+            <img src="images/about_us@2x.png" alt="about_us_logo">
+        </h2>
+        <!-- sectionタグ内のcssは他のメニューにも適応できる -->
+        <div class="pc_about_us_picture">
+            <img src="images/pc_about-100.jpg" alt="picture of about US">
+        </div>
+        <div class="sp_about_us_picture">
+            <img src="images/about_us@2x-100.jpg">
+        </div>
+        <!-- imgタグはpタグで囲わない -->
+        <div class="main">
+            <h2 class="pc_about">
+                <img src="images/about_us@2x.png" alt="about_us_logo">
+            </h2>
+            <p class="main_copy">私たちが提供する<br>こだわりのコーヒー</p>
+            <p class="main_sentense2">
+                サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
+            </p>
+        </div>
+    </section>
+    <!-- ここからMENU -->
+
+    <section id="menu" class="section">
+        <h2>
+            <img src="images/menu@2x.png" alt="Menuの見出しロゴ">
+        </h2>
+        <!-- 使わないclass名は削除 -->
+        <ul>
+            <li>
+                <img src="images/pc_menu_drink-100.jpg" alt="drink_sp photo">
+                <h3>Drink</h3>
+                <p>ドリンクメニューの概要を100文字程度で<br>紹介します。素材やこだわりなどをアピー<br>ルしていきます。</p>
+            </li>
+            <li>
+                <img src="images/pc_menu_food-100.jpg" alt=" food_photo">
+                <h3>Food</h3>
+                <p>フードメニューの概要を100文字程度で紹<br>介します。素材やこだわりなどをアピールし<br>ていきます。
+                </p>
+            </li>
+            <li>
+                <img src="images/pc_menu_sweets-100.jpg" alt="sweets_photo">
+                <h3>Sweets</h3>
+                <p>スイーツメニューの概要を100文字程度で<br>紹介します。素材やこだわりなどをアピー<br>ルしていきます。
+                </p>
+            </li>
+        </ul>
+    </section>
+    <!-- ここからGallery -->
+    <!-- max-widthをここだけ変更しないと！ -->
+    <section id="gallery" class="section">
+        <h2>
+            <img src="images/gallery@2x.png">
+        </h2>
+        <ul>
+            <li><img src="images/pc_gallary_05-100.jpg" alt="カフェアート"></li>
+            <!-- <li><img src="images/pc_gallary_04-100.jpg" alt="看板"></li> -->
+            <!-- <li><img src="images/pc_gallary_03-100.jpg" alt="注文カウンター"></li> -->
+            <!-- <li><img src="images/pc_gallary_02-100.jpg" alt="コーヒー豆"></li> -->
+            <!-- <li><img src="images/pc_gallary_01-100.jpg" alt="店内"></li> -->
+        </ul>
+    </section>
+
+    <!-- ここからEVENT -->
+    <section id="event" class="section">
+        <h2>
+            <img src="images/event@2x.png">
+        </h2>
+        <div class="event_detail">
+            <ul class="date">
+                <li><time datetime="2020-06-23">2020.06.23</time>
+                    <a href="">
+                        <p>7月はイベント出店のため0/0お休みします</p>
+                    </a>
+                </li>
+                <li>
+                    <time datetime="2020-03-15"> 2020.03.15</time>
+                    <a href>
+                        <p>春の新商品新発売。話題のあのブランドとコラボ</p>
+                    </a>
+                </li>
+                <li>
+                    <time datetime="2020-02-06">2020.02.06</time>
+                    <a href="">
+                        <p>コーヒーの日で30％OFFイベントを開催［3日間限定］</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="access" class="section">
+        <h2>
+            <img src="images/access@2x.png">
+        </h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51862.54740673229!2d139.65141623021188!3d35.666924715537334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cb2eb3108d1%3A0xf11cd9b2395b6677!2z5p2x5Lqs6YO95riL6LC35Yy6!5e0!3m2!1sja!2sjp!4v1692189049443!5m2!1sja!2sjp"
+            width="1900" height="471" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section id="footer" class="section">
+        <div class="footer">
+            <img src="images/design_cafe_logo_footer@2x.png">
+            <ul>
+                <li>OPEN 18:00 / CLOSE 24:00</li>
+                <li>〒150-0022</li>
+                <li>東京都渋谷区東京南123デザインビルB1
+                </li>
+                <li>MAIL：info@designcafe.tokyo</li>
+            </ul>
+        </div>
+        <p>© 2021 DESIGN CAFE</p>
+    </section>
+
+    <div class="pagetop">
+        <a href="#header">
+            <img src="images/to_top@2x.png">
+        </a>
+
+
+    </div>
+
+</body>
+
+</html>

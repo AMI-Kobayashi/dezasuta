@@ -208,6 +208,12 @@ body {
     }
 }
 
+@media screen and (max-width: 767px) {
+    .header_logo {
+        width: 188px;
+    }
+}
+
 /* リード文のエリア */
 
 .lead_sentense {
@@ -221,6 +227,7 @@ body {
     font-size: 30px;
     /* font-weightはnormalで入れる（游明朝の場合） */
     padding-bottom: 30px;
+    max-width: 100%;
 }
 .text-center {
     font-size: 82px;
@@ -236,9 +243,25 @@ body {
     letter-spacing: 0.1em;
 }
 
-.sp_main_sentense1 {
+.sp-only {
     display: none;
+    /* pcの時は映さないよ */
 }
+@media screen and (max-width: 767px) {
+    .sp-only {
+        display: block;
+        /* sp版になったので表示するよ */
+    }
+
+    .main_sentense1 {
+        font-size: 16px;
+        padding-top: 10px;
+        padding-bottom: 50px;
+        line-height: 1.62;
+        letter-spacing: 0.1em;
+    }
+}
+
 /* ABOUS US */
 
 .section {
@@ -256,6 +279,9 @@ body {
 }
 .pc_about_us_picture img {
     border-bottom-right-radius: 80px;
+}
+.sp_about_us_picture img {
+    display: none;
 }
 .main {
     width: 41%;
@@ -289,12 +315,14 @@ body {
     /* idは＃で示す*/
     max-width: 1000px;
     margin: 0 auto;
-    padding: 60px;
+    padding-right: 20px;
 }
 
 /* sectionでh2は今後全部中央揃えなので、一気にcssかける */
 section h2 {
     text-align: center;
+    padding-top: 70px;
+    padding-bottom: 40px;
 }
 
 /* id「MENU」の中にある、ulタグだから＃ */
@@ -314,6 +342,8 @@ section h2 {
     　より細かく指定してあげる（ul li) */
     border-top-right-radius: 45px;
     margin-bottom: -10px;
+    width: 100%;
+    /* 大元のimgにwidth100%指定して、レスポンシブに対応するように設定 */
 }
 
 /* 最初の画像だけは角丸つけないので、
@@ -324,7 +354,6 @@ first-childは効かなかった*/
     margin: 0 auto;
     /* 画像のサイズ、AIデータのWとHの数値をwidthに入れているけど
     　これでいいのか・・・？font-size使ってもサイズ変わらない */
-    padding: 40px;
 }
 
 #menu h3 {
@@ -339,6 +368,7 @@ first-childは効かなかった*/
     font-weight: 200;
     line-height: 150%;
     padding-top: 15px;
+    padding-bottom: 20px;
 }
 
 /* ここからGallery */
@@ -350,7 +380,7 @@ first-childは効かなかった*/
 #gallery h2 {
     width: 245px;
     margin: 0 auto;
-    padding-top: 40px;
+    padding-top: 30px;
     padding-bottom: 30px;
 }
 #gallery ul {
@@ -500,9 +530,11 @@ first-childは効かなかった*/
 
 /* 以下スマホ版*/
 @media screen and (max-width: 1100px) {
-    .english {
-        font-size: 17px;
-        padding: 0px 0px 20px;
+    .text-center {
+        font-size: 38px;
+        padding: 0px;
+        width: 100%;
+        letter-spacing: 0;
     }
 }
 
@@ -511,25 +543,6 @@ first-childは効かなかった*/
     .lead_sentense {
         padding: 40px 0px 0px 0px;
     }
-    .text-center {
-        font-size: 38px;
-        padding: 0px;
-        width: 100%;
-        letter-spacing: 0;
-    }
-    .main_sentense1 {
-        display: none;
-    }
-
-    .sp_main_sentense1 {
-        display: block;
-        font-size: 16px;
-        padding-bottom: 40px;
-        text-align: center;
-        padding-top: 20px;
-        line-height: 1.7;
-        letter-spacing: 0.1em;
-    }
 
     /* 導入 */
 
@@ -537,7 +550,8 @@ first-childは効かなかった*/
 
     #about {
         display: block;
-        width: 100%;
+        /* display:block;とwidth:100%;は同じ意味なので
+　一緒に使わない！ */
     }
 
     .sp_about {
@@ -557,7 +571,6 @@ first-childは効かなかった*/
     }
     .sp_about_us_picture img {
         display: block;
-        width: 100%;
     }
     .main_copy {
         font-size: 36px;
@@ -575,7 +588,8 @@ first-childは効かなかった*/
     #menu {
         padding-top: 40px;
         padding-bottom: 20px;
-        padding-left: 20px;
+        padding-left: 35px;
+        padding-right: 35px;
     }
     #menu h2 {
         padding: 30px;
@@ -583,11 +597,11 @@ first-childは効かなかった*/
     }
     #menu ul {
         display: block;
-        width: 100%;
     }
     #menu ul li {
         width: 100%;
-        padding-left: 20px;
+        /* pcの時にwidth:30%;だったので、
+        ここでは100%で指定してあげる */
     }
 
     #menu p {
@@ -613,6 +627,7 @@ first-childは効かなかった*/
     }
     .date {
         padding-left: 30px;
+        padding-right: 30px;
         font-size: 16px;
         font-weight: 100;
         max-width: 100%;
@@ -623,19 +638,20 @@ first-childは効かなかった*/
         align-items: center;
     }
     #event li + li {
-        padding-top: 10px;
+        padding-top: 20px;
     }
 
-    #event .date ul li p {
-        /* https://web-camp.io/magazine/archives/90660 うまく機能しない🧐*/
-        /* https://csshtml.work/overflow-bad/#overflowhidden
-           positio: absolute、position relativeとセットでtext-overflow
-           使わないといけない・・・が、absoluteってどこに置けばいいの🤨 */
-        text-overflow: hidden;
-        position: absolute;
-    }
     .date a {
+        display: block;
+        /* インライン要素、timeタグもインライン要素
+→どうしても横並びになっちゃうので、diaplay:block;かけて改行する。
+　ブロック要素にしちゃう！*/
         text-decoration: 2px solid underline;
+        /* ３点リーダーに下記必要 */
+        /* widthで横幅の指定も必要だが、今回はdisplayblockがその役割してる */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     /* ACCESS */
 
@@ -655,7 +671,7 @@ first-childは効かなかった*/
     }
     .footer {
         display: block;
-        padding: none;
+        padding: 0px;
     }
     .footer img {
         padding: 0px 0px 20px 20px;
@@ -676,6 +692,6 @@ first-childは効かなかった*/
         width: 100px;
         right: 20px;
         bottom: 20px;
-        position: fixed;
+        /* position: fixed;→親要素のcssを継承しているので不要 */
     }
 }

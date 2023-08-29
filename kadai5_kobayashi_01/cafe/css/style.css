@@ -288,6 +288,7 @@ body {
 }
 .sp_about {
     display: none;
+    padding-top: 0;
 }
 
 .pc_about {
@@ -472,38 +473,36 @@ first-childは効かなかった*/
 /* hooter */
 
 #footer {
-    background-color: white;
+    display: flex;
     max-width: 1900px;
+    background: white;
     margin: 0 auto;
+    /* marginのやつが効かない＞＜ */
     padding-top: 70px;
 }
 
-.footer {
-    display: flex;
-    max-width: 1000px;
-    background-color: #fff;
-    margin: 0 auto;
-}
-
-.footer img {
+#footer img {
     width: 213px;
     height: 50px;
     border-top-right-radius: 0px;
+    padding-left: 40px;
 }
-.footer ul {
+#footer ul {
     padding-left: 40px;
     padding-bottom: 30px;
     font-size: 20px;
 }
-.footer li {
+#footer li {
     color: black;
     line-height: 1.95;
 }
 
-#footer p {
+.footer_p p {
     color: black;
+    max-width: 1900px;
     text-align: center;
     padding-bottom: 80px;
+    background: #fff;
 }
 /* PAGE TOP */
 .pagetop {
@@ -540,6 +539,9 @@ first-childは効かなかった*/
 
 @media screen and (max-width: 767px) {
     /* ヘッダー */
+    .english {
+        font-size: 17px;
+    }
     .lead_sentense {
         padding: 40px 0px 0px 0px;
     }
@@ -571,6 +573,7 @@ first-childは効かなかった*/
     }
     .sp_about_us_picture img {
         display: block;
+        padding-top: 20px;
     }
     .main_copy {
         font-size: 36px;
@@ -654,11 +657,13 @@ first-childは効かなかった*/
         text-overflow: ellipsis;
     }
     /* ACCESS */
-
+    .section h2 {
+        padding: 0px;
+    }
     #access h2 img {
         width: 124px;
         text-align: center;
-        padding: 40px 0px 20px;
+        padding: 40px 0px 20px 0px;
     }
     #access iframe {
         display: block;
@@ -673,18 +678,18 @@ first-childは効かなかった*/
         display: block;
         padding: 0px;
     }
-    .footer img {
+    #footer img {
+        width: 227px;
         padding: 0px 0px 20px 20px;
     }
-    .footer ul {
+    #footer ul {
         padding: 0px 0px 30px 20px;
     }
-    .footer ul li {
+    #footer ul li {
         line-height: 35px;
     }
     #footer p {
         padding-bottom: 30px;
-        margin: 0 auto;
     }
 
     /* pagetop */

@@ -9,6 +9,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <!-- lightbox css -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css">
     <!-- ※重要※slickはstyle.cssの上に入れる！ 
         どこかから持ってきたcssは、先に読み込み最後にstyle,cssが来るようにする！-->
     <link rel="stylesheet" href="css/style.css">
@@ -17,7 +20,12 @@
     <!-- ※重要jquery.min.jsの下にslick入れる
         jqueryの本体がないとslickのプラグインが動かなくなってしまう-->
     <!-- jQueryはheadタグ内、style.cssの後 -->
+    <!-- lightbox js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </head>
+<!-- jquery -->
+
+
 
 <body>
     <header>
@@ -163,17 +171,44 @@
     </section>
     <!-- ここからGallery -->
     <!-- max-widthをここだけ変更しないと！ -->
+    <script>
+        $(function () {
+            $('.slider_container').slick({
+                slidesToShow: 5,
+
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+        });
+// slickは、該当するhtmlより先に書く・・・で正解？🤨
+    </script>
     <section id="gallery" class="section">
         <h2>
             <img src="images/gallery@2x.png" alt="garalley">
         </h2>
-        <ul>
-            <li><img src="images/pc_gallary_05-100.jpg" alt="カフェアート"></li>
-            <!-- <li><img src="images/pc_gallary_04-100.jpg" alt="看板"></li> -->
-            <!-- <li><img src="images/pc_gallary_03-100.jpg" alt="注文カウンター"></li> -->
-            <!-- <li><img src="images/pc_gallary_02-100.jpg" alt="コーヒー豆"></li> -->
-            <!-- <li><img src="images/pc_gallary_01-100.jpg" alt="店内"></li> -->
-        </ul>
+        <div class="slider_container">
+            <a href="images/pc_gallary_05-100.jpg" data-lightbox="img-group" data-title="画像01" data-alt="">
+                <div><img src="images/pc_gallary_05-100.jpg" alt="カフェアート"></div>
+            </a>
+            <a href="images/pc_gallary_04-100.jpg" data-lightbox="img-group" data-title="画像01" data-alt="">
+                <div><img src="images/pc_gallary_04-100.jpg" alt="看板"></div>
+            </a>
+            <a href="images/pc_gallary_03-100.jpg" data-lightbox="img-group" data-title="画像01" data-alt="">
+                <div><img src="images/pc_gallary_03-100.jpg" alt="注文カウンター"></div>
+            </a>
+            <a href="images/pc_gallary_02-100.jpg" data-lightbox="img-group" data-title="画像01" data-alt="">
+                <div><img src="images/pc_gallary_02-100.jpg" alt="コーヒー豆"></div>
+            </a>
+            <a href="images/pc_gallary_01-100.jpg" data-lightbox="img-group" data-title="画像01" data-alt="">
+                <div><img src="images/pc_gallary_01-100.jpg" alt="店内"></div>
+            </a>
+            <a href="images/pc_gallary_01-100.jpg" data-lightbox="img-group" data-title="画像01" data-alt="">
+                <div><img src="images/pc_gallary_01-100.jpg" alt="店内"></div>
+            </a>
+        </div>
+        <!-- ここでslick使うならulタグは避けるべきと書いてあったので
+　divにしてやってみました。https://yu-z.com/howto_slick/#ltulgtltligt -->
     </section>
 
     <!-- ここからEVENT -->
@@ -213,21 +248,29 @@
     </section>
 
 
-    <div id="footer" class="section">
+    <div id="footer">
+        <!-- sectionはとっちゃう。これあるから端っこが白にならなかった🧐
+        　初っ端に.sectionでmax-widthかけてた -->
+        <div class="footer">
+            <!-- このdivclassが必要だった.フッターの見出しとコンテンツをくくるためのdiv!-->
+            <img src="images/design_cafe_logo_footer@2x.png" alt="footer">
 
-        <img src="images/design_cafe_logo_footer@2x.png" alt="footer">
+            <ul>
+                <li>OPEN 18:00 / CLOSE 24:00</li>
+                <li>〒150-0022</li>
+                <li>東京都渋谷区東京南123デザインビルB1
+                </li>
+                <li>MAIL：info@designcafe.tokyo</li>
+            </ul>
+        </div>
 
-        <ul>
-            <li>OPEN 18:00 / CLOSE 24:00</li>
-            <li>〒150-0022</li>
-            <li>東京都渋谷区東京南123デザインビルB1
-            </li>
-            <li>MAIL：info@designcafe.tokyo</li>
-        </ul>
-    </div>
-    <div class="footer_p">
+
+        <!-- <div class="footer_p"> これはいらない・・・＃footerのpだけでOK
+            なぜならdiv idで、footerをまとめる大きな括りができているから-->
         <p>© 2021 DESIGN CAFE</p>
+
     </div>
+
     <div class="pagetop">
         <a href="#header">
             <img src="images/to_top@2x.png" alt="pagetopにつながるボタン">

@@ -35,10 +35,6 @@ a {
     /*  */
 }
 
-/* テキストや画像にマウスが触れた時に何かが起こるもの。
-　opacity→透明にする。０.５％透明するよって出す
-　リンクで飛ぶよっていうのを表すときにこれをよく使う */
-/* hoverは、ボタンの上にカーソルを乗せた時の演出を示すタグ */
 a:hover {
     opacity: 0.5;
 }
@@ -384,14 +380,15 @@ first-childは効かなかった*/
     padding-top: 80px;
     padding-bottom: 30px;
 }
-#gallery ul {
+.slider_container {
     display: flex;
 }
-
 #gallery img {
     border-top-right-radius: 0px;
 }
-
+.gallery_slider_none {
+    display: none;
+}
 /* ここからevent */
 
 #event {
@@ -472,32 +469,33 @@ first-childは効かなかった*/
 /* hooter */
 
 #footer {
-    display: flex;
-    max-width: 1900px;
     background: white;
-    justify-content: center;
-    /* marginのやつが効かない＞＜ */
+}
+.footer {
+    display: flex;
+    max-width: 1000;
+    /* justify-content: center; 今回は要素を左寄せにしたいので、センターじゃなくてOK。左なんだ・・(*_*) */
+    margin: 0 auto;
     padding-top: 70px;
-    padding-right: 370px;
 }
 
-#footer img {
+.footer img {
     width: 213px;
     height: 50px;
     border-top-right-radius: 0px;
     padding-left: 40px;
 }
-#footer ul {
+.footer ul {
     padding-left: 60px;
     padding-bottom: 30px;
     font-size: 20px;
 }
-#footer li {
+.footer li {
     color: black;
     line-height: 1.95;
 }
 
-.footer_p p {
+#footer p {
     color: black;
     max-width: 1900px;
     text-align: center;
@@ -616,7 +614,7 @@ first-childは効かなかった*/
         width: 143px;
     }
 
-    #gallery ul {
+    #gallery .slider_container {
         display: block;
     }
 
@@ -717,4 +715,8 @@ first-childは効かなかった*/
 .slick-dotted.slick-slider {
     /* 謎に、写真の下にあったマージンを消す */
     margin-bottom: 0;
+}
+
+.lb-data .lb-number {
+    display: none !important;
 }

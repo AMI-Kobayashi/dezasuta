@@ -29,26 +29,7 @@
 
 <body>
     <header>
-        <script>
-            $(function () {
-                $('.sp_btn, .sp_nav li').on('click', function () {
-                    $('.sp_btn').toggleClass('open');
-                    $('.sp_nav').fadeToggle();
-                })
-                // $('.header_slider').slick();   
-                // これで、画面で写真をカーソルでスライドできるようになる！
-                $('.header_slider').slick({
-                    autoplay: true,
-                    // スライドを自動でしてくれる（autoplay：trueで自動再生）
-                    autoplayspeed: 2000,
-                    // ２秒おき
-                    dots: true,
-                    // 写真の下にドットが出てくる（trueにすることで表示できる）
-                    arrows: false,
-                    // 写真横のスクロールを消す
-                });
-            });
-        </script>
+
         <section id="header">
 
             <div class="header_slider">
@@ -171,18 +152,7 @@
     </section>
     <!-- ここからGallery -->
     <!-- max-widthをここだけ変更しないと！ -->
-    <script>
-        $(function () {
-            $('.slider_container').slick({
-                slidesToShow: 5,
 
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-            });
-        });
-// slickは、該当するhtmlより先に書く・・・で正解？🤨
-    </script>
     <section id="gallery" class="section">
         <h2>
             <img src="images/gallery@2x.png" alt="garalley">
@@ -206,7 +176,13 @@
             <a href="images/pc_gallary_01-100.jpg" data-lightbox="img-group" data-title="画像01" data-alt="">
                 <div><img src="images/pc_gallary_01-100.jpg" alt="店内"></div>
             </a>
+
         </div>
+        <div class="arrows">
+            <div class="arrow-left"></div>
+            <div class="arrow-right"></div>
+        </div>
+        <!-- 矢印はdivで仮想空間的なやつ作って実装する。cssで作る -->
         <!-- ここでslick使うならulタグは避けるべきと書いてあったので
 　divにしてやってみました。https://yu-z.com/howto_slick/#ltulgtltligt -->
     </section>
@@ -223,13 +199,15 @@
                 </li>
                 <li>
                     <time datetime="2020-03-15"> 2020.03.15</time>
-                    <a href>
+                    <a href="">
                         春の新商品新発売。話題のあのブランドとコラボ
                     </a>
                 </li>
                 <li>
                     <time datetime="2020-02-06">2020.02.06</time>
-                    <a href>
+                    <a href="">
+                        <!-- hrefはhref=""にしておいてください。
+タグの中に書くものを属性というのですが、空の場合であっても=""は入れておいた方が警告が出ないです。 -->
                         コーヒーの日で30％OFFイベントを開催［3日間限定］
                     </a>
                 </li>
@@ -278,6 +256,43 @@
 
 
     </div>
+    <script>
+        $(function () {
+            $('.sp_btn, .sp_nav li').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+            // $('.header_slider').slick();   
+            // これで、画面で写真をカーソルでスライドできるようになる！
+            $('.header_slider').slick({
+                autoplay: true,
+                // スライドを自動でしてくれる（autoplay：trueで自動再生）
+                autoplayspeed: 2000,
+                // ２秒おき
+                dots: true,
+                // 写真の下にドットが出てくる（trueにすることで表示できる）
+                arrows: false,
+                // 写真横のスクロールを消す
+            });
+            $('.slider_container').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: true,
+                // https://tr.you84815.space/slick/examples.html#responsive-display
+                responsive: [
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 5,
+                        }
+                    }]
+            });
+        })
+// slickは、bodyタグを閉じる直前にまとめて書く！
+    </script>
 
 </body>
 

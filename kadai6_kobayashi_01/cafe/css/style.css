@@ -389,6 +389,34 @@ first-childは効かなかった*/
 .gallery_slider_none {
     display: none;
 }
+
+.arrows {
+    position: relative;
+}
+.arrow-left {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 166%;
+    left: 23%;
+    width: 18px;
+    height: 18px;
+    border-left: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    transform: rotate(45deg);
+}
+.arrow-right {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 166%;
+    right: 23%;
+    width: 18px;
+    height: 18px;
+    border-top: 4px solid #fff;
+    border-right: 4px solid #fff;
+    transform: rotate(45deg);
+}
 /* ここからevent */
 
 #event {

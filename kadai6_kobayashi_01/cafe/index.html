@@ -178,11 +178,8 @@
             </a>
 
         </div>
-        <div class="arrows">
-            <div class="arrow-left"></div>
-            <div class="arrow-right"></div>
-        </div>
-        <!-- 矢印はdivで仮想空間的なやつ作って実装する。cssで作る -->
+        <!-- 矢印はHPの検証ツールですでに存在している矢印のhtmlを利用し
+        　　　　cssで矢印の形や位置を上書きする -->
         <!-- ここでslick使うならulタグは避けるべきと書いてあったので
 　divにしてやってみました。https://yu-z.com/howto_slick/#ltulgtltligt -->
     </section>
@@ -286,7 +283,8 @@
                         breakpoint: 767,
                         settings: {
                             slidesToShow: 1,
-                            slidesToScroll: 5,
+                            // slidesToScroll: 1,
+                            //  上に1回書いてあるからOK
                         }
                     }]
             });

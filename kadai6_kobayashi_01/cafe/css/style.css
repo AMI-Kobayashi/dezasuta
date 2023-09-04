@@ -385,38 +385,67 @@ first-childは効かなかった*/
 }
 #gallery img {
     border-top-right-radius: 0px;
+    width: 100%;
 }
 .gallery_slider_none {
     display: none;
 }
 
-.arrows {
-    position: relative;
+/* ここから矢印を実装 */
+/* 矢印はHPの検証ツールですでに存在している矢印のhtmlを探して
+　利用し、cssで矢印の形や位置を上書きする  */
+.slick-prev:before,
+.slick-next:before {
+    display: none;
 }
-.arrow-left {
+/* 上記のhtmlがデフォルトで存在している矢印（右に写真からはみ出してるやつ）
+　　これは見えないようにしちゃう */
+
+/* 下記２つは矢印が存在している偽装空間（div要素）、これはスリック使った時点で自動的に存在しているので
+　検証ツールから引っ張ってくる */
+.slick-prev {
     display: block;
     position: absolute;
     content: "";
-    top: 166%;
-    left: 23%;
+    top: 50%;
+    left: 21%;
     width: 18px;
     height: 18px;
     border-left: 4px solid #fff;
     border-bottom: 4px solid #fff;
-    transform: rotate(45deg);
+    transform: rotate(45deg) translate(0, -50%);
+    z-index: 1;
 }
-.arrow-right {
+/* 下記で上下中央に寄せるができる
+top: 50%; とtransform: rotate(45deg) translate(0, -50%);*/
+/* 効果的な検索方法がもうわからんので、勉強しよ🤨 */
+
+.slick-next {
     display: block;
     position: absolute;
     content: "";
-    top: 166%;
-    right: 23%;
+    top: 50%;
+    right: 22%;
     width: 18px;
     height: 18px;
     border-top: 4px solid #fff;
     border-right: 4px solid #fff;
-    transform: rotate(45deg);
+    transform: rotate(45deg) translate(0, -50%);
 }
+
+@media screen and (max-width: 767px) {
+    .slick-prev {
+        left: 7%;
+        border-left: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+    }
+    .slick-next {
+        right: 7%;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+    }
+}
+
 /* ここからevent */
 
 #event {
@@ -501,7 +530,7 @@ first-childは効かなかった*/
 }
 .footer {
     display: flex;
-    max-width: 1000;
+    max-width: 1000px;
     /* justify-content: center; 今回は要素を左寄せにしたいので、センターじゃなくてOK。左なんだ・・(*_*) */
     margin: 0 auto;
     padding-top: 70px;

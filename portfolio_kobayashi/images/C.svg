@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.5 13.75">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #666;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+
+      .cls-2 {
+        fill: #666;
+        font-family: MatisseProN-M-83pv-RKSJ-H, 'FOT-Matisse ProN';
+        font-size: 12px;
+        letter-spacing: .05em;
+      }
+    </style>
+  </defs>
+  <g id="_フッター" data-name="フッター">
+    <g>
+      <text class="cls-2" transform="translate(2.76 10.56)"><tspan x="0" y="0">c</tspan></text>
+      <circle class="cls-1" cx="6.25" cy="7.5" r="6"/>
+    </g>
+  </g>
+</svg>

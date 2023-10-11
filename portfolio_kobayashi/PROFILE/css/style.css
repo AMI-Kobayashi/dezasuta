@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #666666;
+    font-family: "筑紫A丸ゴシック", "FOT-マティス ProN M",
+        "Savoye LET Plain:1.0", "メイリオ", "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans", sans-serif;
+    font-feature-settings: "palt";
+    /* 上のやつは字幅メトリクスで指定 */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+    /*  */
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+/* ここから課題 */
+
+/* スマホ版のcssスタート ：pcとspを出し分ける*/
+/* スマホ版メニューは消す */
+.sp_nav,
+.sp_btn {
+    display: none;
+    /* まずはpc版で非表示にしておく */
+}
+
+/* HEADER */
+
+body {
+    background-color: white;
+}
+
+.wrap {
+    display: flex;
+    position: absolute;
+    background-color: white;
+    opacity: 70%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5% 3px 3%;
+}
+h1 {
+    max-width: 20%;
+    width: 150px;
+    padding-left: 10%;
+}
+.nav_PC ul {
+    display: flex;
+    max-width: 100%;
+    padding-top: 15px;
+    align-items: center;
+}
+.nav_PC ul li {
+    font-family: "FOT-マティス ProN M", sans-serif;
+    /* フォントが変わらない💦 */
+    font-size: 17px;
+    color: #666666;
+    padding-left: 52px;
+}
+
+.nav_PC :last-child {
+    padding-bottom: 5px;
+}
+
+@media screen and (max-width: 767px) {
+    .nav_PC {
+        max-width: 30%;
+    }
+    h1 {
+        width: 50%;
+    }
+}

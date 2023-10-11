@@ -78,7 +78,7 @@ body {
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 5% 3px 3%;
+    padding: 0px 5% 3px 3%;
 }
 h1 {
     max-width: 20%;
@@ -110,4 +110,44 @@ h1 {
     h1 {
         width: 50%;
     }
+}
+
+/* メインビジュアル */
+
+.profile_main img {
+    width: 100%;
+    height: 750px;
+}
+
+.profile_mark {
+    text-align: start;
+    margin-top: -770px;
+    width: 100%;
+    padding-left: 106px;
+}
+.profile_mark img {
+    width: 397px;
+    /* Ami Kobayahshiのマークについて
+    これはちゃんとレスポンシブになっているのかしら💦 */
+}
+
+.main_copy {
+    position: absolute;
+    right: 0;
+    margin-top: -220px;
+    padding-right: 100px;
+    /* padding-top: 230px; */
+
+    /* メインコピーをレスポンシブにするのに、これは位置が固定されてしまう！！
+     そうしたらいい感じに動くようになるのでしょうか・・・ */
+}
+.copy {
+    font-size: 25px;
+    color: #818181;
+    letter-spacing: 3px;
+    line-height: 2;
+}
+.scroll {
+    width: 2px;
+    margin: -355px auto;
 }

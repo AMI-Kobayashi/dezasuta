@@ -78,7 +78,7 @@ body {
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 5% 3px 3%;
+    padding: 0px 5% 3px 3%;
 }
 h1 {
     max-width: 20%;
@@ -116,16 +116,17 @@ h1 {
 
 .main_visual_PC img {
     width: 100%;
+    height: 768px;
 }
 
 .mark {
     text-align: center;
-    margin-top: -650px;
+    margin-top: -770px;
     width: 100%;
 }
 .mark img {
     text-align: center;
-    width: 500px;
+    width: 480px;
     /* Ami Kobayahshiのマークについて
     これはちゃんとレスポンシブになっているのかしら💦 */
 }
@@ -150,9 +151,11 @@ h1 {
     font-feature-settings: initial;
 }
 .scroll {
-    width: 3px;
-    margin: 0 auto;
-    padding-top: 85px;
+    width: 2px;
+    margin: -382px auto;
+}
+
+.scroll img {
 }
 /* @media screen and (max-width: 767px) { */
 /* .main_visual_PC img { */

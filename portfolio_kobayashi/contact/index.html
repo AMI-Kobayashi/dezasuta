@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT / Minori design</title>
+    <meta name="description" content="お問い合わせはこちらから">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="test.js"></script>
+</head>
+
+<body>
+    <header>
+        <section id="HEADER">
+
+            <div class="wrap">
+                <h1>
+                    <a href="/">
+                        <img src="images/LOGO.svg" alt="Minori design">
+                    </a>
+                </h1>
+                <nav class="nav_PC">
+                    <ul>
+                        <li><a href="/">HOME</a></li>
+                        <!-- TOPpageに飛ぶ -->
+                        <li><a href="/">PROFILE</a></li>
+                        <li><a href="#SKILLS">SKILLS</a></li>
+                        <!-- ここはどうなるのだ？TOPのSKILLSに飛びたいよ〜 -->
+                        <li><a href="/">WORKS</a></li>
+                        <!-- WORKSのページにとぶ -->
+                        <li><a href="/">CONTACT</a></li>
+                        <li><a href="/"><img src="images/Instagram_logo.png" alt="Instagramのロゴ"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <!-- ここからメインビジュアル -->
+    <div class="contact_main">
+
+        <img src="images/TOP.png" alt="水彩タッチの青空が広がります。">
+        <!-- <img src="images/sp_mainvisual_sky.png" media="(max-width: 767px)"> -->
+
+        <p class="contact_mark">
+            <img src="images/Firstview_contact_pc.svg" alt="お問い合わせはこちらから。">
+            <!-- <picture class="sp_mark"> <img src="images/firstview_sp_mark.png" media="(max-width: 767px)"></picture> -->
+        </p>
+
+        <p class="scroll">
+            <img src="images/scroll_ashirai.svg" alt="scrollしてください">
+        </p>
+        <div class="main_copy">
+            <p class="copy">
+                お問い合わせはこちらから。<br>
+                お気軽にご連絡ください。
+            </p>
+        </div>
+    </div>
+
+    <!-- ここから問い合わせフォーム -->
+    <section id="form">
+        <div class="bird">
+            <img src="images/contactpage_bird.png" alt="幸せの青いとりさん">
+        </div>
+
+        <p class="introduction">この度は当サイトをご覧くださりありがとうございます。<br>
+            制作のご依頼、ご相談、ご質問等はこちらからお願いいたします。</p>
+
+        <!-- <div class="form"> -->
+        <!-- <ul class="labels"> -->
+        <!-- <li class="NAME">お名前</li> -->
+        <!-- <li class="HIRAGANA">おなまえ</li> -->
+        <!-- <li class="MAIL">メールアドレス</li> -->
+        <!-- <li class="TITLE">ご用件</li> -->
+        <!-- <li class="MESSAGE">お問い合わせ内容</li> -->
+        <!-- </ul> -->
+        <div class="form">
+
+            <form action="input_form" method="post">
+                <ul>
+                    <li>
+                        <label for="name">お名前</label>
+                        <input type="text" id="name" name="name">
+                    </li>
+                    <li>
+                        <label for="yomigana">おなまえ</label>
+                        <input type="text" id="yomigana" name="yomigana">
+                    </li>
+                    <li>
+                        <label for="email">メールアドレス</label>
+                        <input type="email" id="email" name="email">
+                    </li>
+                    <li>
+                        <label foe="title">ご用件</label>
+                        <input type="text" id="title" name="title">
+                    </li>
+                    <li>
+                        <label for="message">お問い合わせ内容</label>
+                        <textarea id="message" name="message"></textarea>
+                    </li>
+                </ul>
+                <button type="submit">
+                    SEND
+                </button>
+            </form>
+        </div>
+
+
+        <div class="blueberry">
+            <img src="images/Contact_blueberry.png" alt="ブルベリちゃん">
+        </div>
+
+
+    </section>
+    <footer>
+
+        <div class="footer_sky">
+            <img src="images/PC_footer.png" alt="足元に広がる空">
+        </div>
+        <nav class="nav_footer_PC">
+            <ul>
+                <li><a href="#header">HOME</a></li>
+                <li><a href="#PROFILE">PROFILE</a></li>
+                <li><a href="#SKILLS">SKILLS</a></li>
+                <li><a href="#WORKS">WORKS</a></li>
+                <li><a href="CONTACT">CONTACT</a></li>
+            </ul>
+        </nav>
+        <p class="Minori">©︎ Minori design</p>
+
+    </footer>
+</body>
+
+</html>

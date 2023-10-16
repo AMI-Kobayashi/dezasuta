@@ -98,6 +98,7 @@ h1 {
     font-style: normal;
     color: #666666;
     padding-left: 52px;
+    letter-spacing: 1.5px;
 }
 
 .nav_PC :last-child {
@@ -155,8 +156,9 @@ h1 {
 }
 
 .CATEGORY_TITLE {
+    width: 30vw;
     padding-top: 150px;
-    padding-bottom: 200px;
+    margin: 0 auto -150px;
 }
 
 .bird {
@@ -176,6 +178,33 @@ h1 {
 .dotted {
     text-align: center;
 }
+@media screen and (max-width: 1100px) {
+    .CATEGORY_TITLE {
+        width: 30vw;
+        padding-top: 150px;
+        margin: 0 auto -150px;
+    }
+    .bird {
+        width: 25px;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    #CATEGORY h2 {
+        text-align: center;
+        font-size: 18px;
+        font-family: "fot-matisse-pron", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: 2px;
+        padding-bottom: 15px;
+        opacity: 90%;
+    }
+    .dotted {
+        width: 20px;
+        text-align: center;
+    }
+}
+
 /*==================================================
 スライダーのためのcss
 ===================================*/
@@ -197,9 +226,10 @@ h1 {
 }
 
 .slider img {
-    width: 19vw; /*スライダー内の画像を60vwにしてレスポンシブ化*/
+    width: 18vw; /*スライダー内の画像を60vwにしてレスポンシブ化*/
     height: auto;
     margin: 0 auto;
+    padding: 20px;
 }
 .other {
     /* padding-top: 100px; */
@@ -312,7 +342,23 @@ h1 {
 .responsive {
     padding-top: 10px;
 }
-
+@media screen and (max-width: 1100px) {
+    #WORKS01 {
+        position: relative;
+        padding-top: 600px;
+        width: 94%;
+        margin: 0 auto;
+    }
+    .WS04 {
+        display: none;
+    }
+    .WS05 {
+        display: none;
+    }
+    .WS06 {
+        display: none;
+    }
+}
 /* ページネーション */
 .nav-links {
     padding: 2em;
@@ -344,6 +390,39 @@ a:hover {
     padding-top: 10px;
     letter-spacing: -3px;
 }
+@media screen and (max-width: 1100px) {
+    /* 作業中 */
+    .nav-links {
+        padding: 2em;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 100px;
+    }
+    .nav-links a,
+    span {
+        width: 50px;
+        height: 50px;
+        margin: 2px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 30px;
+        border: 1px solid #808095;
+        border-radius: 100%;
+        color: #808095;
+        transition: 0.3s;
+    }
+    a:hover {
+        background: white;
+        border-radius: 100%;
+    }
+
+    .dots {
+        background: none;
+        border: none;
+        padding-top: 10px;
+        letter-spacing: -3px;
+    }
+}
 /* フッター */
 .footer_sky {
     /* padding-top: 100px;→フッターで指定しない。上の要素で指定すること */
@@ -360,7 +439,7 @@ a:hover {
 .nav_footer_PC ul {
     display: flex;
     justify-content: center;
-    margin-top: -200px;
+    margin: -200px auto 0;
     padding-left: 20px;
     max-width: 1000px;
 }
@@ -369,6 +448,10 @@ a:hover {
     font-family: "fot-matisse-pron", sans-serif;
     font-weight: 500;
     font-style: normal;
+    letter-spacing: 1.5px;
+}
+.nav_footer_PC ul li :first-child {
+    padding-left: 0;
 }
 .Minori {
     font-family: "fot-matisse-pron", sans-serif;

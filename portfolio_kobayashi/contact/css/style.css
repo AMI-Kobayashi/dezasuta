@@ -98,6 +98,7 @@ h1 {
     font-style: normal;
     color: #666666;
     padding-left: 52px;
+    letter-spacing: 1.5px;
 }
 
 .nav_PC :last-child {
@@ -238,6 +239,7 @@ h1 {
     font-family: "fot-matisse-pron", sans-serif;
     font-weight: 500;
     font-style: normal;
+    letter-spacing: 1.5px;
 }
 .Minori {
     font-family: "fot-matisse-pron", sans-serif;

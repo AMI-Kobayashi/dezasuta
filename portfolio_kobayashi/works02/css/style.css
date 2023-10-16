@@ -1,0 +1,280 @@
+@charset "utf-8";
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #666666;
+    font-family: "筑紫A丸ゴシック", "FOT-マティス ProN M",
+        "Savoye LET Plain:1.0", "メイリオ", "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans", sans-serif;
+    font-feature-settings: "palt";
+    /* 上のやつは字幅メトリクスで指定 */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+    /*  */
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+/* ここから課題 */
+
+/* スマホ版のcssスタート ：pcとspを出し分ける*/
+/* スマホ版メニューは消す */
+.sp_nav,
+.sp_btn {
+    display: none;
+    /* まずはpc版で非表示にしておく */
+}
+
+/* HEADER */
+
+body {
+    background-color: white;
+}
+
+.wrap {
+    display: flex;
+    position: absolute;
+    background-color: white;
+    opacity: 70%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5% 3px 3%;
+}
+h1 {
+    max-width: 150px;
+    width: 100%;
+    padding-left: 10%;
+}
+.nav_PC ul {
+    display: flex;
+    max-width: 100%;
+    padding-top: 15px;
+    align-items: center;
+}
+.nav_PC ul li {
+    font-size: 17px;
+    font-family: "fot-matisse-pron", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #666666;
+    padding-left: 52px;
+    letter-spacing: 1.5px;
+}
+
+.nav_PC :last-child {
+    padding-bottom: 5px;
+    max-width: none;
+}
+
+/* @media screen and (max-width: 767px) { */
+/* .nav_PC { */
+/* max-width: 30%; */
+/* } */
+/* h1 { */
+/* width: 50%; */
+/* } */
+/* } */
+
+/* メインビジュアル */
+
+.works01_main img {
+    width: 100%;
+    height: 750px;
+}
+
+.works01_mark {
+    text-align: start;
+    margin-top: -730px;
+    width: 50%;
+    padding-left: 106px;
+}
+.works01_mark img {
+    width: 397px;
+    /* Ami Kobayahshiのマークについて
+    これはちゃんとレスポンシブになっているのかしら💦 */
+}
+
+.main_copy {
+    position: absolute;
+    right: 0;
+    margin-top: -250px;
+    padding-right: 100px;
+    /* padding-top: 230px; */
+
+    /* メインコピーをレスポンシブにするのに、これは位置が固定されてしまう！！
+     そうしたらいい感じに動くようになるのでしょうか・・・ */
+}
+.copy {
+    font-size: 25px;
+    color: #818181;
+    letter-spacing: 3px;
+    line-height: 2;
+}
+.scroll {
+    width: 2px;
+    margin: -395px auto;
+}
+
+/* 制作物一覧 */
+#WORKS02 {
+    position: relative;
+    padding-top: 200px;
+    width: 94%;
+    margin: 0 auto;
+}
+
+.green01 {
+    top: 0;
+    left: 0;
+}
+
+.works {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    /* 中心によらないのはなぜだ */
+    margin-bottom: 400px;
+}
+.works img {
+    margin-left: -25px;
+}
+.works p {
+    text-align: left;
+}
+.category {
+    padding-top: 170px;
+    letter-spacing: 1px;
+}
+
+.date {
+    font-size: 14px;
+    margin-top: -10px;
+}
+.works_title {
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.tool {
+    font-size: 14px;
+    padding-top: 10px;
+}
+.responsive {
+    padding-top: 10px;
+}
+
+.top_btn_back {
+    padding: 70px;
+}
+.btn_back {
+    display: block;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 15px #efefef;
+    width: 185px;
+    height: 84px;
+    padding: 30px 20px;
+    font-size: 18pt;
+    font-family: "fot-matisse-pron", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    background: #e4ead7;
+    border-radius: 42px;
+    margin: 0px auto;
+}
+@media screen and (max-width: 1100px) {
+    #WORKS02 {
+        position: relative;
+        padding-top: 600px;
+        width: 94%;
+        margin: 0 auto;
+    }
+}
+/* フッター */
+.footer_sky {
+    /* padding-top: 100px;→フッターで指定しない。上の要素で指定すること */
+    max-width: 100%;
+    /* なんか、右の余白ができてしまう・・・ 
+    　　他のエリアではみ出している層があっただけ*/
+    width: 100%;
+    height: 246px;
+    margin: 0 auto;
+}
+.footer_sky img {
+    width: 100%;
+}
+.nav_footer_PC ul {
+    display: flex;
+    justify-content: center;
+    margin: -200px auto 0;
+    padding-left: 20px;
+    max-width: 1000px;
+}
+.nav_footer_PC ul li {
+    padding-left: 40px;
+    font-family: "fot-matisse-pron", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 1.5px;
+}
+.nav_footer_PC ul li :first-child {
+    padding-left: 0;
+}
+.Minori {
+    font-family: "fot-matisse-pron", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.top_btn {
+    position: fixed;
+    right: 40px;
+    bottom: 100px;
+    width: 100px;
+    /* right: 0; */
+    /* top: -120px; */
+}

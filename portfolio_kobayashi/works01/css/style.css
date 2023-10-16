@@ -37,7 +37,7 @@ a {
 }
 
 a:hover {
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 ul {
@@ -262,3 +262,127 @@ h1 {
 }
 
 /*ドットナビゲーションの設定*/
+
+/* 制作物一覧 */
+#WORKS01 {
+    position: relative;
+    padding-top: 200px;
+    width: 94%;
+    margin: 0 auto;
+}
+
+.back_tree {
+    margin: 100px auto;
+}
+
+.works {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -1600px;
+    margin-left: 40px;
+    /* 中心によらないのはなぜだ */
+    margin-bottom: 400px;
+}
+.works img {
+    margin-left: -25px;
+}
+.works p {
+    text-align: left;
+}
+.category {
+    padding-top: 170px;
+    letter-spacing: 1px;
+}
+
+.date {
+    font-size: 14px;
+    margin-top: -10px;
+}
+.works_title {
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.tool {
+    font-size: 14px;
+    padding-top: 10px;
+}
+.responsive {
+    padding-top: 10px;
+}
+
+/* ページネーション */
+.nav-links {
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.nav-links a,
+span {
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    border: 1px solid #808095;
+    border-radius: 100%;
+    color: #808095;
+    transition: 0.3s;
+}
+a:hover {
+    background: white;
+    border-radius: 100%;
+}
+
+.dots {
+    background: none;
+    border: none;
+    padding-top: 10px;
+    letter-spacing: -3px;
+}
+/* フッター */
+.footer_sky {
+    /* padding-top: 100px;→フッターで指定しない。上の要素で指定すること */
+    max-width: 100%;
+    /* なんか、右の余白ができてしまう・・・ 
+    　　他のエリアではみ出している層があっただけ*/
+    width: 100%;
+    height: 246px;
+    margin: 0 auto;
+}
+.footer_sky img {
+    width: 100%;
+}
+.nav_footer_PC ul {
+    display: flex;
+    justify-content: center;
+    margin-top: -200px;
+    padding-left: 20px;
+    max-width: 1000px;
+}
+.nav_footer_PC ul li {
+    padding-left: 40px;
+    font-family: "fot-matisse-pron", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.Minori {
+    font-family: "fot-matisse-pron", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.top_btn {
+    position: fixed;
+    right: 40px;
+    bottom: 100px;
+    width: 100px;
+    /* right: 0; */
+    /* top: -120px; */
+}

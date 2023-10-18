@@ -61,6 +61,20 @@ img {
     /* まずはpc版で非表示にしておく */
 }
 
+.modaal-close:after,
+.modaal-close:before {
+    background: #ccc;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+    background: #666;
+}
+.hide-area {
+    display: none;
+}
 /* HEADER */
 
 body {
@@ -159,55 +173,77 @@ h1 {
 #WORKS02 {
     position: relative;
     padding-top: 200px;
-    width: 94%;
     margin: 0 auto;
 }
 
-.green01 {
-    top: 0;
-    left: 0;
+.green01 img {
+    position: absolute;
+
+    top: 20px;
+    right: 0px;
 }
 
-.works {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-
-    /* 中心によらないのはなぜだ */
-    margin-bottom: 400px;
-}
-.works img {
-    margin-left: -25px;
-}
-.works p {
+.WS01 p {
+    /* position: absolute; */
     text-align: left;
 }
-.category {
-    padding-top: 170px;
-    letter-spacing: 1px;
+.img {
+    text-align: center;
+    padding-top: 150px;
+}
+.PC {
+    width: 460px;
+}
+
+.SP {
+    width: 130px;
+    padding-left: 30px;
+}
+
+.works p {
+    text-align: left;
+    padding-left: 183px;
 }
 
 .date {
-    font-size: 14px;
-    margin-top: -10px;
+    font-size: 25px;
 }
 .works_title {
     font-size: 30px;
     padding-top: 10px;
 }
-
 .tool {
-    font-size: 14px;
-    padding-top: 10px;
-}
-.responsive {
+    font-size: 25px;
     padding-top: 10px;
 }
 
-.top_btn_back {
-    padding: 70px;
+dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px auto;
+    text-align: center;
+    justify-content: center;
 }
+
+dt {
+    position: relative;
+    padding-top: 15px;
+    width: 50%;
+    text-align: left;
+    border-bottom: 2px dotted #666666;
+    left: 0;
+}
+/* 下のドットが重なる〜〜〜！！！どうしてぇぇやだーーー */
+dd {
+    width: 50%;
+    text-align: left;
+    line-height: 40px;
+    margin-left: -300px;
+    max-width: 345px;
+    border-bottom: 2px dotted #666666;
+    padding-top: 5px;
+}
+
 .btn_back {
     display: block;
     box-sizing: border-box;
@@ -222,16 +258,10 @@ h1 {
     text-align: center;
     background: #e4ead7;
     border-radius: 42px;
-    margin: 0px auto;
+    margin: 250px auto 0;
+    z-index: 1;
 }
-@media screen and (max-width: 1100px) {
-    #WORKS02 {
-        position: relative;
-        padding-top: 600px;
-        width: 94%;
-        margin: 0 auto;
-    }
-}
+
 /* フッター */
 .footer_sky {
     /* padding-top: 100px;→フッターで指定しない。上の要素で指定すること */

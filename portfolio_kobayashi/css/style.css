@@ -487,7 +487,9 @@ h1 {
 }
 
 .top_btn_contact {
+    position: relative;
     padding: 70px;
+    z-index: 1;
 }
 .btn_contact {
     display: block;

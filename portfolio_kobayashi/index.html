@@ -34,7 +34,11 @@
                     </ul>
                 </nav>
             </div>
-
+            <button class="btn_nav_sp">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </section>
 
     </header>
@@ -43,12 +47,14 @@
     <section id="MAIN">
         <div class="main_visual_PC">
 
-            <img src="images/TOP.png" alt="水彩タッチの青空が広がります。">
-            <!-- <img src="images/sp_mainvisual_sky.png" media="(max-width: 767px)"> -->
+            <img class="TOP_sky" src="images/TOP.png" alt="水彩タッチの青空が広がります。">
+
+            <img class="TOP_sky_sp" src="images/mainvisual_sp_sky.png" media="(max-width: 767px)">
 
             <p class="mark">
-                <img src="images/Firstview.svg" alt="Ami KobayashiのPortforio">
-                <!-- <picture class="sp_mark"> <img src="images/firstview_sp_mark.png" media="(max-width: 767px)"></picture> -->
+                <img class="pc_mark" src="images/Firstview.svg" alt="Ami KobayashiのPortforio">
+                <img class="sp_mark" src="images/firstview_sp_mark.png" media="(max-width: 767px)">
+
             </p>
 
             <p class="scroll">
@@ -63,11 +69,17 @@
         </div>
     </section>
     <!-- ここから導入 -->
-    <p class="intro">
+    <p class="intro_pc">
         「実りのある人生」という<br>花言葉を持つブルーベリー。<br>涼しい気候を好むから、<br>厳しい冬に負けず<br>花を咲かし実をつける。<br>
         自分にとって心地いいもの<br>を知っていると、<br>自分を見失いそうな時、<br>本来の自分に立ち返り<br>
         つよくなれる。<br>そんな、人生に寄り添う<br>デザインをお届けしたい。<br>
         想いが花咲き、<br>実りますように。
+    </p>
+    <p class="intro_sp">
+        「実りのある人生」という<br>花言葉を持つブルーベリー。<br>涼しい気候を好むから、<br>厳しい冬に負けず<br>花を咲かし実をつける。<br>
+        自分にとって心地いいものを知っていると、<br>自分を見失いそうな時、<br>本来の自分に立ち返り
+        つよくなれる。<br>そんな、人生に寄り添う<br>デザインをお届けしたい。<br>
+        想いが花咲き、実りますように。
     </p>
 
 
@@ -75,34 +87,48 @@
     <section id="PROFILE">
         <div class="profile_text">
             <p class="who">どんなひとだろう・・・</p>
-            <h2>PROFILE</h2>
+            <p class="who_sp">どんなひとだろう</p>
+            <h2 class="">PROFILE</h2>
+            <img class="sp_mark" src="images/sp_top_profile_title.svg" media="(max-width: 767px)">
             <p class="jam">パンは絶対にブルーベリージャム派。</p>
             <p class="design_copy">
                 鍛え上げられたお客さま視点で、<br>
                 商品やサービスの素晴らしさが伝わる<br>
                 デザインとコピーを考えます。
             </p>
+
             <p class="support">
                 結果を引き寄せるデザインづくりを<br>
                 お手伝いさせていただきます。
+            <p class="sp_profile_text">パンは絶対にブルーベリージャム派。
+                鍛え上げられたお客さま視点で、
+                商品やサービスの素晴らしさが伝わる
+                デザインとコピーを考えます。
+                結果を引き寄せるデザインづくりを
+                お手伝いさせていただきます。</p>
             </p>
-            <div class="btn01_eye">
-                <a href="./profile/index.html"><img src="images/PC_viewmore.svg" alt="ポチッと押してね">
-                </a>
-            </div>
+            <p class="btn01_eye">
+                <a class="btn" href="./profile/index.html">
+                    <img class="btn-off" src="images/top_works_btn-off.svg" alt="view more">
+                    <img class="btn-on" src="images/top_works_btn-on.svg" alt="view more"></a>
+
+            </p>
         </div>
 
         <div class="profile_photo">
-            <img src="images/TOP_Profile.png" alt="私と愛犬ツナの写真です。">
+            <img class="AMI_pc" src="images/TOP_Profile.png" alt="私と愛犬ツナの写真です。">
+            <img class="AMI_sp" src="images/sp_top_profile_AMI.png" alt="私と愛犬ツナの写真です。">
         </div>
         <div class="blueberry">
             <img class="blueberry" src="images/profile_blueberry.png" alt="ブルーベリーが実りました">
         </div>
         <div class="hude">
             <img class="hude" src="images/TOP_Profile_fude.png" alt="水がなければブルーベリーは実らない">
+            <img class="sp_hude" src="images/sp_top_profile_brush.png" media="(max-width: 767px)">
         </div>
         <div class="top_btn">
-            <a href="#HEADER"> <img src="images/TOP_btn.png" alt="TOPへ戻るボタン"></a>
+            <a href="#HEADER"> <img src="images/TOP_btn.png" alt="TOPへ戻るボタン">
+            </a>
         </div>
     </section>
 
@@ -119,6 +145,7 @@
         <div class="skills_title">
             <h2 class="title_SKILLS">
                 <img src="images/top_skills_title.svg" alt="わたしにできること。">
+                <div class="sp_hude" src="images/sp_top_skills.svg" media="(max-width: 767px)"></div>
             </h2>
         </div>
         <div class="skills_wrap">
@@ -126,6 +153,7 @@
                 <div class="design_contents">
                     <p class="design_icon">
                         <img src="images/s_design.png" alt="designでできること">
+
                     </p>
                     <p class="icon_design">
                         <img src="images/Photoshop.png" alt="Photoshop">
@@ -187,7 +215,9 @@
             <div><img src="images/top_works_travel.png" alt="a"></div>
         </div>
         <p class="btn02_eye">
-            <a href="./works01/index.html"> <img src="images/top_veiwmore_button.svg" alt="view more"></a>
+            <a class="btn" href="./works01/index.html">
+                <img class="btn-off" src="images/top_works_btn-off.svg" alt="view more">
+                <img class="btn-on" src="images/top_works_btn-on.svg" alt="view more"></a>
 
         </p>
     </section>

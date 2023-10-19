@@ -106,13 +106,46 @@ h1 {
 .nav_PC :last-child {
     padding-bottom: 5px;
 }
+.btn_nav_sp {
+    display: none;
+}
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1100px) {
     .nav_PC {
-        max-width: 30%;
+        display: none;
     }
+
+    .btn_nav_sp {
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background: #333333;
+        -webkit-transition: all 400ms;
+        transition: all 400ms;
+        right: 20px;
+        top: 10px;
+    }
+    ::before,
+    ::after {
+        box-sizing: border-box;
+        border-style: solid;
+        border-width: 0;
+    }
+    .btn_nav_sp span:nth-child(1) {
+        top: 0;
+    }
+
+    .btn_nav_sp span:nth-child(2) {
+        top: 15px;
+        width: 18px;
+    }
+    .btn_nav_sp span:nth-child(3) {
+        top: 17px;
+    }
+
     h1 {
-        width: 50%;
+        width: 25vw;
     }
 }
 
@@ -120,28 +153,34 @@ h1 {
 #MAIN {
     max-width: 100%;
 }
-.main_visual_PC img {
+.TOP_sky {
     width: 100%;
     height: 768px;
+}
+#MAIN .TOP_sky_sp {
+    display: none;
 }
 
 .mark {
     text-align: center;
-    margin-top: -770px;
+    margin-top: -670px;
+    margin-bottom: 600px;
     width: 100%;
 }
-.mark img {
-    text-align: center;
+.pc_mark {
     width: 480px;
     /* Ami Kobayahshiのマークについて
     これはちゃんとレスポンシブになっているのかしら💦 */
 }
+.sp_mark {
+    display: none;
+}
 
 .main_copy {
     position: absolute;
-    right: 240px;
+    right: 150px;
     top: 0;
-    margin-top: 220px;
+    margin-top: 200px;
 
     /* メインコピーをレスポンシブにするのに、これは位置が固定されてしまう！！
      そうしたらいい感じに動くようになるのでしょうか・・・ */
@@ -155,30 +194,12 @@ h1 {
     line-height: 2;
     font-feature-settings: initial;
 }
-@media screen and (max-width: 1100px) {
-    .main_copy {
-        display: block;
-        text-align: center;
-        justify-content: center;
-        margin-top: 800px;
-
-        /* メインコピーをレスポンシブにするのに、これは位置が固定されてしまう！！
-     そうしたらいい感じに動くようになるのでしょうか・・・ */
-    }
-    .copy {
-        writing-mode: horizontal-tb;
-        font-size: 20px;
-        color: #818181;
-        letter-spacing: 3px;
-        line-height: 1.8;
-    }
-}
 .scroll {
     width: 2px;
-    margin: -382px auto;
+    margin: -475px auto 10px;
 }
 
-.intro {
+.intro_pc {
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     color: #666666;
@@ -190,12 +211,86 @@ h1 {
     padding-top: 90px;
     padding-bottom: 100px;
 }
+.intro_sp {
+    display: none;
+}
+@media screen and (max-width: 1100px) {
+    .main_copy {
+        position: absolute;
+        left: 5%;
+        display: block;
+        text-align: center;
+        margin-top: 520px;
+
+        /* メインコピーをレスポンシブにするのに、これは位置が固定されてしまう！！
+     そうしたらいい感じに動くようになるのでしょうか・・・ */
+    }
+    .copy {
+        writing-mode: horizontal-tb;
+        font-size: 18px;
+        color: #818181;
+        letter-spacing: 2px;
+        line-height: 1.5;
+        margin-left: 70px;
+
+        width: 100%;
+    }
+    .TOP_sky {
+        display: none;
+    }
+    #MAIN .TOP_sky_sp {
+        display: block;
+
+        width: 100%;
+        height: 667px;
+    }
+    .mark {
+        text-align: center;
+    }
+    .pc_mark {
+        display: none;
+        /* Ami Kobayahshiのマークについて
+        これはちゃんとレスポンシブになっているのかしら💦 */
+    }
+    .sp_mark {
+        display: block;
+        /* text-align: center; */
+        padding-top: 200px;
+        width: 250px;
+        margin: 0 auto;
+
+        /* Ami Kobayahshiのマークについて
+        これはちゃんとレスポンシブになっているのかしら💦 */
+    }
+    .scroll {
+        width: 1px;
+        height: 30px;
+        margin: -420px auto 10px;
+    }
+
+    .intro_pc {
+        display: none;
+    }
+    .intro_sp {
+        display: block;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        color: #666666;
+        font-size: 13px;
+        letter-spacing: 1.5px;
+        line-height: 2;
+        font-feature-settings: initial;
+        margin: 300px auto 0;
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+}
 
 /* Profile */
 #PROFILE {
     position: relative;
     /* 親要素にかけて上げないといけないrelativeちゃん */
-    padding-top: 300px;
+    padding-top: 250px;
     padding-bottom: 100px;
 }
 .profile_text {
@@ -207,6 +302,9 @@ h1 {
 .who {
     font-size: 14px;
     letter-spacing: 2px;
+}
+.who_sp {
+    display: none;
 }
 
 #PROFILE h2 {
@@ -233,6 +331,9 @@ h1 {
     letter-spacing: 3px;
     line-height: 1.5;
 }
+.sp_profile_text {
+    display: none;
+}
 .btn01_eye {
     width: 143px;
     margin-top: 80px;
@@ -240,7 +341,7 @@ h1 {
     padding: 10px;
 }
 
-.profile_photo img {
+.AMI_pc {
     position: absolute;
     max-width: 1000px;
     width: 35%;
@@ -249,8 +350,10 @@ h1 {
     padding-top: 130px;
     z-index: 2;
 }
-
-.hude {
+.AMI_sp {
+    display: none;
+}
+.hude .hude {
     position: absolute;
     max-width: 1000px;
     width: 100%;
@@ -269,11 +372,76 @@ h1 {
     position: absolute;
     max-width: 340px;
     width: 35%;
-    top: -160px;
+    top: -150px;
     right: 10px;
     z-index: 1;
 }
+@media screen and (max-width: 1100px) {
+    #PROFILE {
+        margin-top: 150px;
+    }
+    .AMI_pc {
+        display: none;
+    }
+    .AMI_sp {
+        display: block;
+        position: absolute;
+        max-width: 285px;
+        width: 100%;
+        top: 100px;
+        left: 70px;
+        padding-top: 0px;
+    }
+    #PROFILE h2 {
+        display: none;
+    }
+    .profile_text {
+        padding-top: 400px;
+    }
 
+    .who {
+        display: none;
+    }
+
+    .who_sp {
+        display: block;
+        font-size: 10px;
+
+        text-align: center;
+        margin-top: -700px;
+        margin-bottom: 5px;
+    }
+
+    .blueberry img {
+        position: absolute;
+        max-width: 340px;
+        width: 50%;
+        top: -450px;
+        right: 10px;
+        z-index: 1;
+        opacity: 0.2;
+    }
+    .hude .hude {
+        display: none;
+    }
+    .sp_hude {
+        padding-left: 35px;
+        margin-top: -300px;
+    }
+    .jam,
+    .design_copy,
+    .support {
+        display: none;
+    }
+    .sp_profile_text {
+        display: block;
+        text-align: center;
+        font-size: 15px;
+        letter-spacing: 3px;
+        line-height: 1.5;
+        padding-top: 200px;
+    }
+}
 /* ここからSKILLS */
 #SKILLS {
     margin-top: -500px;
@@ -297,7 +465,7 @@ h1 {
 #SKILLS h2 {
     position: relative;
     top: 470px;
-    width: 440px;
+    width: 30%;
     text-align: center;
     font-family: "fot-matisse-pron", sans-serif;
     font-weight: 500;
@@ -318,6 +486,7 @@ h1 {
 }
 
 .design_icon img {
+    width: 60%;
     padding-top: 0;
     padding-left: 40px;
 }
@@ -339,6 +508,7 @@ h1 {
 
 .coding img {
     padding-left: 60px;
+    width: 60%;
 }
 
 .icon_coding {
@@ -350,6 +520,26 @@ h1 {
     font-size: 16px;
     letter-spacing: 1px;
     line-height: 1.8;
+}
+@media screen and (max-width: 1100px) {
+    .SKILLS {
+        display: block;
+        padding-top: 300px;
+        justify-content: center;
+    }
+    #SKILLS h2 {
+        position: relative;
+        top: 340px;
+        width: 181px;
+        text-align: center;
+        margin: 0 auto;
+        z-index: 2;
+    }
+    .title_SKILLS img {
+        display: none;
+    }
+    .design_contents {
+    }
 }
 
 /* ここからWORKS */
@@ -417,6 +607,33 @@ h1 {
     width: 170px;
 }
 
+.btn {
+    position: relative;
+    display: block;
+    height: 100%;
+}
+.btn:hover {
+    opacity: 1;
+}
+.btn .btn-on {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+.btn:hover .btn-off {
+    opacity: 0;
+    transition: 0.3s;
+}
+.btn:hover .btn-on {
+    opacity: 1;
+}
+@media screen and (max-width: 1100px) {
+    .haikei_tree01 {
+        width: 70vw;
+    }
+}
 /* ここからCONTACT */
 #WORKS {
     margin: 0 auto;
@@ -480,9 +697,9 @@ h1 {
 他の要素も全部上に上がってしまう！！ */
 .top_contact_berry {
     position: absolute;
-    top: 420px;
-    right: -60px;
-    width: 310px;
+    top: 430px;
+    left: 250px;
+    width: 80vw;
     text-align: center;
 }
 
@@ -507,16 +724,34 @@ h1 {
     border-radius: 42px;
     margin: 0px auto;
 }
-
+.btn_contact:hover {
+    display: block;
+    border: 2px solid #e4ead7;
+    box-shadow: 2px 2px 15px #efefef;
+    width: 185px;
+    height: 84px;
+    padding: 30px 20px;
+    font-size: 18pt;
+    font-family: "fot-matisse-pron", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    background: white;
+    border-radius: 42px;
+    margin: 0px auto;
+}
 /* ちょっとレスポンシブ対応できるかやってみたがごちゃごちゃに・・・意味なし。 */
 @media screen and (max-width: 767px) {
     .circle {
-        display: none;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: 3px dotted #b3b3bf;
+    }
+    .contact_text {
+        font-size: 14px;
     }
     .dotted_circle {
-        width: 332px;
-        height: 332px;
-        opacity: 70%;
+        display: none;
     }
 }
 
@@ -532,6 +767,7 @@ h1 {
 }
 .footer_sky img {
     width: 100%;
+    height: 100%;
 }
 .nav_footer_PC ul {
     display: flex;
@@ -560,4 +796,21 @@ h1 {
     width: 100px;
     /* right: 0; */
     /* top: -120px; */
+}
+@media screen and (max-width: 767px) {
+    .nav_footer_PC ul {
+        display: block;
+        justify-content: left;
+        margin-top: -200px;
+        padding-left: 20px;
+    }
+
+    .top_btn {
+        position: fixed;
+        right: 70px;
+        bottom: 100px;
+        width: 50px;
+        /* right: 0; */
+        /* top: -120px; */
+    }
 }

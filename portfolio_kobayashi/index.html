@@ -8,7 +8,6 @@
     <meta name="description" content="小林愛実のポートフォリオです。">
     <link rel="stylesheet" href="css/style.css">
     <script src="test.js"></script>
-    <script></script>
 
 </head>
 
@@ -34,11 +33,16 @@
                     </ul>
                 </nav>
             </div>
-            <button class="btn_nav_sp">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#HEADER">HOME</a></li>
+                    <li><a href="#PROFILE">PROFILE</a></li>
+                    <li><a href="#SKILLS">SKILLS</a></li>
+                    <li><a href="#WORKS">WORKS</a></li>
+                    <li><a href="#CONTACT">CONTACT</a></li>
+                </ul>
+            </nav>
         </section>
 
     </header>
@@ -53,7 +57,7 @@
 
             <p class="mark">
                 <img class="pc_mark" src="images/Firstview.svg" alt="Ami KobayashiのPortforio">
-                <img class="sp_mark" src="images/firstview_sp_mark.png" media="(max-width: 767px)">
+                <img class="sp_mark_top" src="images/firstview_sp_mark.png" media="(max-width: 767px)">
 
             </p>
 
@@ -85,11 +89,12 @@
 
     <!-- ここからプロフィール -->
     <section id="PROFILE">
+        <img class="sp_bird01" src="images/sp_top_profile_bird.png">
         <div class="profile_text">
             <p class="who">どんなひとだろう・・・</p>
             <p class="who_sp">どんなひとだろう</p>
-            <h2 class="">PROFILE</h2>
-            <img class="sp_mark" src="images/sp_top_profile_title.svg" media="(max-width: 767px)">
+            <h2>PROFILE</h2>
+            <img class="sp_profile_title" src="images/sp_top_profile_title.svg" media="(max-width: 767px)">
             <p class="jam">パンは絶対にブルーベリージャム派。</p>
             <p class="design_copy">
                 鍛え上げられたお客さま視点で、<br>
@@ -100,11 +105,11 @@
             <p class="support">
                 結果を引き寄せるデザインづくりを<br>
                 お手伝いさせていただきます。
-            <p class="sp_profile_text">パンは絶対にブルーベリージャム派。
-                鍛え上げられたお客さま視点で、
-                商品やサービスの素晴らしさが伝わる
-                デザインとコピーを考えます。
-                結果を引き寄せるデザインづくりを
+            <p class="sp_profile_text">パンは絶対にブルーベリージャム派。<br>
+                鍛え上げられたお客さま視点で、<br>
+                商品やサービスの素晴らしさが伝わる<br>
+                デザインとコピーを考えます。<br>
+                結果を引き寄せるデザインづくりを<br>
                 お手伝いさせていただきます。</p>
             </p>
             <p class="btn01_eye">
@@ -134,7 +139,8 @@
 
     <!-- ここからSKILLS -->
     <div class="bird01">
-        <img src="images/bird_SKILLS.png">
+        <img class="bird01" src="images/bird_SKILLS.png">
+        <img class="sp_bird02" src="images/sp_top_skills_bird.png">
     </div>
 
     <section id="SKILLS">
@@ -144,8 +150,8 @@
 
         <div class="skills_title">
             <h2 class="title_SKILLS">
-                <img src="images/top_skills_title.svg" alt="わたしにできること。">
-                <div class="sp_hude" src="images/sp_top_skills.svg" media="(max-width: 767px)"></div>
+                <img class="skills_title_pc" src="images/top_skills_title.svg" alt="わたしにできること。">
+                <img class="skills_title_sp" src="images/sp_top_skills.svg">
             </h2>
         </div>
         <div class="skills_wrap">
@@ -177,8 +183,8 @@
                     </p>
                     <p class="text_coding">
                         HTMLとcssでサイトを作ることができます。<br>
-                        JQueryにてモーションをつけることも可能です。<br>育てやすいサイトづくりを目指してコーディングし
-                        <br>ます。
+                        jQueryやJavascriptにてモーションをつけるこ<br>とも可能です。
+                        レスポンシブにも対応しています<br> ので、ぜひご相談ください。
                     </p>
                 </div>
             </div>
@@ -187,11 +193,12 @@
 
     <section id="WORKS">
         <div class="bird02">
-            <img src="images/bird_WORKS.png" alt="WORKSのとりさん">
+            <img class="bird02" src="images/bird_WORKS.png" alt="WORKSのとりさん">
+            <img class="sp_bird03" src="images/sp_top_works_bird.png">
         </div>
         <div class="haikei_tree01">
 
-            <img src="images/Works1_tree.png" alt="背景のTree">
+            <img class="tree" src="images/Works1_tree.png" alt="背景のTree">
             <div class="title_works">
                 <p class="works">制作実績たち</p>
 
@@ -207,12 +214,16 @@
         </div>
         <!-- 制作実績たち -->
         <div class="works_top">
-            <div><img src="images/top_works_workingspace.png" alt="a"></div>
-            <div><img src="images/top_works_hairsalon.png" alt="a"></div>
-            <div><img src="images/top_works_designcafe.png" alt="a"></div>
-            <div><img src="images/top_works_hamburger.png" alt="a"></div>
-            <div><img src="images/top_works_mobilephone.png" alt="a"></div>
-            <div><img src="images/top_works_travel.png" alt="a"></div>
+            <div class="pc_works">
+                <div><img src="images/top_works_workingspace.png" alt="a"></div>
+                <div><img src="images/top_works_hairsalon.png" alt="a"></div>
+                <div><img src="images/top_works_designcafe.png" alt="a"></div>
+            </div>
+            <div class="sp_works">
+                <div><img src="images/top_works_hamburger.png" alt="a"></div>
+                <div><img src="images/top_works_mobilephone.png" alt="a"></div>
+                <div><img src="images/top_works_travel.png" alt="a"></div>
+            </div>
         </div>
         <p class="btn02_eye">
             <a class="btn" href="./works01/index.html">
@@ -225,7 +236,8 @@
     <!-- ここからCONTACT -->
     <section id="CONTACT">
         <div class="bird03">
-            <img src="images/top_contact_bird.png" alt="CONTACTのとりさん">
+            <img class="bird03" src="images/top_contact_bird.png" alt="CONTACTのとりさん">
+            <img class="sp_bird04" src="images/sp_top_contact_bird.png">
         </div>
 
 
@@ -236,6 +248,14 @@
                 送信完了後、48時間以内にご連絡いたします。<br>
                 (万が一返信がない場合は再度ご連絡いただくか、Instagramにて<br>
                 DMいただけますと幸いです。)</p>
+            <p class="sp_contact_text">
+                この度は当サイトをご覧くださり<br>
+                ありがとうございます。<br>
+                制作のご依頼、ご相談、ご質問等は<br>
+                こちらからお願いいたします。<br>
+                送信完了後、48時間以内に<br>
+                ご連絡いたします。<br>
+            </p>
             <p class="top_btn_contact">
                 <a class="btn_contact" href="./contact/index.html">CONTACT</a>
             </p>
@@ -252,7 +272,8 @@
     <footer>
 
         <div class="footer_sky">
-            <img src="images/PC_footer.png" alt="足元に広がる空">
+            <img class="pc_footer_sky" src="images/PC_footer.png" alt="足元に広がる空">
+            <img class="sp_footer_sky" src="images/sp_footer.png" alt="足元に広がる空">
         </div>
         <nav class="nav_footer_PC">
             <ul>
@@ -266,6 +287,8 @@
         <p class="Minori">©︎ Minori design</p>
 
     </footer>
+
+
 
 </body>
 

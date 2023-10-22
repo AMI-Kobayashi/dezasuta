@@ -84,6 +84,7 @@ h1 {
     max-width: 150px;
     width: 100%;
     padding-left: 10%;
+    padding-top: 5px;
 }
 .nav_PC ul {
     display: flex;
@@ -113,45 +114,175 @@ h1 {
 /* width: 50%; */
 /* } */
 /* } */
+@media screen and (max-width: 1040px) {
+    /* ヘッダーのロゴが変わリ始める瞬間を、SP版に切り替えるタイミングにする */
+    .nav_PC {
+        display: none;
+    }
 
+    .sp_btn {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        display: block;
+        height: 23px;
+        cursor: pointer;
+        z-index: 2;
+        /* z-indexはレイヤーみたいなもの１２３４の順で１が前面に来るよ */
+    }
+    /* 1本線作る */
+    .sp_btn span {
+        position: relative;
+        /* relative入ったタグが基準になる！（親要素にかける） */
+        /* relativeとtopなど組み合わせると
+        　棒線を好きなところに移動できる */
+        top: 10px;
+        display: block;
+        width: 35px;
+        height: 2px;
+        border-radius: 2px;
+        background: #959595;
+        /* 四角形の高さ低くして棒のように見せている */
+        transition: 0.3s;
+        /* これを入れると❌になるまでの過程をモーションで見ることができる
+        おしゃれ！全バッテンに追加*/
+    }
+    /* 擬似要素before・afterと「content: "";」追加
+    　　*/
+    .sp_btn span::before,
+    .sp_btn span::after {
+        position: absolute;
+        /* absolute使う時には、親要素にrelativeを入れないといけない。
+        　　relativeが入った要素を基準に移動することになる */
+        content: "";
+        display: block;
+        width: 35px;
+        height: 2px;
+        border-radius: 2px;
+        background: #959595;
+        transition: 0.3s;
+    }
+    .sp_btn span::before {
+        bottom: 10px;
+        width: 25px;
+        /* 真ん中の線から下に10px */
+    }
+    .sp_btn span::after {
+        top: 10px;
+        width: 25px;
+        /* 真ん中の線から上に10px */
+    }
+
+    .sp_btn.open span {
+        background: transparent;
+    }
+    .sp_btn.open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    .sp_btn.open span::after {
+        top: 0;
+        transform: rotate(135deg);
+    }
+    h1 {
+        width: 20vw;
+    }
+}
 /* メインビジュアル */
 
-.profile_main img {
-    width: 100%;
+.profile_main {
     height: 750px;
 }
-
+.TOP_sky {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .profile_mark {
     text-align: start;
-    margin-top: -730px;
-    width: 50%;
+    margin-top: -530px;
+    width: 397px;
+
     padding-left: 106px;
 }
 .profile_mark img {
-    width: 397px;
+    width: 100%;
     /* Ami Kobayahshiのマークについて
     これはちゃんとレスポンシブになっているのかしら💦 */
 }
 
 .main_copy {
     position: absolute;
+    top: 600px;
     right: 0;
-    margin-top: -250px;
+    left: 0;
+    text-align: right;
     padding-right: 100px;
-    /* padding-top: 230px; */
-
     /* メインコピーをレスポンシブにするのに、これは位置が固定されてしまう！！
      そうしたらいい感じに動くようになるのでしょうか・・・ */
 }
 .copy {
     font-size: 25px;
     color: #818181;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     line-height: 2;
 }
 .scroll {
     width: 2px;
     margin: -395px auto;
+}
+
+.Top_sky_sp {
+    display: none;
+}
+@media screen and (max-width: 1040px) {
+    .profile_main {
+        height: 500px;
+        margin: 0 auto;
+    }
+
+    .TOP_sky {
+        display: none;
+    }
+    .Top_sky_sp {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .profile_mark {
+        max-width: 165px;
+        margin: -350px auto 0;
+        width: 100%;
+        padding-right: 70px;
+    }
+    .profile_mark img {
+        width: 100%;
+    }
+    .main_copy {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 370px;
+        display: block;
+        text-align: center;
+
+        /* メインコピーをレスポンシブにするのに、これは位置が固定されてしまう！！
+     そうしたらいい感じに動くようになるのでしょうか・・・ */
+    }
+    .copy {
+        writing-mode: horizontal-tb;
+        font-size: 15px;
+        letter-spacing: 2px;
+        line-height: 1.5;
+        margin-left: 70px;
+        width: 100%;
+    }
+    .scroll {
+        width: 2px;
+        height: 30px;
+        margin: 170px auto 0px;
+    }
 }
 
 /* ここからAbout me */
@@ -166,7 +297,8 @@ h1 {
 
 /* } */
 .profile {
-    width: 100%;
+    max-width: 100%;
+    padding: 30px;
 }
 
 .who {
@@ -303,6 +435,115 @@ li {
     letter-spacing: 2px;
 }
 
+@media screen and (max-width: 1040px) {
+    #Aboutme {
+        padding-top: 100px;
+    }
+    .profile {
+        padding: 50px;
+    }
+    .who {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    #Aboutme h2 {
+        font-size: 16px;
+    }
+
+    .job {
+        font-size: 12px;
+    }
+    .aboutme {
+        font-size: 14px;
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    .motto img {
+        display: block;
+        padding-top: 40px;
+        width: 70px;
+        margin: 0 auto;
+    }
+    .motto p {
+        font-size: 16px;
+        letter-spacing: 1px;
+        padding-top: 5px;
+        text-align: center;
+    }
+
+    .motto p span {
+        font-family: "fot-matisse-pron", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1.5;
+    }
+
+    .love img {
+        display: block;
+        margin: 0 auto;
+        padding-top: 40px;
+        max-width: 281px;
+        width: 70px;
+    }
+    .love p {
+        width: 100%;
+        font-size: 16px;
+        font-family: "fot-matisse-pron", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        padding-top: 5px;
+        text-align: center;
+    }
+
+    .profile_photo {
+        position: absolute;
+        top: 50px;
+        right: 0px;
+        width: 220px;
+    }
+    .hude {
+        position: absolute;
+        max-width: 300px;
+        width: 100%;
+        top: 55px;
+        left: 0px;
+
+        z-index: -1;
+    }
+    #Aboutme .blueberry {
+        top: 400px;
+        right: 0;
+    }
+    .characters {
+        display: block;
+        max-width: 235px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .characters h3 {
+        width: 235px;
+    }
+    ul {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    li {
+        font-size: 15px;
+    }
+
+    .strengths {
+        padding-bottom: 30px;
+    }
+    .character {
+        padding-bottom: 30px;
+    }
+}
 /* ここからキャリア */
 
 #carrer {
@@ -375,7 +616,76 @@ li {
     margin-left: 20px;
     transform: scale(-1, 1);
 }
+@media screen and (max-width: 1040px) {
+    #carrer {
+        position: relative;
+        padding-top: 0px;
+        padding-bottom: 100px;
+        margin: 0px auto;
+    }
 
+    .carrer_bird {
+        width: 90px;
+    }
+    .career h2 img {
+        width: 30%;
+    }
+
+    .carrer {
+        max-width: 415px;
+        margin: 0 auto;
+    }
+
+    #carrer .text {
+        font-size: 15px;
+        letter-spacing: 3px;
+        line-height: 1.75;
+        max-width: 740px;
+        width: 100%;
+        padding-left: 0px;
+        padding-top: 20px;
+    }
+    .first {
+        display: block;
+        justify-content: start;
+        align-items: center;
+        padding-top: 100px;
+    }
+    .FIRST img {
+        width: 74px;
+        padding-right: 50px;
+    }
+
+    .second {
+        display: block;
+        justify-content: start;
+        align-items: center;
+    }
+    .SECOND img {
+        width: 74px;
+        padding-right: 50px;
+    }
+    .third {
+        display: block;
+        justify-content: start;
+        align-items: center;
+    }
+    .THIRD img {
+        width: 74px;
+        padding-right: 50px;
+    }
+
+    .haikei_carrer {
+        position: relative;
+        max-width: 500px;
+        width: 40%;
+        /* top: -650px; */
+        right: 0px;
+        bottom: 300px;
+        margin-left: 20px;
+        transform: scale(-1, 1);
+    }
+}
 /* ここからVISION */
 #vision {
     background: #e6f4f8;
@@ -389,7 +699,7 @@ li {
     padding-left: 220px;
 }
 
-#vision p {
+.pc_vision {
     display: block;
     max-width: 770px;
     width: 90%;
@@ -402,14 +712,91 @@ li {
     margin: 0 auto;
 }
 
-.berry_ashirai img {
-    position: relative;
-    width: 10%;
-    top: 30px;
-    right: -1200px;
+.berry_ashirai {
+    width: 30%;
+    text-align: right;
+    padding-left: 800px;
+    padding-bottom: 100px;
+}
+.sp_vision {
+    display: none;
 }
 /* このブドウ動かない */
+@media screen and (max-width: 1040px) {
+    #vision {
+        background: #e6f4f8;
+        padding-bottom: 80px;
+    }
+    .pc_vision {
+        display: none;
+    }
+    .vision {
+        width: 30%;
+        padding-left: 30px;
+    }
 
+    .sp_vision {
+        display: block;
+        max-width: 320px;
+        font-size: 15px;
+        width: 90%;
+        font-size: 18px;
+        letter-spacing: 2.5px;
+        line-height: 2;
+        justify-content: center;
+        text-align: center;
+        padding-top: 70px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .berry_ashirai {
+        position: relative;
+        width: 30%;
+        left: -520px;
+        top: -50px;
+    }
+    .readmore {
+        position: relative;
+        margin: 50px auto 0;
+        padding: 0 0 75px;
+    }
+
+    .readmore label {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        margin: 0 auto;
+        width: 270px;
+        padding: 10px 0;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .readmore label img {
+        width: 105px;
+    }
+    .readmore label::before {
+        content: "続きを見る";
+    }
+
+    .readmore input[type="checkbox"]:checked ~ label::before {
+        content: "元に戻す";
+    }
+
+    .readmore input[type="checkbox"] {
+        display: none;
+    }
+
+    .readmore-content {
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .readmore input[type="checkbox"]:checked ~ .readmore-content {
+        height: auto;
+    }
+}
 /* ここからCONTACT */
 #works {
     margin: 0 auto;
@@ -444,7 +831,7 @@ li {
     height: 90vw;
     max-height: 900px;
     opacity: 100%;
-    margin: -160px auto 200px;
+    margin: -160px auto 0;
     /* margin-bottom: 200px; */
     /* margin-top: -150px; */
 }
@@ -516,18 +903,77 @@ li {
     border-radius: 42px;
     margin: 0px auto;
 }
+.sp_bird04 {
+    display: none;
+}
+.sp_contact_text {
+    display: none;
+}
 /* ちょっとレスポンシブ対応できるかやってみたがごちゃごちゃに・・・意味なし。 */
 @media screen and (max-width: 1040px) {
-    .circle {
+    .bird03 .bird03 {
         display: none;
     }
+
+    .bird03 {
+        padding-left: 0px;
+    }
+    .sp_bird04 {
+        display: block;
+        padding-bottom: 80px;
+        padding-left: 50px;
+    }
+    .circle {
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: 3px dotted #b3b3bf;
+        width: 380px;
+        height: 380px;
+        margin-bottom: 100px;
+    }
+    .contact_text {
+        display: none;
+    }
+    .sp_contact_text {
+        display: block;
+        font-size: 14px;
+        line-height: 2;
+        letter-spacing: 1.5px;
+        width: 232px;
+        flex-wrap: wrap;
+        margin: 100px auto 0;
+        text-align: center;
+    }
     .dotted_circle {
-        width: 332px;
-        height: 332px;
-        opacity: 70%;
+        display: none;
+    }
+    .top_contact_berry {
+        right: 0;
+    }
+    .top_contact_berry img {
+        position: absolute;
+        width: 116px;
+        top: -220px;
+        left: 200px;
+    }
+    .top_btn_contact {
+        padding: 30px;
+    }
+    .btn_contact {
+        display: block;
+        width: 113px;
+        height: 51px;
+        padding: 19px 10px;
+        font-size: 13px;
+    }
+    .btn_contact:hover {
+        display: block;
+        width: 113px;
+        height: 51px;
+        padding: 19px 10px;
+        font-size: 13px;
     }
 }
-
 /* ここからfooter */
 
 .footer_sky {
@@ -568,4 +1014,51 @@ li {
     right: 40px;
     bottom: 100px;
     width: 100px;
+}
+@media screen and (max-width: 1040px) {
+    .pc_footer_sky {
+        display: none;
+    }
+    .footer_sky {
+        height: 375px;
+    }
+    .sp_footer_sky {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .nav_footer_PC ul {
+        position: relative;
+        display: block;
+        justify-content: left;
+        margin-top: -375px;
+        padding-left: 0px;
+        z-index: 1;
+        width: 100%;
+    }
+    .nav_footer_PC ul li {
+        font-size: 13px;
+        letter-spacing: 1.5px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        padding-left: 50px;
+        border-bottom: 5px dotted #fff;
+    }
+    .nav_footer_PC a {
+        width: 100%;
+    }
+
+    .top_btn {
+        position: fixed;
+        right: 70px;
+        bottom: 100px;
+        width: 50px;
+        /* right: 0; */
+        /* top: -120px; */
+    }
+    .Minori {
+        font-size: 10px;
+        margin-top: -70px;
+    }
 }

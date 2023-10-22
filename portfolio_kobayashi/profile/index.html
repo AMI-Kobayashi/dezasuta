@@ -34,17 +34,26 @@
                     </ul>
                 </nav>
             </div>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="#header">PROFILE</a></li>
+                    <li><a href="../index.html#skills">SKILLS</a></li>
+                    <li><a href="../works01/index.html">WORKS</a></li>
+                    <li><a href="../contact/index.html">CONTACT</a></li>
+                </ul>
+            </nav>
         </section>
     </header>
     <!-- ここからメインビジュアル -->
     <div class="profile_main">
 
-        <img src="images/TOP.png" alt="水彩タッチの青空が広がります。">
-        <!-- <img src="images/sp_mainvisual_sky.png" media="(max-width: 767px)"> -->
+        <img class="TOP_sky" src="images/TOP.png" alt="水彩タッチの青空が広がります。">
+        <img class="Top_sky_sp" src="images/Firstview_sky_sp.png" alt="青空広がります">
 
         <p class="profile_mark">
             <img src="images/Firstview_profile_pc.svg" alt="Profileのページです。">
-            <!-- <picture class="sp_mark"> <img src="images/firstview_sp_mark.png" media="(max-width: 767px)"></picture> -->
         </p>
 
         <p class="scroll">
@@ -64,7 +73,6 @@
     <!-- ここからAbout me -->
     <section id="Aboutme">
         <div class="profile">
-            <!-- <div class="profile_text"> -->
             <p class="who">コバヤシ　 ア　ミ</p>
             <h2>小林 愛実<span> / Koami</span></h2>
             <p class="job">web designer</p>
@@ -171,30 +179,52 @@
 
     <section id="vision">
         <h2 class="vision"><img src="images/Vision_title.svg" alt="わたしの目標について"></h2>
-        <p>Webデザイナーへの転職が第一目標です。<br>
+        <p class="pc_vision">Webデザイナーへの転職が第一目標です。<br>
             現職での経験を通し、商品やサービスに対し愛と情熱を持つ方々と仕事をしたいと強く思うようになりました。
             デザイン制作だけでなく、数字の検証も行いながら目標達成できるデザインを作り上げていきたいと考えています。少しでも多くのクライアントの課題解決に貢献し、
             エンドユーザーが良いサービスに辿り着けるようデザインを通して<br>お手伝いできれば嬉しいです。
         </p>
-        <div class="berry_ashirai">
-            <img src="images/profile_vision_berry.png" alt="てんてんブルベリさん">
+        <div class="read-more"><input id="readmore" type="checkbox"><label for="readmore"><img
+                    src="images/sp_vision_readmore.svg" alt="見てね"></label>
+            <div class="readmore-content">
+                <p class="sp_vision">
+                    Webデザイナーに<br>転職することが第一目標です。
+                    現職での経験を通し、<br>商品やサービスに対し<br>愛と情熱を持つ方々と仕事をしたいと強く思うようになりました。<br>
+                    デザイン制作だけでなく、<br>数字の検証も行いながら<br>目標達成できるデザインを作り上げていきたいと考えています。<br>
+                    少しでも多くのクライアントの<br>課題解決に貢献し、
+                    エンドユーザーが良いサービスに辿り着けるよう<br>デザインを通してお手伝いできれば嬉しいです。
+                </p>
+            </div>
         </div>
     </section>
-
+    <div class="berry_ashirai">
+        <img src="images/profile_vision_berry.png" alt="てんてんブルベリさん">
+    </div>
     <!-- ここからCONTACT -->
     <section id="contact">
         <div class="bird03">
-            <img src="images/top_contact_bird.png" alt="CONTACTのとりさん">
+            <img class="bird03" src="images/top_contact_bird.png" alt="CONTACTのとりさん">
+            <img class="sp_bird04" src="images/sp_profile_contact_bird.png" alt="とりさん">
         </div>
+
+
 
         <div class="circle">
             <p class="contact_text">この度は当サイトをご覧くださりありがとうございます。<br>
-                少しでも興味を持っていただけたら嬉しいです。<br>
                 制作のご依頼、ご相談、ご質問等はこちらからお願いいたします。<br>
                 送信完了後、48時間以内にご連絡いたします。<br>
+                (万が一返信がない場合は再度ご連絡いただくか、Instagramにて<br>
+                DMいただけますと幸いです。)</p>
+            <p class="sp_contact_text">
+                この度は当サイトをご覧くださり<br>
+                ありがとうございます。<br>
+                制作のご依頼、ご相談、ご質問等は<br>
+                こちらからお願いいたします。<br>
+                送信完了後、48時間以内に<br>
+                ご連絡いたします。<br>
             </p>
             <h2 class="top_btn_contact">
-                <a class="btn_contact" href="../contact/index.html">CONTACT</a>
+                <a class="btn_contact" href="./contact/index.html">CONTACT</a>
             </h2>
             <div class="dotted_circle"></div>
             <div class="top_contact_berry">
@@ -202,8 +232,9 @@
             </div>
         </div>
 
-    </section>
 
+
+    </section>
     <footer>
 
         <div class="footer_sky">

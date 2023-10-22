@@ -105,7 +105,7 @@ h1 {
     max-width: none;
 }
 
-/* @media screen and (max-width: 767px) { */
+/* @media screen and (max-width: 1040px) { */
 /* .nav_PC { */
 /* max-width: 30%; */
 /* } */
@@ -191,7 +191,7 @@ h1 {
     font-weight: 500;
     font-style: normal;
     padding-top: 10px;
-    letter-spacing: 1;
+    letter-spacing: 1px;
 }
 
 .aboutme {
@@ -305,7 +305,7 @@ li {
 
 /* ここからキャリア */
 
-#CARRER {
+#carrer {
     position: relative;
     padding-top: 200px;
     margin: 0 auto;
@@ -316,7 +316,7 @@ li {
     right: 100px;
     margin-top: -80px;
 }
-#CARRER h2 {
+#career h2 img {
     width: 18%;
 }
 
@@ -325,7 +325,7 @@ li {
     margin: 0 auto;
 }
 
-#CARRER .text {
+#carrer .text {
     font-size: 16px;
     letter-spacing: 3px;
     line-height: 1.5;
@@ -377,7 +377,7 @@ li {
 }
 
 /* ここからVISION */
-#VISION {
+#vision {
     background: #e6f4f8;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -389,7 +389,7 @@ li {
     padding-left: 220px;
 }
 
-#VISION p {
+#vision p {
     display: block;
     max-width: 770px;
     width: 90%;
@@ -411,7 +411,7 @@ li {
 /* このブドウ動かない */
 
 /* ここからCONTACT */
-#WORKS {
+#works {
     margin: 0 auto;
 }
 
@@ -517,7 +517,7 @@ li {
     margin: 0px auto;
 }
 /* ちょっとレスポンシブ対応できるかやってみたがごちゃごちゃに・・・意味なし。 */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1040px) {
     .circle {
         display: none;
     }

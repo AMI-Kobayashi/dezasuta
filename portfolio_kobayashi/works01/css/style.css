@@ -51,8 +51,6 @@ img {
     border: none;
 }
 
-/* ここから課題 */
-
 /* スマホ版のcssスタート ：pcとspを出し分ける*/
 /* スマホ版メニューは消す */
 .sp_nav,
@@ -83,7 +81,7 @@ body {
 h1 {
     max-width: 150px;
     width: 100%;
-    padding-left: 10%;
+    padding-left: 50px;
 }
 .nav_PC ul {
     display: flex;
@@ -106,7 +104,7 @@ h1 {
     max-width: none;
 }
 
-/* @media screen and (max-width: 767px) { */
+/* @media screen and (max-width: 1040px) { */
 /* .nav_PC { */
 /* max-width: 30%; */
 /* } */
@@ -164,8 +162,9 @@ h1 {
 .bird {
     text-align: center;
     padding-bottom: 30px;
+    margin: 0 auto;
 }
-#CATEGORY h2 {
+#category h2 {
     text-align: center;
     font-size: 30px;
     font-family: "fot-matisse-pron", sans-serif;
@@ -177,6 +176,7 @@ h1 {
 }
 .dotted {
     text-align: center;
+    margin: 0 auto;
 }
 @media screen and (max-width: 1100px) {
     .CATEGORY_TITLE {
@@ -302,7 +302,7 @@ h1 {
 /*ドットナビゲーションの設定*/
 
 /* 制作物一覧 */
-#WORKS01 {
+#works01 {
     position: relative;
     padding-top: 200px;
     width: 94%;
@@ -351,7 +351,7 @@ h1 {
     padding-top: 10px;
 }
 @media screen and (max-width: 1100px) {
-    #WORKS01 {
+    #works01 {
         position: relative;
         padding-top: 600px;
         width: 94%;
@@ -382,9 +382,7 @@ span {
     line-height: 50px;
     text-align: center;
     font-size: 30px;
-    border: 1px solid #808095;
-    border-radius: 100%;
-    color: #808095;
+
     transition: 0.3s;
 }
 a:hover {
@@ -397,6 +395,12 @@ a:hover {
     border: none;
     padding-top: 10px;
     letter-spacing: -3px;
+}
+
+.nav-links a {
+    border: 1px solid #808095;
+    border-radius: 100%;
+    color: #808095;
 }
 @media screen and (max-width: 1100px) {
     /* 作業中 */

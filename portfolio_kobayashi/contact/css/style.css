@@ -106,7 +106,7 @@ h1 {
     max-width: none;
 }
 
-/* @media screen and (max-width: 767px) { */
+/* @media screen and (max-width: 1040px) { */
 /* .nav_PC { */
 /* max-width: 30%; */
 /* } */
@@ -167,50 +167,78 @@ h1 {
     padding-top: 100px;
     margin-bottom: -100px;
 }
+.form {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 150px;
+}
 #form {
     position: relative;
     margin: 0 auto;
 
     /* margin-left: -30px; */
 }
-.form ul {
-    text-align: right;
-    left: 60%;
-    transform: translate(-50%, -50%);
+.form-inner {
+    max-width: 800px;
     margin: 0 auto;
 }
-.form li {
-    font-size: 18px;
-    padding-bottom: 20px;
+.form-group {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.form label {
+    width: 20%;
+    text-align: right;
+    padding-right: 30px;
+}
+.form .form-group:last-of-type {
+    /* 効かないな・・・！？ */
+    align-items: flex-start;
+}
+.form input,
+.form textarea {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #808090;
+    border-radius: 3px;
 }
 
-.button {
+.form textarea {
+    height: 415px;
+}
+
+button {
     display: block;
+    text-decoration: none;
+    margin: 100px auto 150px;
     box-sizing: border-box;
     box-shadow: 2px 2px 15px #efefef;
     width: 185px;
     height: 84px;
-    padding: 30px 20px;
-    font-family: "fot-matisse-pron", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 20pt;
+
+    cursor: pointer;
     text-align: center;
     background: #e4ead7;
     border-radius: 42px;
-    margin: 200px auto 600px;
-    box-sizing: none;
-    background-color: #efefef;
+    border: none;
+}
+button p {
+    font-size: 18pt;
+    font-family: "fot-matisse-pron", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #666666;
 }
 
 .blueberry {
-    position: absolute;
-    bottom: -500px;
-    right: 50px;
     opacity: 40%;
     z-index: 1;
 }
 .blueberry img {
+    position: absolute;
+    bottom: -1700px;
+    left: 700px;
     width: 630px;
     transform: rotate(-10deg);
 }
@@ -232,8 +260,7 @@ h1 {
     display: flex;
     justify-content: center;
     margin-top: -200px;
-    padding-left: 20px;
-    max-width: 1000px;
+    /* padding-left: 20px; */
 }
 .nav_footer_PC ul li {
     padding-left: 40px;

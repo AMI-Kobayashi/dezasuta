@@ -17,7 +17,7 @@
 
 <body>
     <header>
-        <section id="HEADER">
+        <section id="header">
 
             <div class="wrap">
                 <h1>
@@ -27,18 +27,25 @@
                 </h1>
                 <nav class="nav_PC">
                     <ul>
-                        <li>　<a href="../index.html">HOME</a></li>
-                        <!-- TOPpageに飛ぶ -->
-                        <li><a href="../profile/index.html">PROFILE</a></li>
-                        <li><a href="../index.html#SKILLS">SKILLS</a></li>
-                        <!-- ここはどうなるのだ？TOPのSKILLSに飛びたいよ〜 -->
-                        <li><a href="../works01/index.html">WORKS</a></li>
-                        <!-- WORKSのページにとぶ -->
-                        <li><a href="../contact/index.html">CONTACT</a></li>
+                        <li><a href="#header">HOME</a></li>
+                        <li><a href="./profile/index.html">PROFILE</a></li>
+                        <li><a href="#skills">SKILLS</a></li>
+                        <li><a href="./works01/index.html">WORKS</a></li>
+                        <li><a href="./contact/index.html">CONTACT</a></li>
                         <li><a href="/"><img src="images/Instagram_logo.png" alt="Instagramのロゴ"></a></li>
                     </ul>
                 </nav>
             </div>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#profile">PROFILE</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#works">WORKS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
         </section>
     </header>
     <!-- ここからメインビジュアル -->
@@ -49,7 +56,7 @@
         <!-- <img src="images/sp_mainvisual_sky.png" media="(max-width: 767px)"> -->
 
         <p class="works01_mark">
-            <img src="images/Firstview_works t_pc.svg" alt="制作実績はこちらから。">
+            <img src="images/Firstview_works_pc.svg" alt="制作実績はこちらから。">
             <!-- <picture class="sp_mark"> <img src="images/firstview_sp_mark.png" media="(max-width: 767px)"></picture> -->
         </p>
 
@@ -66,7 +73,7 @@
 
     <!-- ここからCategory -->
 
-    <section id="CATEGORY">
+    <section id="category">
         <div class="CATEGORY_TITLE">
             <div class="bird"><img src="images/CATEGORY_TITLE_bird.png" alt="幸せの青いとりさん"></div>
             <h2>CATEGORY</h2>
@@ -94,16 +101,17 @@
         </div>
     </section>
     <!-- ここから作品一覧 -->
-    <section id="WORKS01">
+    <section id="works01">
         <div class="back_tree"><img src="images/Works1_tree.png" alt="背景は森"></div>
         <div class="works">
             <div class="WS01" data-cat="LP">
                 <p class="category">LP</p>
                 <a href="/"><img src="images/Works_co-working.png" alt="コワーキングスペース">
                     <p class="date">2023.08</p>
-                    <p class="works_title">仮想 コワーキングスペース LP</p>
+                    <h2 class="works_title">仮想 コワーキングスペース LP</h2>
                     <p class="tool">Photoshop / Illustrator</p>
                     <p class="responsive">レスポンシブ対応</p>
+                </a>
             </div>
             <div class="WS02" data-cat="WEB SITE">
                 <p class="category">WEB SITE</p>
@@ -149,7 +157,7 @@
             <!-- <a class="prev page-numbers" href="/">«</a>現在の前のページへのリンク -->
 
             <!-- <a class="page-numbers" href="/"></a> -->
-            <span class=" page-numbers current">1</span><!-- 現在閲覧しているページ -->
+            <a href=""><span class="page-numbers current">1</span></a><!-- 現在閲覧しているページ -->
             <!-- <a class="page-numbers" href="/"></a> -->
             <span class="page-numbers dots">. . .</span>
             <!-- <a class="page-numbers" href="/"></a> -->
@@ -164,11 +172,11 @@
         </div>
         <nav class="nav_footer_PC">
             <ul>
-                <li><a href="#header">HOME</a></li>
-                <li><a href="#PROFILE">PROFILE</a></li>
-                <li><a href="#SKILLS">SKILLS</a></li>
-                <li><a href="#WORKS">WORKS</a></li>
-                <li><a href="CONTACT">CONTACT</a></li>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../profile/index.html">PROFILE</a></li>
+                <li><a href="../index.html#skills">SKILLS</a></li>
+                <li><a href="../works01/index.html">WORKS</a></li>
+                <li><a href="../contact/index.html">CONTACT</a></li>
             </ul>
         </nav>
         <p class="Minori">©︎ Minori design</p>
@@ -180,7 +188,7 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!--自作のJS-->
     <script src="test.js"></script>
-    </section>
+
 
 </body>
 

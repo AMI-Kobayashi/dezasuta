@@ -120,7 +120,7 @@ h1 {
     max-width: none;
 }
 
-/* @media screen and (max-width: 767px) { */
+/* @media screen and (max-width: 1040px) { */
 /* .nav_PC { */
 /* max-width: 30%; */
 /* } */
@@ -220,27 +220,27 @@ h1 {
 dl {
     display: flex;
     flex-wrap: wrap;
+    max-width: 580px;
     margin: 100px auto;
-    text-align: center;
     justify-content: center;
 }
 
 dt {
     position: relative;
     padding-top: 15px;
-    width: 50%;
+    width: 19.6%;
+    margin-right: 0.4%;
     text-align: left;
-    border-bottom: 2px dotted #666666;
+    border-bottom: 4px dotted #c0c0c0;
     left: 0;
 }
 /* 下のドットが重なる〜〜〜！！！どうしてぇぇやだーーー */
 dd {
-    width: 50%;
+    width: 70%;
     text-align: left;
-    line-height: 40px;
-    margin-left: -300px;
-    max-width: 345px;
-    border-bottom: 2px dotted #666666;
+    line-height: 1.9;
+    /* 30/16 */
+    border-bottom: 4px dotted #c0c0c0;
     padding-top: 5px;
 }
 
@@ -261,7 +261,16 @@ dd {
     margin: 250px auto 0;
     z-index: 1;
 }
+.lb_outerContainer {
+    max-width: 100%;
+    min-width: 500px;
+    height: auto;
+}
 
+.lightbox .lb_image {
+    width: 100%;
+    height: auto;
+}
 /* フッター */
 .footer_sky {
     /* padding-top: 100px;→フッターで指定しない。上の要素で指定すること */

@@ -67,7 +67,7 @@ img {
 body {
     background-color: white;
 }
-#HEADER {
+#header {
     position: relative;
 }
 .wrap {
@@ -113,7 +113,8 @@ h1 {
     /* まずはpc版で非表示にしておく */
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1040px) {
+    /* ヘッダーのロゴが変わリ始める瞬間を、SP版に切り替えるタイミングにする */
     .nav_PC {
         display: none;
     }
@@ -134,7 +135,7 @@ h1 {
         /* relative入ったタグが基準になる！（親要素にかける） */
         /* relativeとtopなど組み合わせると
         　棒線を好きなところに移動できる */
-        top: 5px;
+        top: 10px;
         display: block;
         width: 35px;
         height: 2px;
@@ -188,14 +189,18 @@ h1 {
 }
 
 /* メインビジュアル */
-#MAIN {
+#main {
     max-width: 100%;
+}
+.main_visual_PC {
+    height: 768px;
 }
 .TOP_sky {
     width: 100%;
-    height: 768px;
+    height: 100%;
+    object-fit: cover;
 }
-#MAIN .TOP_sky_sp {
+#main .TOP_sky_sp {
     display: none;
 }
 
@@ -252,7 +257,7 @@ h1 {
 .intro_sp {
     display: none;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1040px) {
     .main_copy {
         position: absolute;
         left: 5%;
@@ -274,7 +279,7 @@ h1 {
     .TOP_sky {
         display: none;
     }
-    #MAIN .TOP_sky_sp {
+    #main .TOP_sky_sp {
         display: block;
 
         width: 100%;
@@ -323,7 +328,7 @@ h1 {
 }
 
 /* Profile */
-#PROFILE {
+#profile {
     position: relative;
     /* 親要素にかけて上げないといけないrelativeちゃん */
     padding-top: 250px;
@@ -347,7 +352,7 @@ h1 {
     display: none;
 }
 
-#PROFILE h2 {
+#profile h2 {
     font-size: 40px;
     font-family: "fot-matisse-pron", sans-serif;
     font-weight: 500;
@@ -391,6 +396,7 @@ h1 {
     top: 20px;
     right: 170px;
     padding-top: 130px;
+    margin: auto;
     z-index: 2;
 }
 .AMI_sp {
@@ -423,8 +429,8 @@ h1 {
     z-index: 1;
 }
 
-@media screen and (max-width: 767px) {
-    #PROFILE {
+@media screen and (max-width: 1040px) {
+    #profile {
         position: relative;
         margin-top: 200px;
     }
@@ -441,7 +447,7 @@ h1 {
         padding-right: 30px;
         width: 200px;
     }
-    #PROFILE h2 {
+    #profile h2 {
         display: none;
     }
     .profile_text {
@@ -472,7 +478,9 @@ h1 {
         max-width: 285px;
         width: 100%;
         top: 100px;
-        left: 90px;
+        left: 0;
+        right: 0;
+        margin: auto;
         padding-top: 0px;
     }
 
@@ -504,7 +512,9 @@ h1 {
         display: block;
         position: absolute;
         top: 350px;
-        left: 50px;
+        left: 0;
+        right: 0;
+        margin: auto;
         z-index: -1;
     }
     .jam,
@@ -522,8 +532,8 @@ h1 {
     }
 }
 /* ここからSKILLS */
-#SKILLS {
-    margin-top: -600px;
+#skills {
+    margin-top: -500px;
     padding-bottom: 30px;
 }
 
@@ -544,7 +554,7 @@ h1 {
     width: 100%;
 }
 
-#SKILLS .skills_title_pc {
+#skills .skills_title_pc {
     position: relative;
     top: 440px;
     left: 480px;
@@ -555,7 +565,7 @@ h1 {
 .skills_title_sp {
     display: none;
 }
-.SKILLS {
+.skills {
     display: flex;
     padding-top: 300px;
     justify-content: center;
@@ -566,7 +576,7 @@ h1 {
 }
 
 .design_icon img {
-    width: 60%;
+    /* width: 60%; */
     padding-top: 0;
     padding-left: 40px;
 }
@@ -601,8 +611,8 @@ h1 {
     letter-spacing: 1px;
     line-height: 1.8;
 }
-@media screen and (max-width: 767px) {
-    #SKILLS {
+@media screen and (max-width: 1040px) {
+    #skills {
         margin-top: -400px;
     }
     .bird01 .bird01 {
@@ -617,15 +627,15 @@ h1 {
         margin-top: -100px;
     }
 
-    #SKILLS h2 {
+    #skills h2 {
         position: relative;
-        top: 0px;
-        width: 181px;
+        top: 50px;
+        width: 280px;
         text-align: center;
         margin: 0 auto;
         z-index: 2;
     }
-    #SKILLS .skills_title_pc {
+    #skills .skills_title_pc {
         display: none;
     }
 
@@ -633,14 +643,13 @@ h1 {
         /* サイズ大きくしたいが変わらない＞＜ */
         position: relative;
         display: block;
-        max-width: 181px;
         top: 330px;
         left: 20px;
     }
 
-    .SKILLS {
+    .skills {
         display: block;
-        padding-top: 120px;
+        padding-top: 200px;
         margin: 0 auto;
     }
     .design_contents {
@@ -736,7 +745,7 @@ h1 {
 /* top: 50px; */
 
 /* } */
-#WORKS h2 {
+#works h2 {
     text-align: center;
     font-size: 40px;
     font-family: "fot-matisse-pron", sans-serif;
@@ -791,7 +800,7 @@ h1 {
 .btn:hover .btn-on {
     opacity: 1;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1040px) {
     .bird02 {
         padding: 0;
     }
@@ -804,10 +813,12 @@ h1 {
         left: 20px;
     }
     .title_works {
-        right: 120px;
+        left: 0;
+        right: 0;
         font-family: "fot-matisse-pron", sans-serif;
         font-weight: 500;
         font-style: normal;
+        margin: auto;
     }
     .haikei_tree01 {
         width: 96%;
@@ -831,9 +842,16 @@ h1 {
     .sp_works {
         display: none;
     }
+    .blueberry_works {
+        right: 0;
+        left: 0;
+        margin: auto;
+        padding-left: 230px;
+        width: 90px;
+    }
 }
 /* ここからCONTACT */
-#CONTACT {
+#contact {
     margin: 0 auto;
 }
 
@@ -944,7 +962,7 @@ h1 {
     display: none;
 }
 /* ちょっとレスポンシブ対応できるかやってみたがごちゃごちゃに・・・意味なし。 */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1040px) {
     .bird03 .bird03 {
         display: none;
     }
@@ -1052,7 +1070,7 @@ h1 {
     width: 100%;
     transition: 0.3s;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1040px) {
     .pc_footer_sky {
         display: none;
     }

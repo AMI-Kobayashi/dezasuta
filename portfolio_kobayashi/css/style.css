@@ -1079,16 +1079,20 @@ h1 {
     .pc_footer_sky {
         display: none;
     }
+    .footer_sky {
+        height: 375px;
+    }
     .sp_footer_sky {
         display: block;
         width: 100%;
-        height: 375px;
+        height: 100%;
+        object-fit: cover;
     }
     .nav_footer_PC ul {
         position: relative;
         display: block;
         justify-content: left;
-        margin-top: -220px;
+        margin-top: -375px;
         padding-left: 0px;
         z-index: 1;
         width: 100%;
@@ -1115,6 +1119,6 @@ h1 {
     }
     .Minori {
         font-size: 10px;
-        padding-top: 30px;
+        margin-top: -70px;
     }
 }

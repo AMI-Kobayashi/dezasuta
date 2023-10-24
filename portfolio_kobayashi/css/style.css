@@ -54,6 +54,127 @@ img {
 
 /* ここから課題 */
 
+/*========= ローディング画面のためのCSS ===============*/
+#splash {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9999999;
+    text-align: center;
+    color: #fff;
+}
+
+#splash-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#loading {
+    transition: all 1s;
+    position: relative;
+    left: 0;
+    right: 0;
+    background: #fff;
+    align-items: center;
+}
+.loading {
+    width: 100%;
+    background: white;
+}
+.spinner {
+    width: 430px;
+    height: 430px;
+    margin: -200px auto;
+    animation: spin 15s linear infinite;
+}
+.item {
+    width: 325px;
+    padding-left: 10px;
+    margin: -255px auto;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*========= 画面遷移のためのCSS ===============*/
+
+/*画面遷移アニメーション*/
+
+body {
+    background: #fff; /*遷移アニメーションと同じ色を指定*/
+}
+
+body.container {
+    background: #fff; /*画面を開いた後の背景色を指定*/
+}
+
+.splashbg {
+    display: none;
+    content: "";
+    position: fixed;
+    transform: scale(100);
+    background-color: #efefef; /*伸びる背景色の設定*/
+    z-index: 999;
+    /*丸のスタートの形状*/
+    top: calc(50% - 1rem); /*50%から円の半径を引いた値*/
+    left: calc(50% - 1rem); /*50%から円の半径を引いた値*/
+    width: 2rem;
+    height: 2rem;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg {
+    display: block;
+    border-radius: 50%;
+    animation-name: PageAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes PageAnime {
+    0% {
+        /*丸のスタート位置と形状*/
+        transform: scale(100);
+    }
+    100% {
+        /*丸の終了位置と形状*/
+        transform: scale(0);
+        display: none; /*終了時は消える*/
+    }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container {
+    opacity: 0; /*はじめは透過0に*/
+    background-color: white;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container {
+    animation-name: PageAnimeAppear;
+    animation-duration: 1s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    background: white;
+}
+
+@keyframes PageAnimeAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /* スマホ版のcssスタート ：pcとspを出し分ける*/
 /* スマホ版メニューは消す */
 .sp_nav,
@@ -61,15 +182,20 @@ img {
     display: none;
     /* まずはpc版で非表示にしておく */
 }
-
 /* HEADER */
 
 body {
     background-color: white;
 }
+
 #header {
     position: relative;
+    background: #fff;
+    color: #fff;
+    text-align: center;
+    padding: 0px;
 }
+
 .wrap {
     display: flex;
     position: absolute;
@@ -81,18 +207,20 @@ body {
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 5% 3px 3%;
+    padding: 0px 3px 3px 3%;
 }
 h1 {
     max-width: 150px;
     width: 100%;
-    margin-left: 10%;
+    padding-left: 10%;
+    margin-right: 200px;
 }
 .nav_PC ul {
     display: flex;
     max-width: 80%;
     padding-top: 15px;
     align-items: center;
+    margin-left: 30px;
 }
 .nav_PC ul li {
     font-size: 17px;
@@ -112,16 +240,24 @@ h1 {
     display: none;
     /* まずはpc版で非表示にしておく */
 }
-
+.insta {
+    display: none;
+}
+section:nth-child(2n) {
+    background: fff;
+}
 @media screen and (max-width: 1040px) {
     /* ヘッダーのロゴが変わリ始める瞬間を、SP版に切り替えるタイミングにする */
+    .wrap {
+        align-items: center;
+    }
     .nav_PC {
         display: none;
     }
 
     .sp_btn {
         position: absolute;
-        top: 20px;
+        top: 15px;
         right: 30px;
         display: block;
         height: 23px;
@@ -185,7 +321,23 @@ h1 {
     }
     h1 {
         width: 20vw;
+        padding-top: 5px;
     }
+    .insta {
+        position: absolute;
+        top: 7px;
+        right: 80px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+        padding: 1%;
+    }
+
+    /* .sp_menu a { */
+    /* position: absolute; */
+    /* top: 10px; */
+    /* } */
 }
 
 /* メインビジュアル */
@@ -280,7 +432,7 @@ h1 {
         display: none;
     }
     .main_visual_PC {
-        width: 667px;
+        height: 667px;
     }
     #main .TOP_sky_sp {
         display: block;
@@ -298,10 +450,10 @@ h1 {
         display: block;
         /* text-align: center; */
         padding-top: 120px;
-        padding-right: 20px;
         max-width: 350px;
         width: 80%;
         margin: 0 auto;
+        padding-right: 20px;
 
         /* Ami Kobayahshiのマークについて
         これはちゃんとレスポンシブになっているのかしら💦 */
@@ -1027,14 +1179,15 @@ h1 {
 /* ここからfooter */
 
 .footer_sky {
-    /* padding-top: 100px; */
+    /* padding-top: 100px;→フッターで指定しない。上の要素で指定すること */
     max-width: 100%;
-    /* なんか、右の余白ができてしまう・・・ */
+    /* なんか、右の余白ができてしまう・・・ 
+    　　他のエリアではみ出している層があっただけ*/
     width: 100%;
     height: 246px;
     margin: 0 auto;
 }
-.pc_footer_sky img {
+.footer_sky img {
     width: 100%;
     height: 100%;
 }
@@ -1058,7 +1211,7 @@ h1 {
     font-weight: 500;
     font-style: normal;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 .top_btn {
@@ -1066,9 +1219,15 @@ h1 {
     right: 40px;
     bottom: 100px;
     width: 100px;
+    animation: spin 5.5s linear infinite;
 }
-.top_btn a {
-    transition: 0.3s;
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .top_btn img {

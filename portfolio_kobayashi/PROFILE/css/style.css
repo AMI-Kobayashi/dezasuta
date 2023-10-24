@@ -105,6 +105,9 @@ h1 {
     padding-bottom: 5px;
     max-width: none;
 }
+.insta {
+    display: none;
+}
 
 /* @media screen and (max-width: 1040px) { */
 /* .nav_PC { */
@@ -122,7 +125,7 @@ h1 {
 
     .sp_btn {
         position: absolute;
-        top: 20px;
+        top: 12px;
         right: 30px;
         display: block;
         height: 23px;
@@ -187,6 +190,16 @@ h1 {
     h1 {
         width: 20vw;
     }
+    .insta {
+        position: absolute;
+        top: 5px;
+        right: 80px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+        padding: 1%;
+    }
 }
 /* メインビジュアル */
 
@@ -213,7 +226,7 @@ h1 {
 
 .main_copy {
     position: absolute;
-    top: 600px;
+    top: 550px;
     right: 0;
     left: 0;
     text-align: right;
@@ -229,12 +242,13 @@ h1 {
 }
 .scroll {
     width: 2px;
-    margin: -395px auto;
+    margin: 135px auto;
 }
 
 .Top_sky_sp {
     display: none;
 }
+
 @media screen and (max-width: 1040px) {
     .profile_main {
         height: 500px;
@@ -251,13 +265,14 @@ h1 {
         object-fit: cover;
     }
     .profile_mark {
-        max-width: 185px;
-        margin: -350px auto 0;
+        margin: -360px auto 0;
+        padding-left: 0px;
         width: 100%;
-        padding-right: 70px;
     }
     .profile_mark img {
+        max-width: 200px;
         width: 100%;
+        padding-left: 120px;
     }
     .main_copy {
         position: absolute;
@@ -274,14 +289,14 @@ h1 {
         writing-mode: horizontal-tb;
         font-size: 15px;
         letter-spacing: 2px;
-        line-height: 1.5;
-        margin-left: 70px;
+        line-height: 1.75;
+        margin-left: 60px;
         width: 100%;
     }
     .scroll {
         width: 2px;
         height: 30px;
-        margin: 170px auto 0px;
+        margin: 145px auto 0px;
     }
 }
 
@@ -301,11 +316,13 @@ h1 {
     padding: 30px;
 }
 
-.who {
+.who_pc {
     font-size: 14px;
     letter-spacing: 2px;
 }
-
+.who_sp {
+    display: none;
+}
 #Aboutme h2 {
     font-size: 30px;
     font-weight: lighter;
@@ -442,7 +459,11 @@ li {
     .profile {
         padding: 50px;
     }
-    .who {
+    .who_pc {
+        display: none;
+    }
+    .who_sp {
+        display: block;
         font-size: 10px;
         letter-spacing: 2px;
     }
@@ -515,7 +536,7 @@ li {
         z-index: -1;
     }
     #Aboutme .blueberry {
-        top: 400px;
+        top: 300px;
         right: 0;
     }
     .characters {
@@ -805,7 +826,7 @@ li {
 .bird03 {
     position: relative;
     padding-top: 40px;
-    padding-left: 280px;
+    padding-left: 220px;
     margin: 0px auto;
     z-index: 2;
 }
@@ -831,7 +852,7 @@ li {
     height: 90vw;
     max-height: 900px;
     opacity: 100%;
-    margin: -160px auto 0;
+    margin: -160px auto 100px;
     /* margin-bottom: 200px; */
     /* margin-top: -150px; */
 }
@@ -1014,6 +1035,15 @@ li {
     right: 40px;
     bottom: 100px;
     width: 100px;
+    animation: spin 5.5s linear infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 @media screen and (max-width: 1040px) {
     .pc_footer_sky {
@@ -1056,7 +1086,9 @@ li {
         width: 50px;
         /* right: 0; */
         /* top: -120px; */
+        z-index: 5;
     }
+
     .Minori {
         font-size: 10px;
         margin-top: -70px;

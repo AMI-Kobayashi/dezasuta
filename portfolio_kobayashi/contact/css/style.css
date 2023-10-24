@@ -119,6 +119,7 @@ h1 {
         height: 23px;
         cursor: pointer;
         z-index: 2;
+        padding: 1%;
         /* z-indexはレイヤーみたいなもの１２３４の順で１が前面に来るよ */
     }
     /* 1本線作る */
@@ -180,6 +181,16 @@ h1 {
         margin-top: 5px;
         margin-bottom: 5px;
     }
+    .insta {
+        position: absolute;
+        top: 10px;
+        right: 60px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+        padding: 1%;
+    }
 }
 
 /* @media screen and (max-width: 1040px) { */
@@ -203,7 +214,7 @@ h1 {
 
 .contact_mark {
     text-align: start;
-    margin-top: -730px;
+    margin-top: -530px;
     width: 50%;
     padding-left: 106px;
 }
@@ -216,7 +227,7 @@ h1 {
 .main_copy {
     position: absolute;
     right: 0;
-    margin-top: -250px;
+    top: 550px;
     padding-right: 100px;
     /* padding-top: 230px; */
 
@@ -231,9 +242,12 @@ h1 {
 }
 .scroll {
     width: 2px;
-    margin: -395px auto;
+    margin: 173px auto;
 }
 .Top_sky_sp {
+    display: none;
+}
+.insta {
     display: none;
 }
 @media screen and (max-width: 1040px) {
@@ -254,17 +268,17 @@ h1 {
     .contact_mark {
         text-align: start;
         margin-top: -350px;
-        width: 50%;
-        padding-left: 120px;
+        width: 100%;
+        padding-left: 100px;
     }
     .contact_mark img {
-        width: 200px;
+        width: 230px;
         /* Ami Kobayahshiのマークについて
         これはちゃんとレスポンシブになっているのかしら💦 */
     }
     .main_copy {
         position: absolute;
-        top: 600px;
+        top: 380px;
         display: block;
         text-align: center;
         width: 200px;
@@ -280,6 +294,15 @@ h1 {
         width: 2px;
         height: 30px;
         margin: 160px auto 0px;
+    }
+    .insta {
+        position: absolute;
+        top: 10px;
+        right: 80px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        opacity: 1;
     }
 }
 /* ここからと合わせフォーム */

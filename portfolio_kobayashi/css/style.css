@@ -187,7 +187,9 @@ body.appear #container {
 body {
     background-color: white;
 }
-
+.appear {
+    /* display: none; */
+}
 #header {
     position: relative;
     background: #fff;

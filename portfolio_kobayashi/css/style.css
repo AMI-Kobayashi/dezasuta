@@ -120,7 +120,8 @@ body.container {
     content: "";
     position: fixed;
     transform: scale(100);
-    background-color: #efefef; /*伸びる背景色の設定*/
+    background-color: #daeef5; /*伸びる背景色の設定*/
+    /* a6a6b5 */
     z-index: 999;
     /*丸のスタートの形状*/
     top: calc(50% - 1rem); /*50%から円の半径を引いた値*/
@@ -187,9 +188,9 @@ body.appear #container {
 body {
     background-color: white;
 }
-.appear {
-    /* display: none; */
-}
+/* .appear { */
+/* display: none; */
+/* } */
 #header {
     position: relative;
     background: #fff;
@@ -250,6 +251,16 @@ section:nth-child(2n) {
 }
 @media screen and (max-width: 1040px) {
     /* ヘッダーのロゴが変わリ始める瞬間を、SP版に切り替えるタイミングにする */
+    .spinner {
+        width: 215px;
+        height: 215px;
+        margin: -100px auto;
+    }
+    .item {
+        width: 165px;
+        padding-left: 0px;
+        margin: -125px auto;
+    }
     .wrap {
         align-items: center;
     }

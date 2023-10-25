@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WORKS / Minori design</title>
     <meta name="description" content="制作実績の一覧です。">
-    <link rel="stylesheet" type="text/css"
-        href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+    <link rel="next" href="https://○○○/page/">
+    <!-- <link rel="stylesheet" type="text/css" -->
+    <!-- href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css"> -->
+    <!-- 上記と下記のコメントアウトしたものは不要、レイヤーの邪魔をする -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-7/css/6-1-7.css">
+    <!-- <link rel="stylesheet" type="text/css" -->
+    <!-- href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-7/css/6-1-7.css"> -->
     <link rel="stylesheet" href="css/style.css">
     <script src="test.js"></script>
 </head>
@@ -21,7 +23,7 @@
 
             <div class="wrap">
                 <h1>
-                    <a href="/">
+                    <a href="../index.html">
                         <img src="images/LOGO.svg" alt="Minori design">
                     </a>
                 </h1>
@@ -36,25 +38,39 @@
                                     alt="Instagramのロゴ"></a></li>
                     </ul>
                 </nav>
+
+                <div class="sp_btn"><span></span></div>
+                <nav class="sp_nav">
+                    <ul>
+                        <li><a href="../index.html">HOME</a></li>
+                        <li><a href="../profile/index.html">PROFILE</a></li>
+                        <li><a href="#skills">SKILLS</a></li>
+                        <li><a href="../works01/index.html">WORKS</a></li>
+                        <li><a href="../contact/index.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+
+                <div><a class="insta" href="https://www.instagram.com/amiima.u_u.coco/"><img
+                            src="images/Instagram_logo.svg" alt="AMiのインスタ"></a></div>
+                <div class="sp_btn"><span></span></div>
+                <nav class="sp_nav">
+                    <ul>
+                        <li><a href="#header">HOME</a></li>
+                        <li><a href="#profile">PROFILE</a></li>
+                        <li><a href="#skills">SKILLS</a></li>
+                        <li><a href="#works">WORKS</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div class="sp_btn"><span></span></div>
-            <nav class="sp_nav">
-                <ul>
-                    <li><a href="../index.html">HOME</a></li>
-                    <li><a href="../profile/index.html">PROFILE</a></li>
-                    <li><a href="#skills">SKILLS</a></li>
-                    <li><a href="../works01/index.html">WORKS</a></li>
-                    <li><a href="../contact/index.html">CONTACT</a></li>
-                </ul>
-            </nav>
         </section>
     </header>
     <!-- ここからメインビジュアル -->
 
     <div class="works01_main">
 
-        <img src="images/TOP.png" alt="水彩タッチの青空が広がります。">
-        <!-- <img src="images/sp_mainvisual_sky.png" media="(max-width: 767px)"> -->
+        <img class="TOP_sky" src="images/TOP.png" alt="水彩タッチの青空が広がります。">
+        <img class="sp_TOP_sky" src="images/mainvisual_sp_sky.png" alt="spのメインビジュアル">
 
         <p class="works01_mark">
             <img src="images/Firstview_works_pc.svg" alt="制作実績はこちらから。">
@@ -102,14 +118,15 @@
         </div>
     </section>
     <!-- ここから作品一覧 -->
-    <section id="works01">
+    <div class="works01">
         <div class="back_tree"><img src="images/Works1_tree.png" alt="背景は森"></div>
+        <div class="back_tree_sp"><img src="images/sp_works_background_leaf.png" alt="背景は葉っぱ"></div>
         <div class="works">
             <div class="WS01" data-cat="LP">
                 <p class="category">LP</p>
                 <a href="/"><img src="images/Works_co-working.png" alt="コワーキングスペース">
                     <p class="date">2023.08</p>
-                    <h2 class="works_title">仮想 コワーキングスペース LP</h2>
+                    <p class="works_title">仮想 コワーキングスペース LP</p>
                     <p class="tool">Photoshop / Illustrator</p>
                     <p class="responsive">レスポンシブ対応</p>
                 </a>
@@ -155,21 +172,23 @@
         </div>
 
         <div class="nav-links">
-            <a href=""><span class="page-numbers current">1</span></a><!-- 現在閲覧しているページ -->
+            <a class=href=""><span class="page-numbers current">1</span></a>
+            <a href=""><span class="page-numbers current">2</span></a><!-- 現在閲覧しているページ -->
             <span class="page-numbers dots">. . .</span>
         </div>
-    </section>
+    </div>
 
     <footer>
 
         <div class="footer_sky">
-            <img src="images/PC_footer.png" alt="足元に広がる空">
+            <img class="pc_footer_sky" src="images/PC_footer.png" alt="足元に広がる空">
+            <img class="sp_footer_sky" src="images/sp_footer.png" alt="足元に広がる空">
         </div>
         <nav class="nav_footer_PC">
             <ul>
-                <li><a href="../index.html">HOME</a></li>
+                <li><a href="index.html">HOME</a></li>
                 <li><a href="../profile/index.html">PROFILE</a></li>
-                <li><a href="../index.html#skills">SKILLS</a></li>
+                <li><a href="#skills">SKILLS</a></li>
                 <li><a href="../works01/index.html">WORKS</a></li>
                 <li><a href="../contact/index.html">CONTACT</a></li>
             </ul>
@@ -177,6 +196,7 @@
         <p class="Minori">©︎ Minori design</p>
 
     </footer>
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

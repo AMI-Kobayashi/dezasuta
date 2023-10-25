@@ -220,8 +220,8 @@ h1 {
 }
 .profile_mark img {
     width: 100%;
-    /* Ami Kobayahshiのマークについて
-    これはちゃんとレスポンシブになっているのかしら💦 */
+    display: block; /* 追加 */
+    margin: 0 auto; /* 追加 */
 }
 
 .main_copy {
@@ -272,7 +272,7 @@ h1 {
     .profile_mark img {
         max-width: 200px;
         width: 100%;
-        padding-left: 120px;
+        padding-left: 17px;
     }
     .main_copy {
         position: absolute;
@@ -567,27 +567,30 @@ li {
 }
 /* ここからキャリア */
 
-#carrer {
+#career {
     position: relative;
     padding-top: 200px;
     margin: 0 auto;
 }
 
-.carrer_bird {
+.career_bird {
     position: absolute;
     right: 100px;
     margin-top: -80px;
 }
+#career h2 {
+    padding-left: 5%;
+}
 #career h2 img {
-    width: 18%;
+    width: 10vw;
 }
 
-.carrer {
+.career {
     max-width: 1000px;
     margin: 0 auto;
 }
 
-#carrer .text {
+#career .text {
     font-size: 16px;
     letter-spacing: 3px;
     line-height: 1.5;
@@ -628,36 +631,38 @@ li {
     padding-right: 50px;
 }
 
-.haikei_carrer {
+.haikei_career {
     position: relative;
     max-width: 500px;
     width: 80%;
     top: -650px;
     right: 150px;
     margin-left: 20px;
-    transform: scale(-1, 1);
 }
 @media screen and (max-width: 1040px) {
-    #carrer {
+    #career {
         position: relative;
         padding-top: 0px;
         padding-bottom: 100px;
         margin: 0px auto;
     }
 
-    .carrer_bird {
+    .career_bird {
         width: 90px;
     }
-    .career h2 img {
-        width: 30%;
+    #career h2 {
+        padding-left: 8%;
+    }
+    #career h2 img {
+        width: 20vw;
     }
 
-    .carrer {
+    .career {
         max-width: 415px;
         margin: 0 auto;
     }
 
-    #carrer .text {
+    #career .text {
         font-size: 15px;
         letter-spacing: 3px;
         line-height: 1.75;
@@ -670,7 +675,7 @@ li {
         display: block;
         justify-content: start;
         align-items: center;
-        padding-top: 100px;
+        padding-top: 80px;
     }
     .FIRST img {
         width: 74px;
@@ -681,6 +686,7 @@ li {
         display: block;
         justify-content: start;
         align-items: center;
+        padding-top: 40px;
     }
     .SECOND img {
         width: 74px;
@@ -690,33 +696,33 @@ li {
         display: block;
         justify-content: start;
         align-items: center;
+        padding-top: 40px;
     }
     .THIRD img {
         width: 74px;
         padding-right: 50px;
     }
 
-    .haikei_carrer {
+    .haikei_career {
         position: relative;
         max-width: 500px;
-        width: 40%;
+        width: 40vw;
         /* top: -650px; */
         right: 0px;
-        bottom: 300px;
+        top: -220px;
         margin-left: 20px;
-        transform: scale(-1, 1);
     }
 }
 /* ここからVISION */
 #vision {
     background: #e6f4f8;
-    padding-top: 50px;
+    padding-top: 70px;
     padding-bottom: 50px;
     margin-top: -300px;
 }
 
 .vision {
-    width: 12%;
+    width: 10vw;
     padding-left: 220px;
 }
 
@@ -752,8 +758,8 @@ li {
         display: none;
     }
     .vision {
-        width: 30%;
-        padding-left: 30px;
+        width: 20vw;
+        padding-left: 45px;
     }
 
     .sp_vision {
@@ -995,6 +1001,7 @@ li {
         font-size: 13px;
     }
 }
+
 /* ここからfooter */
 
 .footer_sky {
@@ -1009,6 +1016,9 @@ li {
 .footer_sky img {
     width: 100%;
     height: 100%;
+}
+.sp_footer_sky {
+    display: none;
 }
 .nav_footer_PC ul {
     display: flex;
@@ -1044,6 +1054,11 @@ li {
     100% {
         transform: rotate(360deg);
     }
+}
+
+.top_btn img {
+    width: 100%;
+    transition: 0.3s;
 }
 @media screen and (max-width: 1040px) {
     .pc_footer_sky {
@@ -1086,9 +1101,7 @@ li {
         width: 50px;
         /* right: 0; */
         /* top: -120px; */
-        z-index: 5;
     }
-
     .Minori {
         font-size: 10px;
         margin-top: -70px;

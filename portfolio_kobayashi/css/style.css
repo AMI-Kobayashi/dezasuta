@@ -586,6 +586,11 @@ section:nth-child(2n) {
 
 .blueberry {
     max-width: 340px;
+    display: block;
+    animation-name: fadeInAnime;
+    animation-duration: 17s;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 
 .blueberry img {
@@ -595,6 +600,16 @@ section:nth-child(2n) {
     top: -150px;
     right: 10px;
     z-index: 1;
+}
+
+@keyframes fadeInAnime {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 1040px) {

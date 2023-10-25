@@ -105,6 +105,9 @@ h1 {
     padding-bottom: 5px;
     max-width: none;
 }
+.insta {
+    display: none;
+}
 @media screen and (max-width: 1040px) {
     /* ヘッダーのロゴが変わリ始める瞬間を、SP版に切り替えるタイミングにする */
     .nav_PC {
@@ -184,7 +187,7 @@ h1 {
     .insta {
         position: absolute;
         top: 10px;
-        right: 60px;
+        right: 80px;
         display: block;
         width: 30px;
         height: 30px;
@@ -269,12 +272,11 @@ h1 {
         text-align: start;
         margin-top: -350px;
         width: 100%;
-        padding-left: 100px;
+        padding-left: 0px;
     }
     .contact_mark img {
         width: 230px;
-        /* Ami Kobayahshiのマークについて
-        これはちゃんとレスポンシブになっているのかしら💦 */
+        padding-left: 100px;
     }
     .main_copy {
         position: absolute;
@@ -293,7 +295,7 @@ h1 {
     .scroll {
         width: 2px;
         height: 30px;
-        margin: 160px auto 0px;
+        margin: 130px auto 0px;
     }
     .insta {
         position: absolute;

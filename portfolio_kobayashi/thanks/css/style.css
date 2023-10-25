@@ -97,6 +97,10 @@ h1 {
     padding-bottom: 5px;
     max-width: none;
 }
+.insta {
+    display: none;
+}
+
 @media screen and (max-width: 1040px) {
     /* ヘッダーのロゴが変わリ始める瞬間を、SP版に切り替えるタイミングにする */
     .nav_PC {
@@ -111,6 +115,7 @@ h1 {
         height: 23px;
         cursor: pointer;
         z-index: 2;
+        padding: 1%;
         /* z-indexはレイヤーみたいなもの１２３４の順で１が前面に来るよ */
     }
     /* 1本線作る */
@@ -171,6 +176,16 @@ h1 {
         width: 20vw;
         margin-top: 5px;
         margin-bottom: 5px;
+    }
+    .insta {
+        position: absolute;
+        top: 10px;
+        right: 60px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+        padding: 1%;
     }
 }
 
@@ -248,6 +263,7 @@ h1 {
     .thanks_main {
         height: 616px;
         margin: 0 auto;
+        padding-bottom: 0px;
     }
 
     .TOP_sky {
@@ -309,6 +325,9 @@ h1 {
         height: 42px;
         padding: 13px 10px;
         font-size: 13px;
+    }
+    .btn_top {
+        padding-top: 50px;
     }
 }
 

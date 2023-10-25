@@ -247,7 +247,7 @@ h1 {
     display: none;
 }
 section:nth-child(2n) {
-    background: fff;
+    background: #fff;
 }
 @media screen and (max-width: 1040px) {
     /* ヘッダーのロゴが変わリ始める瞬間を、SP版に切り替えるタイミングにする */

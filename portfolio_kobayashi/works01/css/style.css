@@ -377,6 +377,7 @@ h1 {
     top: 50%;
     transform: translate(-50%, -50%); /* こちらを追加 */
     /* 画像の幅の５０％分横縦にずれる（translate) */
+    z-index: 6;
 }
 
 .slider img {
@@ -503,7 +504,6 @@ h1 {
 
 .back_tree {
     margin: 100px auto;
-    background: url("sample.png") fixed center no-repeat;
 }
 
 .works {
@@ -511,10 +511,9 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-top: -1600px;
-    margin-left: 40px;
-    /* 中心によらないのはなぜだ */
-    margin-bottom: 400px;
+    margin: -1700px auto 200px;
+
+    max-width: 1000px;
 }
 .works img {
     margin-left: -25px;
@@ -548,6 +547,18 @@ h1 {
 }
 
 @media screen and (max-width: 1100px) {
+    .works {
+        max-width: 500px;
+        padding-top: 20%;
+    }
+    .WS03 {
+        width: 100%;
+    }
+
+    .WS03 .date {
+        padding-top: 10px;
+    }
+
     .works01 {
         position: relative;
         padding-top: 50px;
@@ -576,6 +587,7 @@ h1 {
     }
     .works img {
         margin-left: -25px;
+        width: 315px;
     }
     .works p {
         text-align: left;
@@ -600,11 +612,16 @@ h1 {
     }
 }
 @media screen and (max-width: 767px) {
+    .works {
+        padding: 0;
+    }
     .back_tree {
         display: none;
     }
     .back_tree_sp {
         display: block;
+        background: url("sample.png") fixed center no-repeat;
+        margin-top: -100px;
     }
     .back_tree_sp img {
         width: 100%;

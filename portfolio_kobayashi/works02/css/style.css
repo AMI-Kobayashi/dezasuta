@@ -103,6 +103,7 @@ h1 {
     display: flex;
     max-width: 100%;
     padding-top: 15px;
+    padding-left: 50px;
     align-items: center;
 }
 .nav_PC ul li {
@@ -119,7 +120,151 @@ h1 {
     padding-bottom: 5px;
     max-width: none;
 }
+.insta {
+    display: none;
+}
+.sp_btn.open span {
+    background: transparent;
+}
+.sp_btn.open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+.sp_btn.open span::after {
+    top: 0;
+    transform: rotate(135deg);
+}
 
+/* ハンバーガーメニュー */
+.sp_nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* vhにすると全画面にできる。100%は違う、実際sp.navのスペースはちょびっとしかない */
+    background: rgba(0, 0, 0, 0.8);
+    /*  rgba(0, 0, 0, 0.8);これで透過した色になる。
+    　１が１００％なので、0.8で不透明度８０％ */
+    z-index: 1;
+}
+.sp_nav ul {
+    display: flex;
+    flex-direction: column;
+    /* 横並びなのか縦並びなのか指定するcss ,
+    方向を変えられる！「row」だと横並びになるよ*/
+    justify-content: center;
+    /* flexと必ずセットな！ */
+    align-items: center;
+    height: 100%;
+}
+.sp_nav ul li {
+    padding: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+@media screen and (max-width: 1040px) {
+    /* ヘッダーのロゴが変わリ始める瞬間を、SP版に切り替えるタイミングにする */
+    .spinner {
+        width: 215px;
+        height: 215px;
+        margin: -100px auto;
+    }
+    .item {
+        width: 165px;
+        padding-left: 0px;
+        margin: -125px auto;
+    }
+    .wrap {
+        align-items: center;
+    }
+    .nav_PC {
+        display: none;
+    }
+
+    .sp_btn {
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        display: block;
+        height: 23px;
+        cursor: pointer;
+        z-index: 2;
+        /* z-indexはレイヤーみたいなもの１２３４の順で１が前面に来るよ */
+    }
+    /* 1本線作る */
+    .sp_btn span {
+        position: relative;
+        /* relative入ったタグが基準になる！（親要素にかける） */
+        /* relativeとtopなど組み合わせると
+        　棒線を好きなところに移動できる */
+        top: 10px;
+        display: block;
+        width: 35px;
+        height: 2px;
+        border-radius: 2px;
+        background: #959595;
+        /* 四角形の高さ低くして棒のように見せている */
+        transition: 0.3s;
+        /* これを入れると❌になるまでの過程をモーションで見ることができる
+        おしゃれ！全バッテンに追加*/
+    }
+    /* 擬似要素before・afterと「content: "";」追加
+    　　*/
+    .sp_btn span::before,
+    .sp_btn span::after {
+        position: absolute;
+        /* absolute使う時には、親要素にrelativeを入れないといけない。
+        　　relativeが入った要素を基準に移動することになる */
+        content: "";
+        display: block;
+        width: 35px;
+        height: 2px;
+        border-radius: 2px;
+        background: #959595;
+        transition: 0.3s;
+    }
+    .sp_btn span::before {
+        bottom: 10px;
+        width: 25px;
+        /* 真ん中の線から下に10px */
+    }
+    .sp_btn span::after {
+        top: 10px;
+        width: 25px;
+        /* 真ん中の線から上に10px */
+    }
+
+    .sp_btn.open span {
+        background: transparent;
+    }
+    .sp_btn.open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    .sp_btn.open span::after {
+        top: 0;
+        transform: rotate(135deg);
+    }
+    h1 {
+        width: 20vw;
+        padding-top: 5px;
+    }
+    .insta {
+        display: block;
+        position: absolute;
+        top: 7px;
+        right: 80px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+        padding: 1%;
+    }
+}
 /* @media screen and (max-width: 1040px) { */
 /* .nav_PC { */
 /* max-width: 30%; */
@@ -131,18 +276,23 @@ h1 {
 
 /* メインビジュアル */
 
-.works01_main img {
+.works02_main {
     width: 100%;
     height: 750px;
 }
-
-.works01_mark {
+.TOP_sky {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.works02_mark {
+    position: absolute;
     text-align: start;
-    margin-top: -730px;
+    top: 200px;
     width: 50%;
     padding-left: 106px;
 }
-.works01_mark img {
+.works02_mark img {
     width: 397px;
     /* Ami Kobayahshiのマークについて
     これはちゃんとレスポンシブになっているのかしら💦 */
@@ -150,36 +300,88 @@ h1 {
 
 .main_copy {
     position: absolute;
-    right: 0;
-    margin-top: -250px;
-    padding-right: 100px;
-    /* padding-top: 230px; */
-
-    /* メインコピーをレスポンシブにするのに、これは位置が固定されてしまう！！
-     そうしたらいい感じに動くようになるのでしょうか・・・ */
+    right: 100px;
+    bottom: 50px;
 }
 .copy {
     font-size: 25px;
     color: #818181;
     letter-spacing: 3px;
     line-height: 2;
+    text-align: right;
 }
 .scroll {
     width: 2px;
     margin: -395px auto;
 }
+.sp_mark_top {
+    display: none;
+}
+.sp_TOP_sky {
+    display: none;
+}
+@media screen and (max-width: 1040px) {
+    .works02_main {
+        height: 500px;
+        margin: 0 auto;
+    }
 
+    .TOP_sky {
+        display: none;
+    }
+    .sp_TOP_sky {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .main_copy {
+        position: absolute;
+        right: 0;
+        left: 5%;
+        top: 370px;
+    }
+
+    /* メインコピーをレスポンシブにするのに、これは位置が固定されてしまう！！
+     そうしたらいい感じに動くようになるのでしょうか・・・ */
+
+    .copy {
+        font-size: 18px;
+        padding-left: 30px;
+        padding-right: 30px;
+        max-width: 320px;
+        width: 100%;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+    .works02_mark {
+        display: block;
+        top: 130px;
+        /* text-align: center; */
+        padding-top: 0px;
+        max-width: 230px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .scroll {
+        width: 2px;
+        height: 30px;
+        margin: -35px auto 0px;
+    }
+}
 /* 制作物一覧 */
-#WORKS02 {
+#works02 {
     position: relative;
-    padding-top: 200px;
-    margin: 0 auto;
+    top: 135px;
+    margin: 0 auto 300px;
 }
 
 .green01 img {
     position: absolute;
 
-    top: 20px;
+    top: -100px;
     right: 0px;
 }
 
@@ -188,8 +390,10 @@ h1 {
     text-align: left;
 }
 .img {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     padding-top: 150px;
+    width: 100%;
 }
 .PC {
     width: 460px;
@@ -220,30 +424,39 @@ h1 {
 dl {
     display: flex;
     flex-wrap: wrap;
-    max-width: 580px;
-    margin: 100px auto;
+    max-width: 600px;
+    margin: 0px auto;
     justify-content: center;
+    padding-top: 150px;
 }
 
 dt {
     position: relative;
-    padding-top: 15px;
+    padding-top: 35px;
+    padding-bottom: 25px;
     width: 19.6%;
     margin-right: 0.4%;
     text-align: left;
-    border-bottom: 4px dotted #c0c0c0;
-    left: 0;
+    border-bottom: 4px dotted #c8c8c8;
 }
-/* 下のドットが重なる〜〜〜！！！どうしてぇぇやだーーー */
+
 dd {
     width: 70%;
     text-align: left;
     line-height: 1.9;
     /* 30/16 */
-    border-bottom: 4px dotted #c0c0c0;
-    padding-top: 5px;
+    border-bottom: 4px dotted #c8c8c8;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 60px;
 }
 
+dt:first-child {
+    border-top: 4px dotted #c8c8c8;
+}
+dd:first-of-type {
+    border-top: 4px dotted #c8c8c8;
+}
 .btn_back {
     display: block;
     box-sizing: border-box;
@@ -258,9 +471,15 @@ dd {
     text-align: center;
     background: #e4ead7;
     border-radius: 42px;
-    margin: 250px auto 0;
+    margin: 100px auto 0;
     z-index: 1;
 }
+.green02 img {
+    position: absolute;
+
+    bottom: -160px;
+}
+
 .lb_outerContainer {
     max-width: 100%;
     min-width: 500px;
@@ -270,6 +489,65 @@ dd {
 .lightbox .lb_image {
     width: 100%;
     height: auto;
+}
+@media screen and (max-width: 1040px) {
+    #works02 {
+        top: 0px;
+        margin: 0 auto 160px;
+    }
+    .works p {
+        padding-left: 20px;
+    }
+    .WS01 {
+        padding-top: 150px;
+    }
+    .green01 img {
+        position: absolute;
+        top: 0;
+    }
+    .date {
+        font-size: 12px;
+    }
+    .works_title {
+        font-size: 25px;
+    }
+    .img {
+        padding-top: 100px;
+    }
+    .tool {
+        font-size: 12px;
+    }
+    .PC {
+        width: 187px;
+    }
+
+    .SP {
+        width: 55px;
+        padding-left: 50px;
+    }
+    dl {
+        max-width: 350px;
+        padding-top: 100px;
+    }
+
+    dt {
+        padding-top: 35px;
+        padding-bottom: 25px;
+    }
+
+    dd {
+        width: 70%;
+
+        padding-left: 30px;
+    }
+    .btn_back {
+        width: 100px;
+        height: 50px;
+        padding: 16px 20px;
+        font-size: 13pt;
+        margin: 100px auto 0px;
+        z-index: 1;
+    }
 }
 /* フッター */
 .footer_sky {
@@ -317,4 +595,46 @@ dd {
     width: 100px;
     /* right: 0; */
     /* top: -120px; */
+}
+.sp_footer_sky {
+    display: none;
+}
+@media screen and (max-width: 1040px) {
+    .pc_footer_sky {
+        display: none;
+    }
+    .footer_sky {
+        height: 375px;
+    }
+    .sp_footer_sky {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .nav_footer_PC ul {
+        position: relative;
+        display: block;
+        justify-content: left;
+        margin-top: -375px;
+        padding-left: 0px;
+        z-index: 1;
+        width: 100%;
+    }
+    .nav_footer_PC ul li {
+        font-size: 13px;
+        letter-spacing: 1.5px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        padding-left: 50px;
+        border-bottom: 5px dotted #fff;
+    }
+    .nav_footer_PC a {
+        width: 100%;
+    }
+
+    .Minori {
+        font-size: 10px;
+        margin-top: -70px;
+    }
 }

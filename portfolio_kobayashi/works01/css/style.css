@@ -325,6 +325,9 @@ h1 {
     text-align: center;
     margin: 0 auto;
 }
+#category p {
+    text-align: center;
+}
 @media screen and (max-width: 1100px) {
     .CATEGORY_TITLE {
         width: 30vw;
@@ -363,7 +366,7 @@ h1 {
     display: flex;
     /*横幅94%で左右に余白を持たせて中央寄せ*/
     width: 90%;
-    margin: 230px auto;
+    margin: 230px auto 100px;
 }
 .slider li {
     padding: 20px;
@@ -454,7 +457,7 @@ h1 {
 @media screen and (max-width: 767px) {
     .slider {
         width: 95%;
-        margin: 230px auto;
+
         z-index: 3;
     }
     .slider li {
@@ -497,24 +500,25 @@ h1 {
 /* 制作物一覧 */
 .works01 {
     position: relative;
-    padding-top: 200px;
     width: 94%;
-    margin: 0 auto;
 }
 
 .back_tree {
-    margin: 100px auto;
+    margin: 250px auto;
+    position: absolute;
 }
 
 .works {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
-    margin: -1700px auto 200px;
-
-    max-width: 1000px;
+    max-width: 1200px;
+    margin: 0 auto 100px;
+    left: 5%;
+    right: 95%;
 }
+
 .works img {
     margin-left: -25px;
 }
@@ -528,7 +532,6 @@ h1 {
 
 .date {
     font-size: 14px;
-    margin-top: -10px;
 }
 .works_title {
     font-size: 30px;
@@ -546,15 +549,10 @@ h1 {
     display: none;
 }
 
+.sp_img {
+    display: none;
+}
 @media screen and (max-width: 1100px) {
-    .works {
-        max-width: 500px;
-        padding-top: 20%;
-    }
-    .WS03 {
-        width: 100%;
-    }
-
     .WS03 .date {
         padding-top: 10px;
     }
@@ -565,7 +563,7 @@ h1 {
         width: 96%;
         margin: 0 auto;
     }
-    .WS04 {
+    /* .WS04 {
         display: none;
     }
     .WS05 {
@@ -573,27 +571,24 @@ h1 {
     }
     .WS06 {
         display: none;
-    }
+    } */
 
     .works {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-        margin-top: -1600px;
-        margin-left: 40px;
-        /* 中心によらないのはなぜだ */
+
         margin-bottom: 200px;
+        max-width: 500px;
+        padding-top: 20%;
     }
     .works img {
         margin-left: -25px;
-        width: 315px;
     }
     .works p {
         text-align: left;
     }
     .category {
-        padding-top: 70px;
+        padding-top: 100px;
         letter-spacing: 1px;
     }
 
@@ -612,6 +607,14 @@ h1 {
     }
 }
 @media screen and (max-width: 767px) {
+    .pc_img {
+        display: none;
+    }
+
+    .sp_img {
+        display: block;
+        margin-left: -25px;
+    }
     .works {
         padding: 0;
     }
@@ -619,9 +622,9 @@ h1 {
         display: none;
     }
     .back_tree_sp {
+        position: absolute;
         display: block;
-        background: url("sample.png") fixed center no-repeat;
-        margin-top: -100px;
+        top: 400px;
     }
     .back_tree_sp img {
         width: 100%;
@@ -646,10 +649,6 @@ span {
 
     transition: 0.3s;
 }
-a:hover {
-    background: white;
-    border-radius: 100%;
-}
 
 .dots {
     background: none;
@@ -663,7 +662,9 @@ a:hover {
     border-radius: 100%;
     color: #808095;
 }
-
+.page-numbers-current2 {
+    display: none;
+}
 @media screen and (max-width: 1100px) {
     /* 作業中 */
     .nav-links a span {
@@ -687,11 +688,6 @@ a:hover {
         border-radius: 100%;
         color: #808095;
         transition: 0.3s;
-    }
-    .nav-links a:hover {
-        background: white;
-        border-radius: 100%;
-        /* これがフッターにまでかかってしまっている・・・ */
     }
 
     .dots {

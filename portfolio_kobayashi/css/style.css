@@ -678,7 +678,12 @@ section:nth-child(2n) {
         padding-right: 30px;
         margin: 0 auto;
     }
-
+    .blueberry {
+        max-width: 340px;
+        display: block;
+        animation-name: none;
+        opacity: 1;
+    }
     .blueberry img {
         position: absolute;
         max-width: 340px;
@@ -908,7 +913,6 @@ section:nth-child(2n) {
     position: relative;
     width: 890px;
     margin: 0 auto;
-    z-index: -3;
 }
 .works {
     font-size: 14px;
@@ -941,6 +945,7 @@ section:nth-child(2n) {
     padding-top: 8px;
 }
 .works_top {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;

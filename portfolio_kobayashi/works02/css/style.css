@@ -123,48 +123,6 @@ h1 {
 .insta {
     display: none;
 }
-.sp_btn.open span {
-    background: transparent;
-}
-.sp_btn.open span::before {
-    bottom: 0;
-    transform: rotate(45deg);
-}
-.sp_btn.open span::after {
-    top: 0;
-    transform: rotate(135deg);
-}
-
-/* ハンバーガーメニュー */
-.sp_nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    /* vhにすると全画面にできる。100%は違う、実際sp.navのスペースはちょびっとしかない */
-    background: rgba(0, 0, 0, 0.8);
-    /*  rgba(0, 0, 0, 0.8);これで透過した色になる。
-    　１が１００％なので、0.8で不透明度８０％ */
-    z-index: 1;
-}
-.sp_nav ul {
-    display: flex;
-    flex-direction: column;
-    /* 横並びなのか縦並びなのか指定するcss ,
-    方向を変えられる！「row」だと横並びになるよ*/
-    justify-content: center;
-    /* flexと必ずセットな！ */
-    align-items: center;
-    height: 100%;
-}
-.sp_nav ul li {
-    padding: 20px;
-    color: #fff;
-    font-size: 18px;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
-        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-}
 
 @media screen and (max-width: 1040px) {
     /* ヘッダーのロゴが変わリ始める瞬間を、SP版に切り替えるタイミングにする */
@@ -184,7 +142,21 @@ h1 {
     .nav_PC {
         display: none;
     }
-
+    h1 {
+        width: 20vw;
+        padding-top: 5px;
+    }
+    .insta {
+        display: block;
+        position: absolute;
+        top: 7px;
+        right: 80px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+        padding: 1%;
+    }
     .sp_btn {
         position: absolute;
         top: 15px;
@@ -198,27 +170,23 @@ h1 {
     /* 1本線作る */
     .sp_btn span {
         position: relative;
-        /* relative入ったタグが基準になる！（親要素にかける） */
-        /* relativeとtopなど組み合わせると
-        　棒線を好きなところに移動できる */
+
         top: 10px;
         display: block;
         width: 35px;
         height: 2px;
-        border-radius: 2px;
+        border-radius: 5px;
         background: #959595;
         /* 四角形の高さ低くして棒のように見せている */
         transition: 0.3s;
-        /* これを入れると❌になるまでの過程をモーションで見ることができる
-        おしゃれ！全バッテンに追加*/
+
+        z-index: 6;
     }
     /* 擬似要素before・afterと「content: "";」追加
     　　*/
     .sp_btn span::before,
     .sp_btn span::after {
         position: absolute;
-        /* absolute使う時には、親要素にrelativeを入れないといけない。
-        　　relativeが入った要素を基準に移動することになる */
         content: "";
         display: block;
         width: 35px;
@@ -249,20 +217,34 @@ h1 {
         top: 0;
         transform: rotate(135deg);
     }
-    h1 {
-        width: 20vw;
-        padding-top: 5px;
-    }
-    .insta {
-        display: block;
+    /* ハンバーガーメニュー */
+
+    .sp_nav {
         position: absolute;
-        top: 7px;
-        right: 80px;
-        display: block;
-        width: 30px;
-        height: 30px;
-        opacity: 1;
-        padding: 1%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        /* vhにすると全画面にできる。100%は違う、実際sp.navのスペースはちょびっとしかない */
+        z-index: 999;
+    }
+    .sp_nav ul {
+        display: flex;
+        flex-direction: column;
+        /* 横並びなのか縦並びなのか指定するcss ,
+    方向を変えられる！「row」だと横並びになる*/
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .sp_nav ul li {
+        padding: 20px;
+        color: #fff;
+        font-size: 18px;
+        border-bottom: 4px dotted #808095;
+    }
+    .sp_nav ul li:first-child {
+        border-top: 4px dotted #808095;
     }
 }
 /* @media screen and (max-width: 1040px) { */
@@ -612,6 +594,8 @@ dd:first-of-type {
         height: 100%;
         object-fit: cover;
     }
+    .nav_footer_PC {
+    }
     .nav_footer_PC ul {
         position: relative;
         display: block;
@@ -630,7 +614,8 @@ dd:first-of-type {
         border-bottom: 5px dotted #fff;
     }
     .nav_footer_PC a {
-        width: 100%;
+        display: block;
+        /* 高さと横幅を持たせてあげて、文字の上だけでなく、全体をクリックできるようにするよ */
     }
 
     .Minori {

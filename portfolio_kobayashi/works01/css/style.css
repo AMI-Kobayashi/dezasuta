@@ -786,7 +786,7 @@ span {
         border-bottom: 5px dotted #fff;
     }
     .nav_footer_PC a {
-        width: 100%;
+        display: block;
     }
 
     .top_btn {

@@ -1018,14 +1018,15 @@ section:nth-child(2n) {
     }
     .works_top {
         display: block;
-        max-width: 200px;
+        max-width: 100;
         margin: -400px auto 0;
     }
     .pc_works {
         display: block;
+        width: 100%;
     }
     .pc_works img {
-        width: 100%;
+        width: 200px;
     }
     .sp_works {
         display: none;

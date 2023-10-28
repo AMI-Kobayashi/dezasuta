@@ -372,10 +372,15 @@ h1 {
     text-align: left;
 }
 .img {
+    position: absolute;
     display: flex;
     justify-content: center;
     padding-top: 150px;
     width: 100%;
+    z-index: 5;
+}
+a {
+    display: block;
 }
 .PC {
     width: 460px;
@@ -407,9 +412,9 @@ dl {
     display: flex;
     flex-wrap: wrap;
     max-width: 600px;
-    margin: 0px auto;
+    margin: 330px auto 0;
     justify-content: center;
-    padding-top: 150px;
+    padding-top: 200px;
 }
 
 dt {
@@ -453,13 +458,13 @@ dd:first-of-type {
     text-align: center;
     background: #e4ead7;
     border-radius: 42px;
-    margin: 100px auto 0;
-    z-index: 1;
+    margin: 150px auto 50px;
 }
 .green02 img {
     position: absolute;
 
     bottom: -160px;
+    z-index: -1;
 }
 
 .lb_outerContainer {

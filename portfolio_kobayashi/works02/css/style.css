@@ -363,7 +363,7 @@ h1 {
 .green01 img {
     position: absolute;
 
-    top: -100px;
+    top: -135px;
     right: 0px;
 }
 
@@ -391,6 +391,17 @@ h1 {
 }
 a {
     display: block;
+}
+.img_salon {
+    position: absolute;
+    text-align: center;
+    padding-top: 150px;
+    margin-bottom: -100px;
+    width: 100%;
+    z-index: 5;
+}
+.SP_salon {
+    display: none;
 }
 .PC {
     width: 460px;
@@ -424,7 +435,7 @@ dl {
     max-width: 600px;
     margin: 330px auto 0;
     justify-content: center;
-    padding-top: 200px;
+    padding-top: 300px;
 }
 
 dt {
@@ -526,6 +537,9 @@ dd:first-of-type {
     .img_sns_sp img {
         width: 250px;
     }
+    .img_salon img {
+        width: 300px;
+    }
     .lb-nav {
         position: absolute;
         top: 0;
@@ -548,7 +562,7 @@ dd:first-of-type {
     }
     dl {
         max-width: 350px;
-        padding-top: 0;
+        padding-top: 150px;
     }
 
     dt {
@@ -633,8 +647,7 @@ dd:first-of-type {
         height: 100%;
         object-fit: cover;
     }
-    .nav_footer_PC {
-    }
+
     .nav_footer_PC ul {
         position: relative;
         display: block;

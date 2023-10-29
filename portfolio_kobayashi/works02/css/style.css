@@ -481,6 +481,22 @@ dd:first-of-type {
     border-radius: 42px;
     margin: 150px auto 50px;
 }
+.btn_back:hover {
+    display: block;
+    border: 2px solid #e4ead7;
+    box-shadow: 2px 2px 15px #efefef;
+    width: 185px;
+    height: 84px;
+    padding: 30px 20px;
+    font-size: 18pt;
+    font-family: "fot-matisse-pron", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    background: white;
+    border-radius: 42px;
+    margin: 150px auto 50px;
+}
 .green02 img {
     position: absolute;
 
@@ -576,6 +592,15 @@ dd:first-of-type {
         padding-left: 30px;
     }
     .btn_back {
+        width: 100px;
+        height: 50px;
+        padding: 16px 20px;
+        font-size: 13pt;
+        margin: 100px auto 0px;
+        z-index: 1;
+    }
+    .btn_back:hover {
+        display: block;
         width: 100px;
         height: 50px;
         padding: 16px 20px;

@@ -601,7 +601,34 @@ section:nth-child(2n) {
     right: 10px;
     z-index: 1;
 }
+.btn01_eye {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 170px;
+}
 
+.btn {
+    display: block;
+    height: 100%;
+}
+.btn:hover {
+    opacity: 1;
+}
+.btn .btn-on {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+.btn:hover .btn-off {
+    opacity: 0;
+    transition: 0.3s;
+}
+.btn:hover .btn-on {
+    opacity: 1;
+}
 @keyframes fadeInAnime {
     from {
         opacity: 0;
@@ -962,12 +989,13 @@ section:nth-child(2n) {
 }
 
 .btn02_eye {
-    margin: 60px auto;
+    position: relative;
+    top: -50px;
+    margin: 0px auto;
     width: 170px;
 }
 
 .btn {
-    position: relative;
     display: block;
     height: 100%;
 }
@@ -988,7 +1016,17 @@ section:nth-child(2n) {
 .btn:hover .btn-on {
     opacity: 1;
 }
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 767px) {
+    .works_top {
+        position: relative;
+        top: -200px;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0px auto;
+    }
+}
+@media screen and (max-width: 767px) {
     .bird02 {
         padding: 0;
     }
@@ -1013,20 +1051,24 @@ section:nth-child(2n) {
     }
 
     .tree {
-        margin-top: 200px;
+        margin-top: 150px;
         width: 100%;
     }
     .works_top {
-        display: block;
-        max-width: 100;
-        margin: -400px auto 0;
+        position: relative;
+        width: 100vw;
+        top: -150px;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0px auto;
     }
     .pc_works {
         display: block;
-        width: 100%;
+        width: 250px;
     }
     .pc_works img {
-        width: 200px;
+        margin: 0px auto 0;
     }
     .sp_works {
         display: none;
@@ -1038,6 +1080,10 @@ section:nth-child(2n) {
         padding-left: 230px;
         width: 90px;
     }
+    .btn02_eye {
+        position: relative;
+        top: -250px;
+    }
 }
 /* ここからCONTACT */
 #contact {
@@ -1047,7 +1093,7 @@ section:nth-child(2n) {
 .bird03 .bird03 {
     position: relative;
     padding-top: 40px;
-    padding-left: 280px;
+    left: 20%;
     margin: 0px auto;
     z-index: 2;
 }
@@ -1159,8 +1205,10 @@ section:nth-child(2n) {
         display: none;
     }
     .sp_bird04 {
+        position: relative;
         display: block;
         margin-top: 50px;
+        left: 20%;
         padding-bottom: 80px;
     }
     .circle {
@@ -1210,7 +1258,11 @@ section:nth-child(2n) {
         font-size: 13px;
     }
 }
-/* ここからfooter */
+@media screen and (max-width: 767px) {
+    #contact {
+        margin: -200px auto 0;
+    }
+} /* ここからfooter */
 
 .footer_sky {
     /* padding-top: 100px;→フッターで指定しない。上の要素で指定すること */
@@ -1299,7 +1351,7 @@ section:nth-child(2n) {
         border-bottom: 5px dotted #fff;
     }
     .nav_footer_PC a {
-        width: 100%;
+        display: block;
     }
 
     .top_btn {

@@ -425,6 +425,12 @@ h1 {
 .characters h3 {
     width: 233px;
 }
+.strengths {
+    padding-right: 30px;
+}
+.character {
+    padding-right: 30px;
+}
 ul {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -768,8 +774,8 @@ li {
 #vision {
     background: #e6f4f8;
     padding-top: 70px;
-    padding-bottom: 50px;
-    margin-top: -300px;
+    padding-bottom: 200px;
+    margin: -300px auto 0;
 }
 
 .vision {
@@ -797,6 +803,10 @@ li {
     padding-bottom: 100px;
 }
 .sp_vision {
+    display: none;
+}
+
+.read-more {
     display: none;
 }
 /* このブドウ動かない */
@@ -834,12 +844,15 @@ li {
         left: -520px;
         top: -50px;
     }
-    .readmore {
+    .read-more {
+        display: block;
         position: relative;
         margin: 50px auto 0;
         padding: 0 0 75px;
     }
-
+    .read-more img {
+        width: 105px;
+    }
     .readmore label {
         position: absolute;
         left: 50%;

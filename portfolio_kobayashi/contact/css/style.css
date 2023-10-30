@@ -70,8 +70,7 @@ body {
 .wrap {
     display: flex;
     position: absolute;
-    background-color: white;
-    opacity: 70%;
+    background-color: rgb(255, 255, 255, 0.7);
     top: 0;
     left: 0;
     width: 100%;
@@ -84,6 +83,7 @@ h1 {
     max-width: 150px;
     width: 100%;
     padding-left: 10%;
+    opacity: 70%;
 }
 .nav_PC ul {
     display: flex;
@@ -96,7 +96,7 @@ h1 {
     font-family: "fot-matisse-pron", sans-serif;
     font-weight: 500;
     font-style: normal;
-    color: #666666;
+    color: #808090;
     padding-left: 52px;
     letter-spacing: 1.5px;
 }
@@ -121,7 +121,7 @@ h1 {
         display: block;
         height: 23px;
         cursor: pointer;
-        z-index: 2;
+        z-index: 99;
         padding: 1%;
         /* z-indexはレイヤーみたいなもの１２３４の順で１が前面に来るよ */
     }
@@ -370,12 +370,27 @@ button {
     box-shadow: 2px 2px 15px #efefef;
     width: 185px;
     height: 84px;
-
     cursor: pointer;
     text-align: center;
     background: #e4ead7;
     border-radius: 42px;
     border: none;
+}
+
+button:hover {
+    display: block;
+    border: 2px solid #e4ead7;
+    box-shadow: 2px 2px 15px #efefef;
+    width: 185px;
+    height: 84px;
+    font-size: 18pt;
+    font-family: "fot-matisse-pron", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    background: white;
+    border-radius: 42px;
+    transition: 0.3s;
 }
 button p {
     font-size: 18pt;
@@ -468,6 +483,18 @@ button p {
         margin: 0 -130px 0px 200px;
         transform: rotate(-10deg);
         opacity: 40%;
+    }
+    button {
+        width: 120px;
+        height: 61px;
+    }
+
+    button:hover {
+        width: 120px;
+        height: 61px;
+    }
+    button p {
+        font-size: 12pt;
     }
 }
 /* フッター */

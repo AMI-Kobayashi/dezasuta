@@ -68,8 +68,7 @@ body {
 .wrap {
     display: flex;
     position: absolute;
-    background-color: white;
-    opacity: 70%;
+    background-color: rgba(255, 255, 255, 0.7);
     top: 0;
     left: 0;
     width: 100%;
@@ -81,6 +80,7 @@ body {
 h1 {
     width: 150px;
     padding-left: 10%;
+    opacity: 0.7;
 }
 .nav_PC ul {
     display: flex;
@@ -94,7 +94,7 @@ h1 {
     font-family: "fot-matisse-pron", sans-serif;
     font-weight: 500;
     font-style: normal;
-    color: #666666;
+    color: #808090;
     padding-left: 52px;
     letter-spacing: 1.5px;
 }
@@ -128,7 +128,7 @@ h1 {
         display: block;
         height: 23px;
         cursor: pointer;
-        z-index: 2;
+        z-index: 99;
         /* z-indexはレイヤーみたいなもの１２３４の順で１が前面に来るよ */
     }
     /* 1本線作る */

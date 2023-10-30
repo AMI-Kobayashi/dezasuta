@@ -202,8 +202,8 @@ body {
 .wrap {
     display: flex;
     position: absolute;
-    background-color: white;
-    opacity: 70%;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* ヘッダーの白帯だけ透過、他のロゴとテキストは透けない */
     top: 0;
     left: 0;
     width: 100%;
@@ -217,6 +217,7 @@ h1 {
     width: 100%;
     padding-left: 10%;
     margin-right: 200px;
+    opacity: 0.7;
 }
 .nav_PC ul {
     display: flex;
@@ -230,7 +231,7 @@ h1 {
     font-family: "fot-matisse-pron", sans-serif;
     font-weight: 500;
     font-style: normal;
-    color: #666666;
+    color: #808080;
     padding-left: 52px;
 }
 
@@ -275,7 +276,7 @@ section:nth-child(2n) {
         display: block;
         height: 23px;
         cursor: pointer;
-        z-index: 2;
+        z-index: 99;
         /* z-indexはレイヤーみたいなもの１２３４の順で１が前面に来るよ */
     }
     /* 1本線作る */
@@ -410,7 +411,7 @@ section:nth-child(2n) {
 .intro_pc {
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
-    color: #666666;
+    color: #808080;
     font-size: 20px;
     letter-spacing: 5px;
     line-height: 2.5;
@@ -1356,8 +1357,8 @@ section:nth-child(2n) {
 
     .top_btn {
         position: fixed;
-        right: 70px;
-        bottom: 100px;
+        right: 20px;
+        bottom: 30px;
         width: 50px;
         /* right: 0; */
         /* top: -120px; */

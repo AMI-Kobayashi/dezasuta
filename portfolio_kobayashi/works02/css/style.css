@@ -139,54 +139,41 @@ h1 {
     .wrap {
         align-items: center;
     }
-    .nav_PC {
-        display: none;
-    }
     h1 {
         width: 20vw;
         padding-top: 5px;
     }
-    .insta {
-        display: block;
-        position: absolute;
-        top: 7px;
-        right: 80px;
-        display: block;
-        width: 30px;
-        height: 30px;
-        opacity: 1;
-        padding: 1%;
+    .nav_PC {
+        display: none;
     }
+
     .sp_btn {
         position: absolute;
-        top: 15px;
-        right: 30px;
+        top: 12px;
+        right: 10px;
         display: block;
         height: 23px;
         cursor: pointer;
-        z-index: 2;
-        /* z-indexはレイヤーみたいなもの１２３４の順で１が前面に来るよ */
+        z-index: 99;
     }
     /* 1本線作る */
     .sp_btn span {
         position: relative;
-
         top: 10px;
         display: block;
         width: 35px;
         height: 2px;
-        border-radius: 5px;
+        border-radius: 2px;
         background: #959595;
-        /* 四角形の高さ低くして棒のように見せている */
         transition: 0.3s;
-
-        z-index: 6;
     }
     /* 擬似要素before・afterと「content: "";」追加
-    　　*/
+        　　*/
     .sp_btn span::before,
     .sp_btn span::after {
         position: absolute;
+        /* absolute使う時には、親要素にrelativeを入れないといけない。
+            　　relativeが入った要素を基準に移動することになる */
         content: "";
         display: block;
         width: 35px;
@@ -217,36 +204,19 @@ h1 {
         top: 0;
         transform: rotate(135deg);
     }
-    /* ハンバーガーメニュー */
 
-    .sp_nav {
+    .insta {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        /* vhにすると全画面にできる。100%は違う、実際sp.navのスペースはちょびっとしかない */
-        z-index: 999;
-    }
-    .sp_nav ul {
-        display: flex;
-        flex-direction: column;
-        /* 横並びなのか縦並びなのか指定するcss ,
-    方向を変えられる！「row」だと横並びになる*/
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
-    .sp_nav ul li {
-        padding: 20px;
-        color: #fff;
-        font-size: 18px;
-        border-bottom: 4px dotted #808095;
-    }
-    .sp_nav ul li:first-child {
-        border-top: 4px dotted #808095;
+        top: 5px;
+        right: 80px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+        padding: 1%;
     }
 }
+
 /* @media screen and (max-width: 1040px) { */
 /* .nav_PC { */
 /* max-width: 30%; */
@@ -294,7 +264,7 @@ h1 {
 }
 .scroll {
     width: 2px;
-    margin: -395px auto;
+    margin: -30px auto;
 }
 .sp_mark_top {
     display: none;

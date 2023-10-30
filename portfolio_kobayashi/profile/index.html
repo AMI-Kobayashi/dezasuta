@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROFILE/Minori design</title>
     <meta name="description" content="駆け出しWebデザイナー、こばやしあみについて。">
+    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="test.js"></script>
+    <!-- 下記ハンバーガーのjs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -27,21 +29,25 @@
                         <li><a href="../index.html#skills">SKILLS</a></li>
                         <li><a href="../works01/index.html">WORKS</a></li>
                         <li><a href="../contact/index.html">CONTACT</a></li>
-                        <li><a href="https://www.instagram.com/amiima.u_u.coco/"><img src="images/Instagram_logo.png"
-                                    alt="Instagramのロゴ"></a></li>
+                        <li><a href="https://www.instagram.com/amiima.u_u.coco/" target="_blank"><img
+                                    src="images/Instagram_logo.png" alt="Instagramのロゴ"></a></li>
                     </ul>
                 </nav>
             </div>
-            <div><a class="insta" href="https://www.instagram.com/amiima.u_u.coco/"><img src="images/Instagram_logo.svg"
-                        alt="AMiのインスタ"></a></div>
+            <div><a class="insta" href="https://www.instagram.com/amiima.u_u.coco/" target="_blank"><img
+                        src="images/Instagram_logo.svg" alt="AMiのインスタ"></a></div>
             <div class="sp_btn"><span></span></div>
             <nav class="sp_nav">
                 <ul>
-                    <li><a href="../index.html">HOME</a></li>
-                    <li><a href="../profile/index.html">PROFILE</a></li>
-                    <li><a href="../index.html#skills">SKILLS</a></li>
-                    <li><a href="../works01/index.html">WORKS</a></li>
-                    <li><a href="../contact/index.html">CONTACT</a></li>
+                    <li><a href="../index.html">HOME<img src="images/sp_hamburger_yazirushi.png" alt="a"></a></li>
+                    <li><a href="../profile/index.html">PROFILE<img src="images/sp_hamburger_yazirushi.png" alt="a"></a>
+                    </li>
+                    <li><a href="../index.html#skills">SKILLS<img src="images/sp_hamburger_yazirushi.png" alt="a"></a>
+                    </li>
+                    <li><a href="../works01/index.html">WORKS<img src="images/sp_hamburger_yazirushi.png" alt="a"></a>
+                    </li>
+                    <li><a href="../contact/index.html">CONTACT<img src="images/sp_hamburger_yazirushi.png" alt="a"></a>
+                    </li>
                 </ul>
             </nav>
         </section>
@@ -185,8 +191,8 @@
             デザイン制作だけでなく、数字の検証も行いながら目標達成できるデザインを作り上げていきたいと考えています。少しでも多くのクライアントの課題解決に貢献し、
             エンドユーザーが良いサービスに辿り着けるようデザインを通して<br>お手伝いできれば嬉しいです。
         </p>
-        <div class="read-more"><input id="readmore" type="checkbox"><label for="readmore"><img
-                    src="images/sp_vision_readmore.svg" alt="見てね"></label>
+        <div class="readmore"><input id="readmore" type="checkbox">
+
             <div class="readmore-content">
                 <p class="sp_vision">
                     Webデザイナーに<br>転職することが第一目標です。
@@ -196,6 +202,7 @@
                     エンドユーザーが良いサービスに辿り着けるよう<br>デザインを通してお手伝いできれば嬉しいです。
                 </p>
             </div>
+            <label class=".readmore_btn" for="readmore"><img src="images/sp_vision_readmore.svg" alt="見てね"></label>
         </div>
     </section>
     <div class="berry_ashirai">
@@ -254,7 +261,8 @@
         <p class="Minori">©︎ Minori design</p>
 
     </footer>
-
+    <script src="../js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

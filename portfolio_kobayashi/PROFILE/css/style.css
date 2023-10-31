@@ -1205,9 +1205,10 @@ li {
 
     .top_btn {
         position: fixed;
-        right: 70px;
-        bottom: 100px;
+        right: 20px;
+        bottom: 30px;
         width: 50px;
+        z-index: 99 !important;
         /* right: 0; */
         /* top: -120px; */
     }

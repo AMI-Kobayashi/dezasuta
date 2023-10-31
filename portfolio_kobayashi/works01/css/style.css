@@ -128,7 +128,7 @@ h1 {
         display: block;
         height: 23px;
         cursor: pointer;
-        z-index: 99;
+        z-index: 99!;
         /* z-indexはレイヤーみたいなもの１２３４の順で１が前面に来るよ */
     }
     /* 1本線作る */
@@ -789,14 +789,6 @@ span {
         display: block;
     }
 
-    .top_btn {
-        position: fixed;
-        right: 70px;
-        bottom: 100px;
-        width: 50px;
-        /* right: 0; */
-        /* top: -120px; */
-    }
     .Minori {
         font-size: 10px;
         margin-top: -40px;

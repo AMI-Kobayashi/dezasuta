@@ -749,13 +749,13 @@ section:nth-child(2n) {
 }
 /* ここからSKILLS */
 #skills {
-    margin-top: -500px;
+    /* margin-top: -500px; */
     padding-bottom: 30px;
 }
 
 .bird01 .bird01 {
     display: block;
-    margin: 0 auto;
+    margin: 0 auto -500px;
 }
 
 .sp_bird02 {
@@ -814,7 +814,6 @@ section:nth-child(2n) {
 
 .coding img {
     padding-left: 60px;
-    width: 60%;
 }
 
 .icon_coding {

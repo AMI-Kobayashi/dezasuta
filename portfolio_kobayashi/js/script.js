@@ -36,19 +36,19 @@
         
 
    
-      var webStorage = function () {
-        if (sessionStorage.getItem('access')) {
-          //2回目以降アクセス時の処理
-          console.log('display:none');
-          $("#splash").css("display", "none");
-          $(".splash-logo").css("display", "none");
+      // var webStorage = function () {
+      //   if (sessionStorage.getItem('access')) {
+      //     //2回目以降アクセス時の処理
+      //     console.log('display:none');
+      //     $("#splash").css("display", "none");
+      //     $(".splash-logo").css("display", "none");
   
-        } else {
-          //初回アクセス時の処理
-          sessionStorage.setItem('access', 0);
-          console.log('初回アクセスです');
-        }
-      }
-      webStorage();
+      //   } else {
+      //     //初回アクセス時の処理
+      //     sessionStorage.setItem('access', 0);
+      //     console.log('初回アクセスです');
+      //   }
+      // }
+      // webStorage();
       
 });

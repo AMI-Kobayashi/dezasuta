@@ -11,7 +11,6 @@
     <link rel="icon" type="image/png" href="../android-chrome-192x192.png">
     <link rel="stylesheet" href="css/lightbox.min.css">
     <link rel="stylesheet" href="../css/common.css">
-
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -24,7 +23,7 @@
 
             <div class="wrap">
                 <h1>
-                    <a href="/">
+                    <a href="../index.html">
                         <img src="images/LOGO.svg" alt="Minori design">
                     </a>
                 </h1>
@@ -35,8 +34,8 @@
                         <li><a href="../index.html#skills">SKILLS</a></li>
                         <li><a href="../works01/index.html">WORKS</a></li>
                         <li><a href="../contact/index.html">CONTACT</a></li>
-                        <li><a href="https://www.instagram.com/amiima.u_u.coco/" target="_blank"><img
-                                    src="images/Instagram_logo.png" alt="Instagramのロゴ"></a></li>
+                        <li><a href="https://www.instagram.com/amiima.u_u.coco/"><img src="images/Instagram_logo.png"
+                                    alt="Instagramのロゴ"></a></li>
                     </ul>
                 </nav>
             </div>
@@ -46,7 +45,6 @@
 
             <div class="sp_btn"><span></span></div>
             <nav class="sp_nav">
-
                 <ul>
                     <li><a href="../index.html">HOME<img src="images/sp_hamburger_yazirushi.png" alt="a"></a></li>
                     <li><a href="../profile/index.html">PROFILE<img src="images/sp_hamburger_yazirushi.png" alt="a"></a>
@@ -82,56 +80,64 @@
         <div class="main_copy">
             <p class="copy">
                 制作物の詳細を掲載しています。<br>
-                デザインをクリックで全表示されます。
+                デザインはURLから。
             </p>
         </div>
     </div>
 
 
     <!-- ここから作品一覧 -->
-    <section id="works02">
+    <div class="works02">
         <div class="green01"><img src="images/Works2_greenTOP.png" alt="kawaiigreen"></div>
         <div class="works">
             <div class="WS01">
                 <p class="date">2023.08</p>
-                <p class="works_title">仮想　デザインカフェ HP</p>
-                <p class="tool">Coding</p>
+                <p class="works_title">わたしのポートフォリオ</p>
+                <p class="tool">Photoshop / Illustrator</p>
             </div>
-            <div class="img">
-                <a href="images/kadai06_coding_pc.jpg" data-lightbox="image-1" width="100%">
-                    <img class="PC" src="images/works02_PC_cafe.png" alt="images_pc"></a>
-                <a href="images/kadai06_coding_sp.jpg" data-lightbox="image-1" width="100%">
-                    <!-- data-lightboxが重要！ -->
-                    <img class="SP" src="images/works02_SP_cafe.png" alt="images_sp"></a>
+            <div class="img_salon">
+
+                <img class="PC" src="images/portfolio_PC.png" alt="images_pc">
+
+                <img class="SP" src="images/portfolio_SP.png" alt="images_sp">
+
             </div>
         </div>
         <dl>
             <dt>概要</dt>
-            <dd>仮想HP デザインカフェ <br>
-                スクールの課題でコーディングしました。</dd>
-            <dt>ターゲット</dt>
-            <dd>働く大人女子、おしゃれ男子。<br>
-                朝、コーヒーとモーニングを楽しみたい方。</dd>
+            <dd>わたしのポートフォリオです。<br>デザインとコーディングをしました。</dd>
+            <dt>URL</dt>
+            <dd>　　　　</dd>
             <dt>コンセプト</dt>
-            <dd>こだわりのコーヒー豆とこだわりの内装。
-                落ち着きがあり大人っぽいブラウンをベースにした内装で、
-                大人がリラックスできる空間とコーヒーをお届けする。
-                jQueryを使用してモーションをつけました。
+            <dd>自分が落ち着き、ここちがいいと感じるデザインを追求。<br>
+                モチーフはブルーベリー。
+                <br>厳しい環境下でも強かに育ち、必ず実をつける。これこそが私の”ありたい自分の姿”。
+                また、新卒で入社した会社で一番愛情を持って接していたのがブルーベリーのサプリメント。
+                わたしが現職でとても大切にしていた商品を、デザイナーとしてのポートフォリオのモチーフにしました。
+
+            </dd>
+            <dt>ポイント</dt>
+            <dd>
+                ドットと丸をデザインのベースに、ブルーベリーの世界観を統一。
+                冷静さを取り戻させてくれる爽やかな水色がメインカラー。<br>
+                落ち着きリラックスさせてくれるグリーンをアクセントカラーにチョイス。
+                ブラシで水を描き、実りのための命の水を表現。
+
+                余白を広めにとり、読みやすさと見やすさを大切にしました。
             </dd>
             <dt>制作期間</dt>
-            <dd>１か月</dd>
+            <dd>2ヶ月</dd>
             <dt>レスポンシブ</dt>
             <dd>スマートフォン</dd>
 
         </dl>
 
-        <!-- ホバーした時、画像の幅よりも広いところまでホバーできちゃう・・・
-            　　　　画像幅は書き出しの時におかしくなったのか！？ -->
+
         <div class="top_btn_back">
             <a class="btn_back" href="../works01/index.html">BACK</a>
             <div class="green02"><img src="images/Works2_greenBOTTOM.png" alt="kawaiigreen"></div>
         </div>
-    </section>
+    </div>
 
 
 
@@ -154,10 +160,8 @@
 
     </footer>
 
-
     <script src="js/lightbox.js"></script>
     <script src="../js/script.js"></script>
-
 
     <!-- モーディングのやつはlightboxで！ -->
 

@@ -97,7 +97,7 @@ h1 {
     font-family: "fot-matisse-pron", sans-serif;
     font-weight: 500;
     font-style: normal;
-    color: #666666;
+    color: #808080;
     padding-left: 52px;
 }
 
@@ -454,7 +454,8 @@ li {
     font-size: 10px;
     margin-left: 20px;
     margin-top: -15px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    line-height: 1.5;
     letter-spacing: 2px;
 }
 
@@ -863,76 +864,78 @@ li {
         /* 画像を動かさないといけないので、displayblockとtext-aline:centerだけあればOK */
         cursor: pointer;
     }
-    .readmore label img {
+}
+/* .readmore label img {
         width: 105px;
-    }
+    } */
 
-    .readmore input[type="checkbox"] {
+/* .readmore input[type="checkbox"] {
         display: none;
-    }
+    } */
 
-    .readmore-content {
+/* .readmore-content {
         position: relative;
         height: 350px;
         overflow: hidden;
-    }
-    .readmore-content::before {
+    } */
+/* .readmore-content::before {
         /* 同じ色の板を作って、次にafterで点線を作る */
-        content: "";
+/* content: "";
         position: absolute;
         bottom: 0;
         /* bottomのが距離近いので今回はbottom */
-        left: 0;
+/* left: 0;
         display: block;
         width: 100%;
         height: 60px;
         background: #e6f4f8;
-    }
+    /* } */
+*/ */ */
 
-    .readmore-content::before {
-        /* 同じ色の板を作って、次にafterで点線を作る */
+    /* .readmore-content::before {
+      
         content: "";
         position: absolute;
         bottom: 0;
-        /* bottomのが距離近いので今回はbottom */
+      
         left: 0;
         display: block;
         width: 100%;
         height: 70px;
         background: #e6f4f8;
-    }
+    } */
 
-    .readmore-content::after {
+    /* .readmore-content::after {
         content: "";
         position: absolute;
         bottom: 10px;
-        /* bottomのが距離近いので今回はbottom */
+       
         left: 49%;
         right: 51%;
         border-right: 2px dotted rgb(138, 137, 137);
         width: 3px;
         height: 30px;
-    }
-    .readmore label img.open {
+    } */
+    /* .readmore label img.open {
         display: none;
     }
     .readmore input[type="checkbox"]:checked ~ .readmore-content {
         height: auto;
-    }
+    } */
 
-    .readmore input[type="checkbox"]:checked ~ .readmore-content::before {
-        /* チェックボックスつかないときはこれ */
+    /* .readmore input[type="checkbox"]:checked ~ .readmore-content::before {
+     
         display: none;
     }
     .readmore input[type="checkbox"]:checked ~ .readmore-content::after {
-        /* チェックボックスつかないときはこれ */
+       
         display: none;
     }
     .readmore input[type="checkbox"]:checked + .readmore_btn img {
-        /* 開いてるのにさらにReadmoreはNG＞＜　消せないんだが */
+        
         display: none;
-    }
-}
+    } */
+
 /* ここからCONTACT */
 #works {
     margin: 0 auto;

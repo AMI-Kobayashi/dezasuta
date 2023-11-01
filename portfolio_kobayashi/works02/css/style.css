@@ -324,7 +324,7 @@ h1 {
     }
 }
 /* 制作物一覧 */
-#works02 {
+.works02 {
     position: relative;
     top: 135px;
     margin: 0 auto 300px;
